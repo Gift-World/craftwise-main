@@ -12,7 +12,7 @@ import RisingProfessionalsProgram from "./pages/minipages/RisingProfessionalsPro
 import LegacyLeadersProgram from "./pages/minipages/LegacyLeadersProgram";
 
 // Initialize Google Analytics
-ReactGA.initialize("GTM-KMG9X8DN"); // Replace with your actual GA4 Measurement ID
+ReactGA.initialize("G-C083LV0PVF"); // Replace with your actual GA4 Measurement ID
 
 const App = () => {
   const location = useLocation();

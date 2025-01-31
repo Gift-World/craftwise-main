@@ -58,13 +58,13 @@ const ProgramPage = ({
   return (
     <div className="min-h-screen">
       {/* Google Analytics Script */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-KMG9X8DN"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-C083LV0PVF"></script>
       <script>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'GTM-KMG9X8DN'); 
+          gtag('config', 'G-C083LV0PVF'); 
         `}
       </script>
 
