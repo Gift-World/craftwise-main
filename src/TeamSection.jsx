@@ -1,20 +1,24 @@
 import { useEffect, useRef } from 'react';
+import { FaLinkedin } from 'react-icons/fa';
 
 const teamMembers = [
-  { name: 'Pete Kariuki', role: 'Team Member', image: 'https://i.imgur.com/rlRlE2z.png' },
-  { name: 'Terry Kiruki', role: 'Team Member', image: 'https://i.imgur.com/DXxBjNY.png' },
-  { name: 'Joe Gachira', role: 'Team Member', image: 'https://i.imgur.com/QLu0K8p.png' },
-  { name: 'Maryann Somba', role: 'Team Member', image: 'https://i.imgur.com/ejnhfW5.png' },
-  { name: 'Bernard Kariuki', role: 'Team Member', image: 'https://i.imgur.com/oxpubqd.png' },
-  { name: 'Sheila Antoinnette', role: 'Team Member', image: 'https://i.imgur.com/gwUpKbt.png' },
-  { name: 'Ngibuini Mwaura', role: 'Team Member', image: 'https://i.imgur.com/nk0SIDn.png' },
-  { name: 'Carol Kaye', role: 'Team Member', image: 'https://i.imgur.com/Z7ifO8X.png' },
-  { name: 'Edwin Mutoro', role: 'Team Member', image: 'https://i.imgur.com/pJabNvR.png' },
-  { name: 'Nguka Ojwang', role: 'Team Member', image: 'https://i.imgur.com/Nhf2Obx.png' },
-  { name: 'Sylvia Njeri', role: 'Team Member', image: 'https://i.imgur.com/Z0H1ghr.png' },
-  { name: 'Sam Kimera', role: 'Team Member', image: 'https://i.imgur.com/JyJR0Tu.png' },
-  { name: 'Peris Wambui', role: 'Team Member', image: 'https://i.imgur.com/FkFPQoG.png' },
-  { name: 'Denise Kibisu', role: 'Team Member', image: 'https://i.imgur.com/7cYbZXv.png' }
+  { name: 'Pete Kariuki', image: 'https://i.imgur.com/rlRlE2z.png', linkedin: 'https://www.linkedin.com/in/pete-kariuki-48788767/' },
+  { name: 'Terry Kiruki', image: 'https://i.imgur.com/DXxBjNY.png', linkedin: 'https://www.linkedin.com/in/terry-kiruki-mimano-b8317141/' },
+  { name: 'Joe Gachira', image: 'https://i.imgur.com/QLu0K8p.png', linkedin: '#' },
+  { name: 'Maryann Somba', image: 'https://i.imgur.com/ejnhfW5.png', linkedin: 'https://www.linkedin.com/in/maryann-somba/' },
+  { name: 'Bernard Kariuki', image: 'https://i.imgur.com/oxpubqd.png', linkedin: 'https://www.linkedin.com/in/bernard-kariuki-a1709752/' },
+  { name: 'Sheila Antoinnette', image: 'https://i.imgur.com/gwUpKbt.png', linkedin: 'https://www.linkedin.com/in/sheila-antoinette/' },
+  { name: 'Ngibuini Mwaura', image: 'https://i.imgur.com/nk0SIDn.png', linkedin: 'https://www.linkedin.com/in/ngibuinimwaura/' },
+  { name: 'Carol Kaye', image: 'https://i.imgur.com/Z7ifO8X.png', linkedin: 'https://www.linkedin.com/in/carolynekaye/' },
+  { name: 'Edwin Mutoro', image: 'https://i.imgur.com/pJabNvR.png', linkedin: 'https://www.linkedin.com/in/edwinmutoro/?originalSubdomain=ke' },
+  { name: 'Nguka Ojwang', image: 'https://i.imgur.com/Nhf2Obx.png', linkedin: 'https://www.linkedin.com/in/nguka/' },
+  { name: 'Sylvia Njeri', image: 'https://i.imgur.com/Z0H1ghr.png', linkedin: 'https://www.linkedin.com/in/sylvia-githinji/' },
+  { name: 'Sam Kimera', image: 'https://i.imgur.com/JyJR0Tu.png', linkedin: 'https://www.linkedin.com/in/samkimera/' },
+  { name: 'Peris Wambui', image: 'https://i.imgur.com/FkFPQoG.png', linkedin: 'https://www.linkedin.com/in/peris-wambui-53547157/' },
+  { name: 'Joy Wangu', image: 'https://i.imgur.com/b230S9v.png', linkedin: ' https://www.linkedin.com/in/wangu-joy-b39285246/' },
+  { name: 'Nancy Gitonga', image: 'https://i.imgur.com/EC5fi0E.png', linkedin: ' https://www.linkedin.com/in/nancy-w-gitonga/' },
+  { name: 'George Munge', image: 'https://i.imgur.com/Hx2P5BG.png', linkedin: 'https://www.linkedin.com/in/george-munge-861ab8109/' },
+  { name: 'Denise Kibisu', image: 'https://i.imgur.com/7cYbZXv.png', linkedin: ' https://www.linkedin.com/in/denisekibisu/' }
 ];
 
 const TeamSection = () => {
@@ -37,11 +41,11 @@ const TeamSection = () => {
   }, []);
 
   return (
-    <div className=" mb-16 pt-6 py-16 bg-gradient-to-br from-[rgb(94,50,47)] to-[rgb(61,18,25)] text-white overflow-hidden">
-      <h2 className=" font-montserrat text-4xl font-bold text-center mb-2">
+    <div className="mb-16 pt-6 py-16 bg-gradient-to-br from-[rgb(94,50,47)] to-[rgb(61,18,25)] text-white overflow-hidden">
+      <h2 className="font-montserrat text-4xl font-bold text-center mb-2">
         Your Partners in Growth and Excellence
       </h2>
-      <h3 className=" font-montserrat text-2xl text-center mb-12 ">
+      <h3 className="font-montserrat text-2xl text-center mb-12">
         Empowering Africa's Top Talent!
       </h3>
       
@@ -63,9 +67,14 @@ const TeamSection = () => {
               <h3 className="text-xl font-semibold mb-2 text-white">
                 {member.name}
               </h3>
-              <p className="text-[rgb(74,38,47)]">
-                {member.role}
-              </p>
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white flex justify-center items-center mt-2"
+              >
+                <FaLinkedin size={30} className="hover:text-blue-400 transition duration-300" />
+              </a>
             </div>
           ))}
         </div>
