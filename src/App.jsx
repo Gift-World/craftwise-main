@@ -13,7 +13,7 @@ import LegacyLeadersProgram from "./pages/minipages/LegacyLeadersProgram";
 import ScrollToTop from "./ScrollToTop";
 
 // Initialize Google Analytics
-ReactGA.initialize("G-C083LV0PVF"); // Replace with your actual GA4 Measurement ID
+ReactGA.initialize("G-VVVPM0YHQH"); // Replace with your actual GA4 Measurement ID
 
 const App = () => {
   const location = useLocation();
