@@ -195,7 +195,7 @@ const ProgramPage = ({
   className="text-center mb-16"
 >
   <h2 className="text-3xl font-montserrat font-bold mb-8">Why Choose This Programme?</h2>
-  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
     {tools.map((tool, index) => {
       // Define an array of unique background gradients for each card
       const bgGradients = [
