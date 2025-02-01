@@ -88,7 +88,7 @@ const ProgramPage = ({
   <div className="absolute inset-0 bg-black bg-opacity-60" />
 </div>
 
-        <div className="relative h-full flex items-center justify-center text-white pt-12 px-4">
+        <div className="relative h-full flex items-center justify-center text-white  pt-32">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
