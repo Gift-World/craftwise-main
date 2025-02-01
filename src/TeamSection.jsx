@@ -4,7 +4,7 @@ import { FaLinkedin } from 'react-icons/fa';
 const teamMembers = [
   { name: 'Pete Kariuki', image: 'https://i.imgur.com/rlRlE2z.png', linkedin: 'https://www.linkedin.com/in/pete-kariuki-48788767/' },
   { name: 'Terry Kiruki', image: 'https://i.imgur.com/DXxBjNY.png', linkedin: 'https://www.linkedin.com/in/terry-kiruki-mimano-b8317141/' },
-  { name: 'Joe Gachira', image: 'https://i.imgur.com/QLu0K8p.png', linkedin: '#' },
+  { name: 'Joe Gachira', image: 'https://i.imgur.com/QLu0K8p.png', linkedin: 'https://www.linkedin.com/in/joseph-gachira-27429626/' },
   { name: 'Maryann Somba', image: 'https://i.imgur.com/ejnhfW5.png', linkedin: 'https://www.linkedin.com/in/maryann-somba/' },
   { name: 'Bernard Kariuki', image: 'https://i.imgur.com/oxpubqd.png', linkedin: 'https://www.linkedin.com/in/bernard-kariuki-a1709752/' },
   { name: 'Sheila Antoinnette', image: 'https://i.imgur.com/gwUpKbt.png', linkedin: 'https://www.linkedin.com/in/sheila-antoinette/' },
