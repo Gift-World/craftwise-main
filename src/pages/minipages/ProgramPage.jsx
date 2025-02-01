@@ -37,7 +37,7 @@ const ProgramPage = ({
       `Phone: ${formData.phone}\n\n` +
       `Message: ${formData.message}`
     );
-    const mailtoLink = `mailto:charlesgiftangila@gmail.com?subject=${subject}&body=${body}&from=${formData.email}`;
+    const mailtoLink = `mailto:harold@craftwiseacademy.com?subject=${subject}&body=${body}&from=${formData.email}`;
     window.location.href = mailtoLink;
     setShowForm(false);
   };
