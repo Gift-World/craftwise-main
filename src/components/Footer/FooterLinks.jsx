@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const links = {
@@ -29,12 +29,31 @@ const links = {
 
 const FooterLinks = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleClick = (e, route) => {
+  const handleClick = (e, route, sectionId) => {
+    e.preventDefault();
+    
     if (route) {
-      e.preventDefault();
       navigate(route);
+    } else if (sectionId) {
+      if (location.pathname === "/") {
+        // Scroll directly if already on Home
+        scrollToSection(sectionId);
+      } else {
+        // Navigate to Home first, then scroll
+        navigate("/", { state: { scrollTo: sectionId } });
+      }
     }
+  };
+
+  const scrollToSection = (sectionId) => {
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 500);
   };
 
   return (
@@ -65,7 +84,7 @@ const FooterLinks = () => {
                   onClick={(e) =>
                     item.route
                       ? handleClick(e, item.route)
-                      : item.sectionId && scrollToSection(item.sectionId)
+                      : item.sectionId && handleClick(e, null, item.sectionId)
                   }
                   target={item.url ? "_blank" : "_self"}
                   rel={item.url ? "noopener noreferrer" : ""}
