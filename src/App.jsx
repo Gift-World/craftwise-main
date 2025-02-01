@@ -10,7 +10,7 @@ import EmergingLeadersProgram from "./pages/minipages/EmergingLeadersProgram";
 import NewManagersProgram from "./pages/minipages/NewManagersProgram";
 import RisingProfessionalsProgram from "./pages/minipages/RisingProfessionalsProgram";
 import LegacyLeadersProgram from "./pages/minipages/LegacyLeadersProgram";
-
+import ScrollToTop from "./ScrollToTop";
 // Initialize Google Analytics
 ReactGA.initialize("G-C083LV0PVF"); // Replace with your actual GA4 Measurement ID
 
@@ -24,6 +24,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/managers" element={<NewManagersProgram />} />
         <Route path="/emerging" element={<EmergingLeadersProgram />} />

@@ -57,7 +57,7 @@ const NewManagersProgram = () => {
   };
 
   return (
-    <>
+    < >
       <ProgramPage {...programData} />
       <Footer />
     </>
