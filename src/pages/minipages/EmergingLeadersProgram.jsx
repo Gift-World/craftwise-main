@@ -6,7 +6,7 @@ const EmergingLeadersProgram = () => {
   const programData = {
     title: "EMERGING & ADVANCED LEADERS PROGRAMME",
     subtitle: "Step into Senior Leadership with Confidence",
-    backgroundImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80",
+    backgroundImage: "https://i.imgur.com/1NTh8oR.png",
     title1: "Ready to Lead at the Next Level?",
     description: "Leadership is more than managing teams; it's about influencing strategy, driving transformation, and preparing for executive roles. The Emerging & Advanced Leaders Programme at CraftWise Academy is designed for high-potential professionals who are ready to step into senior leadership and navigate complex organizational challenges with clarity and impact.",
     duration: {
