@@ -75,13 +75,14 @@ const ProgramPage = ({
   return (
     <div className="min-h-screen">
       <motion.div 
-        className="relative h-[60vh] overflow-hidden"
+        className="relative h-[80vh] overflow-hidden"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-       <div 
-  className="absolute inset-0 bg-contain bg-center bg-no-repeat transform hover:scale-105 transition-transform duration-700"
+       <div   
+      
+  className="absolute inset-0 bg-cover  bg-no-repeat transform hover:scale-105 transition-transform duration-700"
   style={{ backgroundImage: `url(${backgroundImage})` }}
 >
   <div className="absolute inset-0 bg-black bg-opacity-60" />
