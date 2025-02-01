@@ -58,18 +58,6 @@ const NewManagersProgram = () => {
   return (
     <>
       <ProgramPage {...programData} />
-      <div className="bg-gray-100 py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Tools & Resources</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {programData.tools.map((tool, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <p className="text-gray-700">{tool}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
       <Footer />
     </>
   );
