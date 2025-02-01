@@ -36,7 +36,7 @@ const TeamSection = () => {
       }
     };
 
-    const intervalId = setInterval(scroll, 30);
+    const intervalId = setInterval(scroll, 20);
     return () => clearInterval(intervalId);
   }, []);
 
