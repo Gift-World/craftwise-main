@@ -83,9 +83,7 @@ const ProgramPage = ({
       >
        <div   
       
-  className="absolute inset-0 w-full min-h-screen overflow-hidden 
-             bg-no-repeat bg-center sm:bg-contain md:bg-cover 
-             transform hover:scale-105 transition-transform duration-700"
+  className="inset-0 bg-cover  bg-no-repeat absolute min-h-screen overflow-hidden transform hover:scale-105 transition-transform duration-700"
   style={{ backgroundImage: `url(${backgroundImage})` }}
 >
   <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -238,7 +236,7 @@ const ProgramPage = ({
             </motion.p>
           </motion.div>
           <div
-  className="bg-gradient-to-r from-orange-700 via-orange-700 to-orange-700 text-white shadow-lg p-8 mb-16 hover:shadow-2xl transition-shadow duration-300 rounded-xl"
+  className="bg-gradient-to-r from-orange-500 via-orange-500 to-orange-500 text-white shadow-lg p-8 mb-16 hover:shadow-2xl transition-shadow duration-300 rounded-xl"
 >
   <h3 className="text-2xl font-montserrat font-bold mb-6 text-center">Program Duration & Format</h3>
   <div className="grid md:grid-cols-2 gap-8">
