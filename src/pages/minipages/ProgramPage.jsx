@@ -88,7 +88,7 @@ const ProgramPage = ({
   <div className="absolute inset-0 bg-black bg-opacity-60" />
 </div>
 
-        <div className="relative h-full flex items-center justify-center text-white px-4">
+        <div className="relative h-full flex items-center justify-center text-white pt-12 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ const ProgramPage = ({
           >
             <motion.h2 
               variants={itemVariants}
-              className="text-3xl font-black font-montserrat text-gray-800 mb-4"
+              className="text-3xl font-black font-montserrat text-orange-500 mb-4"
             >
               {title1}
             </motion.h2>
@@ -158,7 +158,7 @@ const ProgramPage = ({
                       {feature.icon}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg">{feature.title}</h3>
+                      <h3 className="text-orange-500 font-semibold text-lg">{feature.title}</h3>
                       <p className="text-gray-600">{feature.description}</p>
                     </div>
                   </motion.div>
@@ -199,10 +199,10 @@ const ProgramPage = ({
     {tools.map((tool, index) => {
       // Define an array of unique background gradients for each card
       const bgGradients = [
-        "bg-gradient-to-r from-blue-500 to-indigo-500",
-        "bg-gradient-to-r from-green-400 to-teal-500",
-        "bg-gradient-to-r from-orange-400 to-red-500",
-        "bg-gradient-to-r from-purple-500 to-pink-500",
+        "bg-gradient-to-r from-orange-700 to-orange-700",
+        "bg-gradient-to-r from-white to-white",
+        "bg-gradient-to-r from-orange-700 to-orange-700",
+        "bg-gradient-to-r from-white to-white",
       ];
       return (
         <motion.div
@@ -212,7 +212,7 @@ const ProgramPage = ({
           className={`p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 
             ${bgGradients[index % bgGradients.length]} text-white`}
         >
-          <p className="font-montserrat">{tool}</p>
+          <p className=" text-black font-montserrat">{tool}</p>
         </motion.div>
       );
     })}
@@ -235,7 +235,7 @@ const ProgramPage = ({
             </motion.p>
           </motion.div>
           <div
-  className="bg-gradient-to-r from-orange-500 via-orange-300 to-yellow-700 text-white shadow-lg p-8 mb-16 hover:shadow-2xl transition-shadow duration-300 rounded-xl"
+  className="bg-gradient-to-r from-orange-700 via-orange-700 to-orange-700 text-white shadow-lg p-8 mb-16 hover:shadow-2xl transition-shadow duration-300 rounded-xl"
 >
   <h3 className="text-2xl font-montserrat font-bold mb-6 text-center">Program Duration & Format</h3>
   <div className="grid md:grid-cols-2 gap-8">
