@@ -83,7 +83,7 @@ const ProgramPage = ({
       >
        <div   
       
-  className="absolute inset-0 bg-cover  bg-no-repeat transform hover:scale-105 transition-transform duration-700"
+  className="inset-0 bg-cover  bg-no-repeat absolute min-h-screen overflow-hidden transform hover:scale-105 transition-transform duration-700"
   style={{ backgroundImage: `url(${backgroundImage})` }}
 >
   <div className="absolute inset-0 bg-black bg-opacity-60" />
