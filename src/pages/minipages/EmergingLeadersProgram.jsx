@@ -47,7 +47,8 @@ const EmergingLeadersProgram = () => {
       "Elite Network & Mentorship – Connect with experienced executives",
       "Capstone Project for Real-World Application – Showcase your leadership"
     ],
-    outcome: "Future senior leaders are built today. Be part of an elite cohort of professionals driving meaningful change in their organizations. Next Cohort Begins Soon!",
+    outcome: " Apply Now – Your Leadership Evolution Starts Here Future senior leaders are built today. Be part of an elite cohort of professionals driving meaningful change in their organizations. Next Cohort Begins Soon – Secure your spot now!",
+    outcome1:"  Leaders equipped to handle complex challenges and drive organizational transformation",
     eligibility: [
       "Mid-Level Managers & High-Potential Leaders – Take the next step toward senior leadership",
       "Department Heads & Functional Leaders – Expand your strategic influence",

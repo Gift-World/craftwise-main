@@ -47,7 +47,8 @@ const LegacyLeadersProgram = () => {
       "Bespoke Leadership Development – Curated experiences tailored to your leadership aspirations and organizational impact.",
       "Elite Networking & Influence Expansion – Connect with global changemakers, legacy builders, and thought leaders shaping the future."
     ],
-    outcome: "Only a select number of leaders are admitted into each cohort. Join this prestigious leadership experience and shape a legacy that transcends generations. Next Cohort Begins Soon!",
+    outcome: "Apply Now – Leave a Mark That Endures Only a select number of leaders are admitted into each cohort. Join this prestigious leadership experience and shape a legacy that transcends generations. Next Cohort Begins Soon – Apply today!",
+    outcome1:" Senior leaders who inspire, innovate, and build a thriving organizational culture.",
     eligibility: [
       "CEOs, Board Members & Senior Executives – Elevate your leadership influence and long-term vision.",
       "Accomplished Entrepreneurs – Ensure your business thrives beyond your tenure.",

@@ -47,7 +47,8 @@ const NewManagersProgram = () => {
       "Simulated Scenarios – Practice real-world leadership challenges in a risk-free environment.",
       "Performance Tracking Dashboard – Measure your growth and leadership effectiveness."
     ],
-    outcome: "Confident, people-focused managers who inspire, drive success, and lead with clarity. A structured approach to handling difficult conversations, team dynamics, and performance management. The ability to motivate teams, align goals, and create a thriving workplace culture.",
+    outcome: " Ready to become the leader your team looks up to? Join the New Managers Programme and start your leadership journey today! Apply Now – Spaces are limited!",
+   outcome1:"Confident, empathetic managers capable of inspiring and driving team success.",
     eligibility: [
       "Newly promoted managers stepping into leadership roles.",
       "High-potential employees preparing for a managerial transition.",

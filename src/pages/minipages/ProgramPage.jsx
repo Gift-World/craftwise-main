@@ -12,6 +12,7 @@ const ProgramPage = ({
   features, 
   tools,
   outcome,
+  outcome1,
   duration,
   eligibility 
 }) => {
@@ -199,10 +200,10 @@ const ProgramPage = ({
     {tools.map((tool, index) => {
       // Define an array of unique background gradients for each card
       const bgGradients = [
-        "bg-gradient-to-r from-orange-700 to-orange-700",
-        "bg-gradient-to-r from-white to-white",
-        "bg-gradient-to-r from-orange-700 to-orange-700",
-        "bg-gradient-to-r from-white to-white",
+        "bg-gradient-to-r from-orange-500 to-orange-500",
+        "bg-gradient-to-r from-orange-500 to-orange-500",
+        "bg-gradient-to-r from-orange-500 to-orange-500",
+        "bg-gradient-to-r from-orange-500 to-orange-500",
       ];
       return (
         <motion.div
@@ -212,7 +213,7 @@ const ProgramPage = ({
           className={`p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 
             ${bgGradients[index % bgGradients.length]} text-white`}
         >
-          <p className=" text-black font-montserrat">{tool}</p>
+          <p className=" text-white font-montserrat">{tool}</p>
         </motion.div>
       );
     })}
@@ -231,7 +232,7 @@ const ProgramPage = ({
               variants={itemVariants}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              {outcome}
+              {outcome1}
             </motion.p>
           </motion.div>
           <div
@@ -309,7 +310,14 @@ const ProgramPage = ({
                 Apply Now
               </button>
             </motion.a>
+            
           </motion.div>
+          <motion.p 
+              variants={itemVariants}
+              className="text-xl text-black p-6 mx-auto"
+            >
+              {outcome}
+            </motion.p>
         </div>
       </div>
 

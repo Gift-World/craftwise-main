@@ -47,7 +47,8 @@ const RisingProfessionalsProgram = () => {
       "High-Impact Curriculum – Designed with top employers to meet industry demands",
       "Strong Professional Network – Connect with industry leaders & like-minded peers"
     ],
-    outcome: "Seats are limited, and demand is high! Don’t miss out on the ultimate career accelerator. Apply now and secure your spot.",
+    outcome: "Seats are limited, and demand is high! Don’t miss out on the ultimate career accelerator. Next Cohort Starts Soon – Apply today!",
+    outcome1:" Confident, efficient, and well-connected professionals ready to thrive in their first 100 days",
     eligibility: [
       "Fresh Graduates & Job Seekers – Land your first job and hit the ground running",
       "Young Professionals (0–3 years experience) – Fast-track your growth and stand out",
