@@ -5,7 +5,7 @@ import "./index.css";
 import App from "./App.jsx";
 
 // Initialize Google Analytics with your Measurement ID
-ReactGA.initialize("G-VVVPM0YHQH"); // Replace with your actual Measurement ID
+ReactGA.initialize("G-G8QQVJ969P"); // Replace with your actual Measurement ID
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
