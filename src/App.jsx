@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
 import Navbar from "./components/Navbar";
@@ -17,7 +17,6 @@ ReactGA.initialize("G-G8QQVJ969P"); // Replace with your actual GA4 Measurement 
 
 const App = () => {
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: location.pathname });
