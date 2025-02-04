@@ -18,10 +18,12 @@ ReactGA.initialize("G-453EHGH7V6P"); // Replace with your actual GA4 Measurement
 const App = () => {
   const location = useLocation();
 
+  // Track page views on route changes
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: location.pathname });
   }, [location]);
 
+  // Scroll to specific sections when "scrollTo" state is present
   useEffect(() => {
     if (location.state?.scrollTo) {
       const sectionId = location.state.scrollTo;
@@ -33,6 +35,23 @@ const App = () => {
       }, 500); // Ensures scrolling happens after page load
     }
   }, [location]);
+
+  // Dynamically load the Google Analytics script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-453EHGH7V6P";
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-453EHGH7V6P");
+    };
+  }, []);
 
   return (
     <>
