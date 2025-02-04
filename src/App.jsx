@@ -13,14 +13,21 @@ import LegacyLeadersProgram from "./pages/minipages/LegacyLeadersProgram";
 import ScrollToTop from "./ScrollToTop";
 
 // Initialize Google Analytics
-ReactGA.initialize("G-G8QQVJ969P"); // Replace with your actual GA4 Measurement ID
+ReactGA.initialize("G-453EHGH7V6"); // Replace with your GA4 Measurement ID
 
-const App = () => {
+// Component to track page views
+const AnalyticsTracker = () => {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
   }, [location]);
+
+  return null;
+};
+
+const App = () => {
+  const location = useLocation();
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -38,6 +45,7 @@ const App = () => {
     <>
       <Navbar />
       <ScrollToTop />
+      <AnalyticsTracker />
       <Routes>
         <Route path="/managers" element={<NewManagersProgram />} />
         <Route path="/emerging" element={<EmergingLeadersProgram />} />
