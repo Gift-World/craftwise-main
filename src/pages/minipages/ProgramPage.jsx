@@ -39,7 +39,6 @@ const ProgramPage = ({
     );
     const mailtoLink = `mailto:joy@craftwiseacademy.com?subject=${subject}&body=${body}&from=${formData.email}`;
     window.location.href = mailtoLink;
-    
     setShowForm(false);
   };
 
