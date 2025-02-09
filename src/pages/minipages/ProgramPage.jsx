@@ -37,8 +37,8 @@ const ProgramPage = ({
       `Phone: ${formData.phone}\n\n` +
       `Message: ${formData.message}`
     );
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=joy@craftwiseacademy.com&su=${subject}&body=${body}`;
-    window.open(gmailLink, '_blank');
+    const mailtoLink = `mailto:joy@craftwiseacademy.com?subject=${subject}&body=${body}&from=${formData.email}`;
+    window.location.href = mailtoLink;
     
     setShowForm(false);
   };
