@@ -31,16 +31,31 @@ const ProgramPage = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
+  
     const subject = encodeURIComponent(`Program Interest from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
       `Phone: ${formData.phone}\n\n` +
       `Message: ${formData.message}`
     );
-    const mailtoLink = `mailto:joy@craftwiseacademy.com?subject=${subject}&body=${body}&from=${formData.email}`;
-    window.location.href = mailtoLink;
+  
+    // Attempt to open Gmail Web App first
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=joy@craftwiseacademy.com&su=${subject}&body=${body}`;
+    
+    const newTab = window.open(gmailLink, "_blank");
+  
+    // If the tab didn't open (likely due to browser restrictions), fall back to mailto:
+    setTimeout(() => {
+      if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
+        const mailtoLink = `mailto:joy@craftwiseacademy.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
+      }
+    }, 1000); // Wait 1 second before falling back
+  
     setShowForm(false);
   };
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },
