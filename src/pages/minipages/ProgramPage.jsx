@@ -40,18 +40,27 @@ const ProgramPage = ({
       `Message: ${formData.message}`
     );
   
-    // Attempt to open Gmail Web App first
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=joy@craftwiseacademy.com&su=${subject}&body=${body}`;
-    
-    const newTab = window.open(gmailLink, "_blank");
+    const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=joy@craftwiseacademy.com&su=${subject}&body=${body}`;
+    const mailtoLink = `mailto:joy@craftwiseacademy.com?subject=${subject}&body=${body}`;
   
-    // If the tab didn't open (likely due to browser restrictions), fall back to mailto:
-    setTimeout(() => {
-      if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
-        const mailtoLink = `mailto:joy@craftwiseacademy.com?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
-      }
-    }, 1000); // Wait 1 second before falling back
+    // Special link for Android (opens Gmail app directly)
+    const gmailIntent = `intent://compose?to=joy@craftwiseacademy.com&subject=${subject}&body=${body}#Intent;scheme=mailto;package=com.google.android.gm;end;`;
+  
+    if (/Android/i.test(navigator.userAgent)) {
+      // Try opening Gmail app on Android
+      window.location.href = gmailIntent;
+    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      // Try opening Gmail on iOS using the mailto link
+      window.location.href = mailtoLink;
+    } else {
+      // Try opening Gmail Web on desktop or fallback to mailto
+      const newTab = window.open(gmailWebLink, "_blank");
+      setTimeout(() => {
+        if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
+          window.location.href = mailtoLink;
+        }
+      }, 1000);
+    }
   
     setShowForm(false);
   };
