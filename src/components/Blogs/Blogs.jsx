@@ -76,8 +76,8 @@ function Blogs() {
             transition={{ duration: 1 }}
             className="text-center text-white"
           >
-            <h1 className="text-5xl font-bold mb-4">Our Blog</h1>
-            <p className="text-xl max-w-2xl mx-auto">
+            <h1 className="text-5xl font-montserrat font-bold mb-4">Our Blog</h1>
+            <p className="text-xl font-montserrat max-w-2xl mx-auto">
               Insights and advice from our team of experts on leadership, career growth, and organizational development
             </p>
           </motion.div>
@@ -85,7 +85,7 @@ function Blogs() {
       </div>
 
       {/* Blog Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl font-montserrat mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {articles.map((article, index) => (
           <BlogSection key={article.id} article={article} index={index} />
         ))}

@@ -79,7 +79,7 @@ const BuiltToLast = () => {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          <span className="text-orange-600">Back to Articles</span>
+          <span className="text-orange-600 font-montserrat ">Back to Articles</span>
         </motion.button>
 
         <motion.article 
@@ -124,10 +124,10 @@ const BuiltToLast = () => {
                 
                 {article.subheadings.map((subheading, index) => (
                   <div key={index} className="mt-8">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-orange-500 pb-2">
+                    <h2 className="text-2xl font-montserrat font-bold text-gray-800 mb-4 border-b-2 border-orange-500 pb-2">
                       {subheading}
                     </h2>
-                    <p className="mt-4">{article.content[index + 1]}</p>
+                    <p className="mt-4 font-montserrat">{article.content[index + 1]}</p>
                   </div>
                 ))}
               </div>
