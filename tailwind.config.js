@@ -19,6 +19,8 @@ export default {
       },
       animation: {
         shine: 'shine 1.5s ease-out infinite',
+        'fade-in': 'fadeIn 0.5s ease-in',
+        'slide-up': 'slideUp 0.5s ease-out',
       },
       keyframes: {
         shine: {
