@@ -48,7 +48,7 @@ const articles = [
       At Craftwise Academy, we are committed to helping professionals and organizations create a skilled, emotionally intelligent, and future-ready workforce. Join us in shaping a legacy of excellence.
 
       Craftwise Academy is revolutionizing workplace training in Africa. Through practical, experiential learning, we equip professionals with the skills needed to thrive in today's workplace.`,
-    imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+    imageUrl: "https://i.imgur.com/potnzqb.jpeg",
     organization: "Craftwise Academy",
     followers: "18 followers",
     path: "/built-to-last"
@@ -61,7 +61,7 @@ function Blogs() {
       {/* Hero Section */}
       <div 
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.imgur.com/4jBBPw8.jpeg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           height: '70vh',

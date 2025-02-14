@@ -51,9 +51,9 @@ const BuiltToLast = () => {
 
       Craftwise Academy is revolutionizing workplace training in Africa. Through practical, experiential learning, we equip professionals with the skills needed to thrive in today's workplace.`
     ],
-    imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+    imageUrl: "https://i.imgur.com/potnzqb.jpeg",
     organization: "Craftwise Academy",
-    followers: "18 followers"
+    // followers: "18 followers"
   };
 
   return (
@@ -89,14 +89,7 @@ const BuiltToLast = () => {
           className="bg-white rounded-lg shadow-lg overflow-hidden"
         >
           <div className="p-6">
-            <motion.img
-              initial={{ scale: 1.1, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              src={article.imageUrl}
-              alt={article.title}
-              className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-8"
-            />
+           
             
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -118,13 +111,20 @@ const BuiltToLast = () => {
                 <span className="mx-2">•</span>
                 <span>{article.date}</span>
               </div>
-              
+              <motion.img
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              src={article.imageUrl}
+              alt={article.title}
+              className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-8"
+            />
               <div className="prose lg:prose-xl text-gray-700 leading-relaxed">
                 <p>{article.content[0]}</p>
                 
                 {article.subheadings.map((subheading, index) => (
                   <div key={index} className="mt-8">
-                    <h2 className="text-2xl font-montserrat font-bold text-gray-800 mb-4 border-b-2 border-orange-500 pb-2">
+                    <h2 className=" font-montserrat text-gray-800 mt-4">
                       {subheading}
                     </h2>
                     <p className="mt-4 font-montserrat">{article.content[index + 1]}</p>
