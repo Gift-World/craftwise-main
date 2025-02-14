@@ -119,7 +119,7 @@ const BuiltToLast = () => {
               alt={article.title}
               className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-8"
             />
-              <div className="prose lg:prose-xl text-gray-700 leading-relaxed">
+              <div className="prose lg:prose-xl p-16 text-gray-700 leading-relaxed">
                 <p>{article.content[0]}</p>
                 
                 {article.subheadings.map((subheading, index) => (
