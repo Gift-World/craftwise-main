@@ -101,7 +101,7 @@ onClick={() => setIsMenuOpen((prev) => !prev)}
               className="font-montserrat font-medium text-[15px]  inline-flex items-center px-1 pt-1 text-gray-700 hover:text-orange-500 transition-colors focus:outline-none"
 onClick={() => setIsMenuOpen((prev) => !prev)}
             >
-             News % Insights
+             News & Insights
             </Link>
             <Link
               to="/contact"
