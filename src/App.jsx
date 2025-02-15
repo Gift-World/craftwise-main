@@ -10,7 +10,10 @@ import EmergingLeadersProgram from "./pages/minipages/EmergingLeadersProgram";
 import NewManagersProgram from "./pages/minipages/NewManagersProgram";
 import RisingProfessionalsProgram from "./pages/minipages/RisingProfessionalsProgram";
 import LegacyLeadersProgram from "./pages/minipages/LegacyLeadersProgram";
+// import Apps from "./pages/Apps";
 import ScrollToTop from "./ScrollToTop";
+import BuiltToLast from "./components/Blogs/BuiltToLast";
+import Blogs from "./components/Blogs/Blogs";
 
 // Initialize Google Analytics
 ReactGA.initialize("G-453EHGH7V6"); // Replace with your GA4 Measurement ID
@@ -55,7 +58,10 @@ const App = () => {
         <Route path="/programs" element={<Programs />} />
         <Route path="/benefits" element={<BenefitsSection />} />
         <Route path="/contact" element={<ContactSection />} />
-      </Routes>
+        {/* <Route path="/blogs" element={<Apps />} /> */}
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/built-to-last" element={<BuiltToLast />} />
+     </Routes>
     </>
   );
 };
