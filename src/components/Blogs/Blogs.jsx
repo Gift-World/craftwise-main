@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import BlogSection from './BlogSection';
+import Footer from '../Footer/Footer';
 
 const articles = [
   {
@@ -90,6 +91,7 @@ function Blogs() {
           <BlogSection key={article.id} article={article} index={index} />
         ))}
       </main>
+      <Footer />
     </div>
   );
 }
