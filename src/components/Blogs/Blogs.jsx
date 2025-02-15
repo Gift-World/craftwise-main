@@ -50,7 +50,7 @@ const articles = [
       Craftwise Academy is revolutionizing workplace training in Africa. Through practical, experiential learning, we equip professionals with the skills needed to thrive in today's workplace.`,
     imageUrl: "https://i.imgur.com/potnzqb.jpeg",
     organization: "Craftwise Academy",
-    followers: "18 followers",
+    // followers: "18 followers",
     path: "/built-to-last"
   }
 ];
