@@ -60,6 +60,7 @@ const TalentBridge = () => {
   return (
     < >
       <TalentPage {...programData} />
+      
       <Footer />
     </>
   );

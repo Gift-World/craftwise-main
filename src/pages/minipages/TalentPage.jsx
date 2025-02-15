@@ -187,8 +187,19 @@ const TalentPage = ({
                       <h3 className="text-orange-500 font-semibold text-lg">{feature.title}</h3>
                       <p className="text-gray-600">{feature.description}</p>
                     </div>
+                    
                   </motion.div>
+                  
                 ))}
+                <h3 className='font-montserrat font-semibold text-[16px]'>Secure your access to top-tier talent today!</h3>
+                <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setShowForm(true)}
+              className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
+            >
+              Get Pre-Vetted Talent
+            </motion.button>
               </div>
             </motion.div>
 
@@ -215,8 +226,21 @@ const TalentPage = ({
                   </motion.div>
                 ))}
               </div>
+              <h3 className='font-montserrat mt-7 font-semibold text-[16px]'>🔥 Invest in your career today for just KES 10,000.
+              </h3>
+              <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setShowForm(true)}
+              className="bg-orange-500 text-white px-8 mt-7 py-3 rounded-full hover:bg-orange-600 transform transition-all"
+            >
+              Get Hired Faster
+            </motion.button>
+
             </motion.div>
+            
           </div>
+
 
           <motion.div
   variants={containerVariants}
@@ -225,6 +249,7 @@ const TalentPage = ({
   className="text-center mb-16"
 >
   <h2 className="text-3xl font-montserrat font-bold mb-8">Why CraftWise Talent Bridge?</h2>
+  <h4 className="font-montserrat p-5">Unlike job boards or traditional recruitment firms, we do more than match resumes.</h4>
   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
     {tools.map((tool, index) => {
       // Define an array of unique background gradients for each card
@@ -249,106 +274,25 @@ const TalentPage = ({
   </div>
 </motion.div>
 
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl  font-montserrat font-bold mb-4">Program Outcome</h2>
-            <motion.p 
-              variants={itemVariants}
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
-            >
-              {outcome1}
-            </motion.p>
-          </motion.div>
-          <div
-  className="bg-gradient-to-r from-orange-500 via-orange-500 to-orange-500 text-white shadow-lg p-8 mb-16 hover:shadow-2xl transition-shadow duration-300 rounded-xl"
->
-  <h3 className="text-2xl font-montserrat font-bold mb-6 text-center">Program Duration & Format</h3>
-  <div className="grid md:grid-cols-2 gap-8">
-    <motion.div 
-      className="space-y-4"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <motion.div 
-        variants={itemVariants}
-        className="flex items-center space-x-3"
-      >
-        <span className="text-2xl">📅</span>
-        <span className="text-lg font-montserrat font-semibold">{duration.weeks}</span>
-      </motion.div>
-      <motion.div 
-        variants={itemVariants}
-        className="flex items-center space-x-3"
-      >
-        <span className="text-2xl">🎓</span>
-        <span className="text-lg font-montserrat">{duration.format}</span>
-      </motion.div>
-    </motion.div>
-    <motion.div 
-      className="space-y-3 font-montserrat"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      {duration.components.map((component, index) => (
-        <motion.div
-          key={index}
-          variants={itemVariants}
-          className="flex items-start space-x-2"
-          whileHover={{ x: 10 }}
-          transition={{ duration: 0.2 }}
-        >
-          <FaCheck className="text-green-300 mt-1 flex-shrink-0" />
-          <span>{component}</span>
-        </motion.div>
-      ))}
-    </motion.div>
-  </div>
-</div>
-
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            className="flex justify-center font-montserrat space-x-6"
-          >
-            
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setShowForm(true)}
-              className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
-            >
-              Express Interest
-            </motion.button>
-            <motion.a 
-              href="https://0au0uzstrck.typeform.com/to/EcsAcnpt" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transform transition-all">
-                Apply Now
-              </button>
-            </motion.a>
-            
-          </motion.div>
-          <motion.p 
-              variants={itemVariants}
-              className="text-xl text-black p-6 mx-auto"
-            >
-              {outcome}
-            </motion.p>
+        
         </div>
+       
       </div>
+      <div className="bg-secondary text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-8">The Future of Hiring & Career Success Starts Here</h2>
+          <p className="mb-8 max-w-2xl mx-auto">CraftWise Talent Bridge isn't just another job-matching platform—it's a game-changer for businesses and ambitious professionals.</p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <button className="bg-orange-700 text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">
+              Get Pre-Vetted Talent
+            </button>
+            <button className="bg-orange-700 text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">
+              Get Hired Faster
+            </button>
+          </div>
+        </div>
+        </div>
+      
 
       {showForm && (
         <motion.div
