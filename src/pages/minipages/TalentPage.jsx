@@ -164,13 +164,14 @@ const TalentPage = ({
 
         
 
-          <div ref={ref} className="grid md:grid-cols-2 gap-12 mb-16">
+          <div ref={ref} className="flex   mb-16   gap-8 ">
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
+              className='bg-orange-500 p-7'
             >
-              <h2 className="text-3xl font-montserrat font-bold mb-8">📌 For Employers: Get Job-Ready Talent with ZERO Hiring Fees</h2>
+              <h2 className="text-3xl text-white font-montserrat font-bold mb-8"> For Employers: Get Job-Ready Talent with ZERO Hiring Fees</h2>
               <h4 className='font-montserrat text-[15px] font-semibold mb-7'>Hiring the wrong person is costly. What if you could get high-quality, pre-trained professionals ready to deliver from Day 1—at no cost?</h4>
               <div className="font-montserrat space-y-6">
                 {features.map((feature, index) => (
@@ -178,17 +179,18 @@ const TalentPage = ({
                     key={index}
                     variants={itemVariants}
                     whileHover={scaleVariants.hover}
-                    className="flex items-start space-x-4 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                    className="flex items-start space-x-4 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
                   >
                     <div className="bg-orange-500 p-3 rounded-full">
                       {feature.icon}
                     </div>
                     <div>
-                      <h3 className="text-orange-500 font-semibold text-lg">{feature.title}</h3>
-                      <p className="text-gray-600">{feature.description}</p>
+                      <h3 className="text-black font-semibold text-lg">{feature.title}</h3>
+                      <p className="text-white">{feature.description}</p>
                     </div>
                     
                   </motion.div>
+                  
                   
                 ))}
                 <h3 className='font-montserrat font-semibold text-[16px]'>Secure your access to top-tier talent today!</h3>
@@ -196,38 +198,52 @@ const TalentPage = ({
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowForm(true)}
-              className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
+              className="bg-black text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
             >
               Get Pre-Vetted Talent
             </motion.button>
               </div>
             </motion.div>
 
+            <div className="w-1 relative ">
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-500 via-pink-500 to-blue-500 animate-gradient bg-[length:400%_400%]"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-3 h-3 bg-white rounded-full shadow-md"></div>
+              </div>
+              <div className="absolute top-1/4 inset-x-0 flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full shadow-md"></div>
+              </div>
+              <div className="absolute bottom-1/4 inset-x-0 flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full shadow-md"></div>
+              </div>
+            </div>
+
+
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
+              className='bg-secondary w-[1600px] p-7'
             >
-              <h2 className="text-3xl font-bold font-montserrat mb-8">🚀 For Job Seekers: Your Shortcut to a High-Paying Job Starts Here</h2>
+              <h2 className="text-3xl font-bold text-white font-montserrat mb-8"> For Job Seekers: Your Shortcut to a High-Paying Job Starts Here</h2>
               <h4 className='font-montserrat text-[15px] font-semibold mb-7'>You’re doing everything right—so why aren’t you getting hired?
               Most job seekers lack the workplace skills that employers actually want.</h4>
-              <h3 className='font-montserrat font-bold text-[15px] mb-5'>Rising Professionals gives you an unfair advantage:</h3>
+              
+              
 
-              <div className="font-montserrat space-y-4">
+              <div className="font-montserrat  space-y-4">
                 {eligibility.map((item, index) => (
                   <motion.div
                     key={index}
                     variants={itemVariants}
                     whileHover={scaleVariants.hover}
-                    className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                    className="flex items-center space-x-3  p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
                   >
-                    <FaCheck className="text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
+                    <FaCheck className="text-orange-500 flex-shrink-0" />
+                    <span className="text-white">{item}</span>
                   </motion.div>
                 ))}
               </div>
-              <h3 className='font-montserrat mt-7 font-semibold text-[16px]'>🔥 Invest in your career today for just KES 10,000.
-              </h3>
               <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -283,12 +299,22 @@ const TalentPage = ({
           <h2 className="text-3xl font-bold mb-8">The Future of Hiring & Career Success Starts Here</h2>
           <p className="mb-8 max-w-2xl mx-auto">CraftWise Talent Bridge isn't just another job-matching platform—it's a game-changer for businesses and ambitious professionals.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <button className="bg-orange-700 text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">
+          <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setShowForm(true)}
+              className="bg-orange-600 text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
+            >
               Get Pre-Vetted Talent
-            </button>
-            <button className="bg-orange-700 text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all">
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setShowForm(true)}
+              className="bg-orange-500 text-white px-8  py-3 rounded-full hover:bg-orange-600 transform transition-all"
+            >
               Get Hired Faster
-            </button>
+            </motion.button>
           </div>
         </div>
         </div>
