@@ -164,7 +164,7 @@ const TalentPage = ({
 
         
 
-          <div ref={ref} className="flex   mb-16   gap-8 ">
+          <div ref={ref} className="md:grid-cols-2  mb-16 flex items-stretch gap-8 ">
             <motion.div
               variants={containerVariants}
               initial="hidden"
