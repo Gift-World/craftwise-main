@@ -6,7 +6,7 @@ const TalentBridge = () => {
   const programData = {
     title: "CraftWise Talent Bridge",
     subtitle: "Top Talent. Zero Hiring Costs. Real Career Breakthroughs. Real Results.",
-    backgroundImage: "https://i.imgur.com/Y94ziMX.png",
+    backgroundImage: "https://i.imgur.com/LK115l9.jpeg",
     // title1: "Ready to Become the Leader Your Team Looks Up To?",
     // description: "The leap from top performer to successful manager is one of the biggest shifts in a professional’s career. The New Managers Programme is designed to equip you with the leadership, communication, and strategic thinking skills needed to lead with confidence, earn respect, and inspire high-performing teams.",
     duration: {
