@@ -209,6 +209,18 @@ const TalentPage = ({
       </motion.button>
     </div>
   </motion.div>
+  <div className="w-1 relative ">
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-500 via-pink-500 to-blue-500 animate-gradient bg-[length:400%_400%]"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-3 h-3 bg-white rounded-full shadow-md"></div>
+              </div>
+              <div className="absolute top-1/4 inset-x-0 flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full shadow-md"></div>
+              </div>
+              <div className="absolute bottom-1/4 inset-x-0 flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full shadow-md"></div>
+              </div>
+            </div>
 
   {/* Job Seekers Section */}
   <motion.div
