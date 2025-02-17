@@ -164,98 +164,92 @@ const TalentPage = ({
 
         
 
-          <div ref={ref} className="md:grid-cols-2  mb-16 flex items-stretch gap-8 ">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              className='bg-orange-500 p-7'
-            >
-              <h2 className="text-3xl text-white font-montserrat font-bold mb-8"> For Employers: Get Job-Ready Talent with ZERO Hiring Fees</h2>
-              <h4 className='font-montserrat text-[15px] font-semibold mb-7'>Hiring the wrong person is costly. What if you could get high-quality, pre-trained professionals ready to deliver from Day 1—at no cost?</h4>
-              <div className="font-montserrat space-y-6">
-                {features.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    variants={itemVariants}
-                    whileHover={scaleVariants.hover}
-                    className="flex items-start space-x-4 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-                  >
-                    <div className="bg-orange-500 p-3 rounded-full">
-                      {feature.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-black font-semibold text-lg">{feature.title}</h3>
-                      <p className="text-white">{feature.description}</p>
-                    </div>
-                    
-                  </motion.div>
-                  
-                  
-                ))}
-                <h3 className='font-montserrat font-semibold text-[16px]'>Secure your access to top-tier talent today!</h3>
-                <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setShowForm(true)}
-              className="bg-black text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
-            >
-              Get Pre-Vetted Talent
-            </motion.button>
-              </div>
-            </motion.div>
-
-            <div className="w-1 relative ">
-              <div className="absolute inset-0 bg-gradient-to-b from-purple-500 via-pink-500 to-blue-500 animate-gradient bg-[length:400%_400%]"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-3 h-3 bg-white rounded-full shadow-md"></div>
-              </div>
-              <div className="absolute top-1/4 inset-x-0 flex items-center justify-center">
-                <div className="w-2 h-2 bg-white rounded-full shadow-md"></div>
-              </div>
-              <div className="absolute bottom-1/4 inset-x-0 flex items-center justify-center">
-                <div className="w-2 h-2 bg-white rounded-full shadow-md"></div>
-              </div>
-            </div>
-
-
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              className='bg-secondary w-[1600px] p-7'
-            >
-              <h2 className="text-3xl font-bold text-white font-montserrat mb-8"> For Job Seekers: Your Shortcut to a High-Paying Job Starts Here</h2>
-              <h4 className='font-montserrat text-[15px] font-semibold mb-7'>You’re doing everything right—so why aren’t you getting hired?
-              Most job seekers lack the workplace skills that employers actually want.</h4>
-              
-              
-
-              <div className="font-montserrat  space-y-4">
-                {eligibility.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    variants={itemVariants}
-                    whileHover={scaleVariants.hover}
-                    className="flex items-center space-x-3  p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-                  >
-                    <FaCheck className="text-orange-500 flex-shrink-0" />
-                    <span className="text-white">{item}</span>
-                  </motion.div>
-                ))}
-              </div>
-              <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setShowForm(true)}
-              className="bg-orange-500 text-white px-8 mt-7 py-3 rounded-full hover:bg-orange-600 transform transition-all"
-            >
-              Get Hired Faster
-            </motion.button>
-
-            </motion.div>
-            
+          <div ref={ref} className="flex flex-col md:flex-row mb-16 gap-8">
+  {/* Employers Section */}
+  <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    animate={inView ? "visible" : "hidden"}
+    className="bg-orange-500 p-7 w-full md:w-1/2"
+  >
+    <h2 className="text-3xl text-white font-montserrat font-bold mb-8">
+      For Employers: Get Job-Ready Talent with ZERO Hiring Fees
+    </h2>
+    <h4 className="font-montserrat text-[15px] font-semibold mb-7">
+      Hiring the wrong person is costly. What if you could get high-quality, pre-trained professionals ready to deliver from Day 1—at no cost?
+    </h4>
+    
+    <div className="font-montserrat space-y-6">
+      {features.map((feature, index) => (
+        <motion.div
+          key={index}
+          variants={itemVariants}
+          whileHover={scaleVariants.hover}
+          className="flex items-start space-x-4 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+        >
+          <div className="bg-orange-500 p-3 rounded-full">
+            {feature.icon}
           </div>
+          <div>
+            <h3 className="text-black font-semibold text-lg">{feature.title}</h3>
+            <p className="text-white">{feature.description}</p>
+          </div>
+        </motion.div>
+      ))}
+      <h3 className="font-montserrat font-semibold text-[16px]">
+        Secure your access to top-tier talent today!
+      </h3>
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setShowForm(true)}
+        className="bg-black text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
+      >
+        Get Pre-Vetted Talent
+      </motion.button>
+    </div>
+  </motion.div>
+
+  {/* Job Seekers Section */}
+  <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    animate={inView ? "visible" : "hidden"}
+    className="bg-secondary p-7 w-full md:w-1/2"
+  >
+    <h2 className="text-3xl font-bold text-white font-montserrat mb-8">
+      For Job Seekers: Your Shortcut to a High-Paying Job Starts Here
+    </h2>
+    <h4 className="font-montserrat text-[15px] font-semibold mb-7">
+      You’re doing everything right—so why aren’t you getting hired? 
+      Most job seekers lack the workplace skills that employers actually want.
+    </h4>
+
+    <div className="font-montserrat space-y-4">
+      {eligibility.map((item, index) => (
+        <motion.div
+          key={index}
+          variants={itemVariants}
+          whileHover={scaleVariants.hover}
+          className="flex items-center space-x-3 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+        >
+          <FaCheck className="text-orange-500 flex-shrink-0" />
+          <span className="text-white">{item}</span>
+        </motion.div>
+      ))}
+    </div>
+
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={() => setShowForm(true)}
+      className="bg-orange-500 text-white px-8 mt-7 py-3 rounded-full hover:bg-orange-600 transform transition-all"
+    >
+      Get Hired Faster
+    </motion.button>
+  </motion.div>
+</div>
+
 
 
           <motion.div
