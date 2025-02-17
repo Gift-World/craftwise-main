@@ -57,6 +57,12 @@ const Navbar = () => {
               Programmes
             </Link>
             <Link
+              to="/talent"
+              className="font-montserrat font-medium text-[15px]  inline-flex items-center px-1 pt-1 text-gray-700 hover:text-orange-500 transition-colors focus:outline-none"
+            >
+              Talent Bridge
+            </Link>
+            <Link
               to="/blogs"
               className="font-montserrat font-medium text-[15px]  inline-flex items-center px-1 pt-1 text-gray-700 hover:text-orange-500 transition-colors focus:outline-none"
             >
@@ -95,6 +101,13 @@ onClick={() => setIsMenuOpen((prev) => !prev)}
 onClick={() => setIsMenuOpen((prev) => !prev)}
             >
               Programmes
+            </Link>
+            <Link
+              to="/talent"
+              className="font-montserrat font-medium text-[15px]  inline-flex items-center px-1 pt-1 text-gray-700 hover:text-orange-500 transition-colors focus:outline-none"
+onClick={() => setIsMenuOpen((prev) => !prev)}
+            >
+             Talent Bridge
             </Link>
             <Link
               to="/blogs"
