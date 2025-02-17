@@ -35,11 +35,7 @@ const TalentBridge = () => {
         description: "Build a continuous stream of skilled professionals—ready when you need them. Strengthen your employer brand by partnering with a mission-driven talent accelerator.",
         icon: <FaSyncAlt className="text-white text-xl" />
       },
-      {
-        title: "Personal Leadership Brand",
-        description: "Define your leadership identity, communicate your vision, and earn trust from your team.",
-        icon: <FaLightbulb className="text-white text-xl" />
-      }
+      
     ],
     tools: [
       "Zero Hiring Fees for Employers",
@@ -52,8 +48,8 @@ const TalentBridge = () => {
     eligibility: [
       " Master the skills top employers demand (communication, workflow management, professional networking).",
       " Gain direct access to job openings in reputable companies.",
-      "Get fast-tracked for interviews with companies hiring RIGHT NOW.",
-      "Join a program where 80%+ of graduates land jobs in just 90 days!"
+      "Get fast-tracked for interviews with companies hiring RIGHT NOW."
+      
     ]
   };
 
