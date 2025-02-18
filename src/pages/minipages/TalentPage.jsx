@@ -173,8 +173,9 @@ const TalentPage = ({
     className=" p-7 w-full md:w-1/2"
   >
     <h2 className="text-3xl text-black font-montserrat font-bold mb-8">
-      For Employers: Get Job-Ready Talent with ZERO Hiring Fees
+      For Employers:
     </h2>
+    <h3 className='font-bold text-orange-500 font-montserrat text-[20px]'> Get Job-Ready Talent with ZERO Hiring Fees</h3>
     <h4 className="font-montserrat text-[15px] text-gray-600 font-semibold mb-7">
       Hiring the wrong person is costly. What if you could get high-quality, pre-trained professionals ready to deliver from Day 1—at no cost?
     </h4>
@@ -219,8 +220,9 @@ const TalentPage = ({
     className=" p-7 w-full md:w-1/2"
   >
     <h2 className="text-3xl font-bold text-black font-montserrat mb-8">
-      For Job Seekers: Your Shortcut to a High-Paying Job Starts Here
+      For Job Seekers: 
     </h2>
+    <h3 className="font-bold text-orange-500 font-montserrat text-[20px]"> Your Shortcut to a High-Paying Job Starts Here</h3>
     <h4 className="font-montserrat text-[15px] text-gray-600 font-semibold mb-7">
       You’re doing everything right—so why aren’t you getting hired? 
       Most job seekers lack the workplace skills that employers actually want.
@@ -292,7 +294,7 @@ const TalentPage = ({
       <div className="bg-secondary text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">The Future of Hiring & Career Success Starts Here</h2>
-          <p className="mb-8 max-w-2xl mx-auto">CraftWise Talent Bridge isn't just another job-matching platform—it's a game-changer for businesses and ambitious professionals.</p>
+          <p className="mb-8 max-w-2xl mx-auto font-montserrat">CraftWise Talent Bridge isn't just another job-matching platform—it's a game-changer for businesses and ambitious professionals.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
           <motion.button
               whileHover={{ scale: 1.05 }}
