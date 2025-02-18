@@ -298,7 +298,7 @@ const TalentPage = ({
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowForm(true)}
-              className="bg-orange-600 text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
+              className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
             >
               Get Pre-Vetted Talent
             </motion.button>
