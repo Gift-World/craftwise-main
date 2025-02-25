@@ -7,7 +7,7 @@ const articles = [
     id: 1,
     title: "Built to Last: How to Create a Career & Organization That Thrives for Generations",
     author: "George Munge",
-    date: "February 13, 2025",
+    date: "February 25, 2025",
     excerpt: "In today's fast-changing world, many careers and businesses rise and fall at an alarming rate. Short-term trends often dictate success, but some professionals and organizations break the cycle to achieve lasting impact...",
     content: `In today's fast-changing world, many careers and businesses rise and fall at an alarming rate. Short-term trends often dictate success, but some professionals and organizations break the cycle to achieve lasting impact. What sets them apart? How do they future-proof themselves in a world obsessed with quick wins? Jim Collins' Built to Last: Successful Habits of Visionary Companies uncovers that long-term success isn't about luck or a single brilliant idea. It's about having a solid foundation, embracing a visionary mindset, and committing to continuous growth. Whether you're an ambitious young professional, a middle manager, or a C-suite executive, these lessons can transform your approach to career and business success.
 

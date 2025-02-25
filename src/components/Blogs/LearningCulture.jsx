@@ -7,7 +7,7 @@ const LearningCulture = () => {
   const article = {
     title: "How Organizations Can Build a Learning Culture for Continuous Growth",
     author: "George Munge",
-    date: "February 15, 2025",
+    date: "February 25, 2025",
     subheadings: [
       "Understanding a Learning Culture",
       "The Business Case for Workplace Learning",
