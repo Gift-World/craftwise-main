@@ -14,6 +14,7 @@ import ScrollToTop from "./ScrollToTop";
 import BuiltToLast from "./components/Blogs/BuiltToLast";
 import Blogs from "./components/Blogs/Blogs";
 import TalentBridge from "./pages/minipages/TalentBridge";
+import LearningCulture from "./components/Blogs/LearningCulture";
 
 // Initialize Google Analytics
 ReactGA.initialize("G-453EHGH7V6"); // Replace with your GA4 Measurement ID
@@ -61,6 +62,7 @@ const App = () => {
         <Route path="/talent" element={<TalentBridge />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/built-to-last" element={<BuiltToLast />} />
+        <Route path ="/learning-culture" element={<LearningCulture />} />
      </Routes>
     </>
   );
