@@ -33,29 +33,37 @@ const ContactSection = () => {
       return;
     }
 
-    const mailtoLink = `mailto:info@craftwiseacademy.com?subject=Message from ${formData.name}&body=Name: ${formData.name}%0AEmail: ${formData.email}%0AMessage:%0A${formData.message}`;
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:\n${formData.message}`
+    );
+    const recipient = "info@craftwiseacademy.com";
+
+    // Default email app (Apple Mail, Outlook, etc.)
+    const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2,
-      },
-    },
+  const openGmail = () => {
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:\n${formData.message}`
+    );
+    const recipient = "info@craftwiseacademy.com";
+
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+    window.open(gmailLink, "_blank");
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5 },
-    },
+  const openOutlook = () => {
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:\n${formData.message}`
+    );
+    const recipient = "info@craftwiseacademy.com";
+
+    const outlookLink = `https://outlook.live.com/mail/deeplink/compose?to=${recipient}&subject=${subject}&body=${body}`;
+    window.open(outlookLink, "_blank");
   };
 
   return (
@@ -65,119 +73,96 @@ const ContactSection = () => {
           ref={sectionRef}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, staggerChildren: 0.2 },
+            },
+          }}
           id="contact"
           className="relative overflow-hidden py-16"
         >
-          <motion.div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-gradient" />
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div className="text-center mb-12" variants={itemVariants}>
-              <h2
-                style={{ fontFamily: "Nexa " }}
-                className="text-4xl font-bold text-white mb-4"
-              >
-                Contact Us
-              </h2>
-              <p
-                style={{ fontFamily: "Nexa " }}
-                className="text-white/80 text-2xl"
-              >
+            <motion.div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Contact Us</h2>
+              <p className="text-white/80 text-2xl">
                 Get in touch with the CraftWise Academy team
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <motion.div
-                className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
-                variants={itemVariants}
-              >
+              {/* Contact Form */}
+              <motion.div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl">
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   {formError && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className="bg-red-500/10 border border-red-500/20 text-red-200 text-center p-3 rounded-lg"
-                    >
+                    <motion.div className="bg-red-500/10 border border-red-500/20 text-red-200 text-center p-3 rounded-lg">
                       <p>{formError}</p>
                     </motion.div>
                   )}
 
-                  <motion.div variants={itemVariants}>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-white/90 mb-2"
-                    >
+                  <div>
+                    <label className="block text-sm font-medium text-white/90 mb-2">
                       Name
                     </label>
                     <input
                       type="text"
-                      id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all duration-300"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/50"
                       placeholder="Your Name"
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.div variants={itemVariants}>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-white/90 mb-2"
-                    >
+                  <div>
+                    <label className="block text-sm font-medium text-white/90 mb-2">
                       Email
                     </label>
                     <input
                       type="email"
-                      id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all duration-300"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/50"
                       placeholder="your@email.com"
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.div variants={itemVariants}>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-white/90 mb-2"
-                    >
+                  <div>
+                    <label className="block text-sm font-medium text-white/90 mb-2">
                       Message
                     </label>
                     <textarea
-                      id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       rows="4"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all duration-300"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/50"
                       placeholder="Your message..."
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.button
-                    type="submit"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    style={{ fontFamily: "Nexa " }}
-                    className="w-full bg-secondary text-white py-4 px-6 rounded-lg font-semibold shadow-lg hover:bg-secondary/90 hover:shadow-xl text-2xl transition-all duration-300"
-                  >
-                    Send Message
-                  </motion.button>
+                  {/* Email Send Options */}
+                  <div className="grid grid-cols-3 gap-4">
+                    
+                    <button
+                      type="button"
+                      onClick={openGmail}
+                      className="bg-orange-700 text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:bg-orange-500 transition-all duration-300"
+                    >
+                      Send Message
+                    </button>
+                    
+                  </div>
                 </form>
               </motion.div>
 
-              <motion.div
-                className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl"
-                variants={itemVariants}
-              >
+              {/* Contact Info */}
+              <motion.div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl">
                 <div className="space-y-8">
-                  <h3
-                    style={{ fontFamily: "Nexa " }}
-                    className="text-2xl font-semibold text-white mb-8"
-                  >
+                  <h3 className="text-2xl font-semibold text-white mb-8">
                     Contact Information
                   </h3>
 
@@ -195,30 +180,20 @@ const ContactSection = () => {
                     {
                       icon: FaEnvelope,
                       title: "Email",
-                      content: "INFO@CRAFTWISEACADEMY.COM",
+                      content: "info@craftwiseacademy.com",
                     },
                   ].map((item, index) => (
-                    <motion.div
-                      key={index}
-                      className="flex items-start space-x-4 group"
-                      whileHover={{ x: 10 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <div className="p-4 bg-secondary/20 rounded-xl group-hover:bg-secondary/30 transition-colors duration-300">
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="p-4 bg-secondary/20 rounded-xl">
                         <item.icon className="text-white text-xl" />
                       </div>
                       <div>
-                        <h4
-                          style={{ fontFamily: "Nexa " }}
-                          className="font-medium text-white text-lg mb-1"
-                        >
+                        <h4 className="font-medium text-white text-lg mb-1">
                           {item.title}
                         </h4>
-                        <p className="text-white/70 group-hover:text-white transition-colors duration-300">
-                          {item.content}
-                        </p>
+                        <p className="text-white/70">{item.content}</p>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </motion.div>
