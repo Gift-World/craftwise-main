@@ -9,7 +9,7 @@ const PosterSection = () => {
     description: `Your first 100 days in a new role set the foundation for your long-term success. 
     But how do you navigate expectations, build credibility, and make an impact—without feeling overwhelmed? 
     Join this expert-led, interactive Masterclass to learn more. Spots are limited!`,
-    link: "https://bit.ly/CraftwiseAcademyMasterClass2025",
+    link: "https://zoom.us/webinar/register/WN_bZKioxAzTLmGMLNomZxCBA",
     imageUrl: "https://i.imgur.com/eD7f1dz.jpeg", // Replace with actual image URL
   };
 
