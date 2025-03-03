@@ -64,7 +64,7 @@ const App = () => {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/built-to-last" element={<BuiltToLast />} />
         <Route path ="/learning-culture" element={<LearningCulture />} />
-        <Route path ="/risingposter" element={<PosterSection />} />
+        <Route path ="/masterclass2025" element={<PosterSection />} />
      </Routes>
     </>
   );

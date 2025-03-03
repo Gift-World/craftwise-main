@@ -19,7 +19,7 @@ const articles = [
     imageUrl: "https://i.imgur.com/eD7f1dz.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/risingposter"
+    path: "/masterclass2025"
   },
   {
     id: 2,
