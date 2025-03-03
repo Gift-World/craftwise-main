@@ -1,6 +1,7 @@
-import ProgramPage from '../minipages/ProgramPage';
+import RisingPage from '../minipages/RisingPage';
 import Footer from '../../components/Footer/Footer';
 import { FaChartLine, FaUsers, FaSyncAlt, FaLightbulb } from 'react-icons/fa';
+// import PosterSection from '../../components/PosterSection';  
 
 const RisingProfessionalsProgram = () => {
   const programData = {
@@ -59,7 +60,8 @@ const RisingProfessionalsProgram = () => {
 
   return (
     <div id="rising">
-      <ProgramPage {...programData} />
+    
+      <RisingPage {...programData} />
       <Footer />
     </div>
   );

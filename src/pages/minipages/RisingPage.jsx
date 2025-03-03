@@ -2,9 +2,10 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
+import PosterSection from '../../components/PosterSection';  
 
 
-const ProgramPage = ({ 
+const RisingPage = ({ 
   title, 
   subtitle,
   title1,
@@ -140,6 +141,7 @@ const ProgramPage = ({
           </motion.div>
         </div>
       </motion.div>
+      <PosterSection />
 
       <div className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
@@ -427,4 +429,4 @@ const ProgramPage = ({
   );
 };
 
-export default ProgramPage;
+export default RisingPage;
