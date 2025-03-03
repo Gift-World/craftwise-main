@@ -5,6 +5,8 @@ import Footer from '../Footer/Footer';
 const articles = [
   {
     id: 1,
+    button: "👉 Register Now !!",
+    link: "https://bit.ly/CraftwiseAcademyMasterClass2025",
     title: "Your First 100 Days in a New Role",
     // author: "George Munge",
     // date: "February 25, 2025",

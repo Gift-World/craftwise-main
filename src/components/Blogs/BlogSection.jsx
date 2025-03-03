@@ -28,6 +28,14 @@ function BlogSection({ article, index }) {
           <span className="text-sm">{article.followers}</span>
         </div>
         <h2 className="text-3xl font-bold text-gray-800">{article.title}</h2>
+        <motion.a
+            href={article.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 font-montserrat text-[30px] inline-block text-orange-500 px-6 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
+          >
+            {article.button}
+          </motion.a>
         <div className="flex items-center text-gray-600 text-sm">
           <span>{article.author}</span>
           <span className="mx-2">•</span>
