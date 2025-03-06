@@ -26,8 +26,8 @@ const articles = [
     title: "The Myth of Perfect Strategy: Why Execution Matters More!",
     author: "PERIS WAMBUI  |  Head of Strategy @ HFC Kenya | Driving Business Growth with Resource Mobilization",
     date: "March 6, 2025",
-    excerpt: "Let’s be honest 🤷♂ most of us love a good strategy session. It’s like planning a dream vacation: mapping out every detail, imagining how smooth everything will go, picturing the perfect outcome. And then reality hits 😬 you miss your flight, lose your luggage, and ...",
-    content: ` Let’s be honest 🤷♂ most of us love a good strategy session. It’s like planning a dream vacation: mapping out every detail, imagining how smooth everything will go, picturing the perfect outcome. And then reality hits 😬 you miss your flight, lose your luggage, and end up eating questionable airport sandwiches. That’s what happens when execution doesn’t match strategy.
+    excerpt: "Let’s be honest, most of us love a good strategy session. It’s like planning a dream vacation: mapping out every detail, imagining how smooth everything will go, picturing the perfect outcome. And then reality hits 😬 you miss your flight, lose your luggage, and ...",
+    content: ` Let’s be honest, most of us love a good strategy session. It’s like planning a dream vacation: mapping out every detail, imagining how smooth everything will go, picturing the perfect outcome. And then reality hits 😬 you miss your flight, lose your luggage, and end up eating questionable airport sandwiches. That’s what happens when execution doesn’t match strategy.
 
 The Flawed Obsession with the ‘Perfect’ Strategy
 
@@ -42,9 +42,9 @@ Why Execution Goes Off the Rails 🚧
 Nobody Got the Memo 📩 If your team doesn’t understand the plan, good luck getting it done.
 Leadership in a Bubble - If leaders are too busy strategizing and not dealing with reality, execution falls apart.
 Change? No Thanks 🙅♂ Some companies resist change like a cat resists a bath 🐱💦 Adaptability is key!
-Set It and Forget It Syndrome ⏳ Execution isn’t a slow cooker 🍲 you have to check, tweak, and adjust constantly.
+Set It and Forget It Syndrome  Execution isn’t a slow cooker 🍲 you have to check, tweak, and adjust constantly.
 
-Finding the Sweet Spot 🍬
+Finding the Sweet Spot 
 
 Winning isn’t about having the fanciest plan. It’s about making things happen. Here’s how:
 
@@ -58,7 +58,7 @@ At the end of the day, strategy is just a fancy word for “what we plan to do.�
 What’s your take on execution vs. strategy? Have you seen a great strategy fail because of poor execution—or an average one succeed through sheer determination? Share your thoughts in the comments! 👇
 
 #StrategyExecution #BusinessGrowth #Leadership #ExecutionMatters #StrategyVsExecution #SuccessMindset #BusinessTips #GetItDone #Innovation #Entrepreneurship`,
-    imageUrl: "https://i.imgur.com/NuhymtZ.jpeg",
+    imageUrl: "https://i.imgur.com/fUkk0mV.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
     path: "/The-Myth-of-Perfect-Strategy"
