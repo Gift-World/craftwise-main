@@ -23,6 +23,49 @@ const articles = [
   },
   {
     id: 2,
+    title: "The Myth of Perfect Strategy: Why Execution Matters More!",
+    author: "PERIS WAMBUI  |  Head of Strategy @ HFC Kenya | Driving Business Growth with Resource Mobilization",
+    date: "March 6, 2025",
+    excerpt: "Let’s be honest, most of us love a good strategy session. It’s like planning a dream vacation: mapping out every detail, imagining how smooth everything will go, picturing the perfect outcome. And then reality hits 😬 you miss your flight, lose your luggage, and ...",
+    content: ` Let’s be honest, most of us love a good strategy session. It’s like planning a dream vacation: mapping out every detail, imagining how smooth everything will go, picturing the perfect outcome. And then reality hits 😬 you miss your flight, lose your luggage, and end up eating questionable airport sandwiches. That’s what happens when execution doesn’t match strategy.
+
+The Flawed Obsession with the ‘Perfect’ Strategy
+
+Some companies treat strategy like an ancient scroll 📜 sacred, untouchable, and the key to all wisdom. They spend months (or years!) refining it, convinced they’ve cracked the code. But here’s the catch 🤔 no matter how brilliant the plan, if you don’t execute it well, it’s as useful as a GPS with no signal. Markets change, competitors aren’t waiting, and customers? They have the attention span of a goldfish 🐠.Perfection is a fantasy.
+
+Execution: The Real MVP 🏆
+
+Execution is where the magic happens ✨ A mediocre plan executed with energy beats a flawless plan gathering dust. Look at Nokia and Apple 📱 Nokia had the tech and the talent but fumbled the execution. Apple? They nailed it with a relentless focus on making things work in real life, not just in boardrooms.
+
+Why Execution Goes Off the Rails 🚧
+
+Nobody Got the Memo 📩 If your team doesn’t understand the plan, good luck getting it done.
+Leadership in a Bubble - If leaders are too busy strategizing and not dealing with reality, execution falls apart.
+Change? No Thanks 🙅♂ Some companies resist change like a cat resists a bath 🐱💦 Adaptability is key!
+Set It and Forget It Syndrome  Execution isn’t a slow cooker 🍲 you have to check, tweak, and adjust constantly.
+
+Finding the Sweet Spot 
+
+Winning isn’t about having the fanciest plan. It’s about making things happen. Here’s how:
+
+Keep strategy simple and flexible (like a good stretch before a workout 🏋♀) 
+Hire leaders who know how to bridge the gap between planning and doing 👥 
+Make sure your team actually knows what’s expected and give them the power to act 💡 
+Track progress and be ready to pivot when needed (because nothing ever goes exactly to plan)
+
+At the end of the day, strategy is just a fancy word for “what we plan to do.” Execution is actually doing it. So, instead of aiming for the perfect plan, focus on making things happen 🚀 and don’t forget to enjoy the ride! 🎢
+
+What’s your take on execution vs. strategy? Have you seen a great strategy fail because of poor execution—or an average one succeed through sheer determination? Share your thoughts in the comments! 👇
+
+#StrategyExecution #BusinessGrowth #Leadership #ExecutionMatters #StrategyVsExecution #SuccessMindset #BusinessTips #GetItDone #Innovation #Entrepreneurship`,
+    imageUrl: "https://i.imgur.com/fUkk0mV.jpeg",
+    organization: "Craftwise Academy",
+    // followers: "18 followers",
+    path: "/The-Myth-of-Perfect-Strategy"
+  },
+ 
+  {
+    id: 3,
     title: "How Organizations Can Build a Learning Culture for Continuous Growth",
     author: "George Munge",
     date: "February 25, 2025",
@@ -96,7 +139,7 @@ The future belongs to organizations that invest in knowledge—because learning 
     path: "/learning-culture"
   },
   {
-    id: 3,
+    id: 4,
     title: "Built to Last: How to Create a Career & Organization That Thrives for Generations",
     author: "George Munge",
     date: "February 13, 2025",
