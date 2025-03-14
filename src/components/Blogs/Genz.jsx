@@ -115,7 +115,7 @@ ownership of your journey.
 Are we ready to stop complaining about Gen Z and start building the next generation of
 leaders?`
     ],
-    imageUrl: "https://i.imgur.com/NuhymtZ.jpeg",
+    imageUrl: "https://i.imgur.com/LSflXJU.jpeg",
     organization: "Craftwise Academy",
   };
 
