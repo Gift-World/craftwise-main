@@ -17,7 +17,7 @@ import TalentBridge from "./pages/minipages/TalentBridge";
 import LearningCulture from "./components/Blogs/LearningCulture";
 import PosterSection from "./components/PosterSection";
 import PerfectStrategy from "./components/Blogs/PerfectStrategy";
-
+import Genz from "./components/Blogs/Genz";
 // Initialize Google Analytics
 ReactGA.initialize("G-453EHGH7V6"); // Replace with your GA4 Measurement ID
 
@@ -67,6 +67,7 @@ const App = () => {
         <Route path ="/learning-culture" element={<LearningCulture />} />
         <Route path ="/masterclass2025" element={<PosterSection />} />
         <Route path ="/The-Myth-of-Perfect-Strategy" element={<PerfectStrategy />} />
+        <Route path ="/genz" element={<Genz />} />
 
      </Routes>
     </>
