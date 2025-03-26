@@ -4,6 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer/Footer';
 const programs = [
   {
+    title: "RISING PROFESSIONALS PROGRAMME",
+    subtitle: "Empowering Early Career Success",
+    description: "A foundational program designed to accelerate the growth of emerging professionals.",
+    image: "https://i.imgur.com/6GjLRZC.png",
+    path: "/rising"
+  },
+  {
     title: "NEW MANAGERS PROGRAMME",
     subtitle: "Transitioning from Individual Contributor to Leader",
     description: "A comprehensive program designed for new managers, focusing on essential leadership skills and team management fundamentals.",
@@ -23,14 +30,8 @@ const programs = [
     description: "An executive program focused on building lasting organizational impact and cultural transformation.",
     image: "https://i.imgur.com/qsWTkfs.png",
     path: "/legacy"
-  },
-  {
-    title: "RISING PROFESSIONALS PROGRAMME",
-    subtitle: "Empowering Early Career Success",
-    description: "A foundational program designed to accelerate the growth of emerging professionals.",
-    image: "https://i.imgur.com/6GjLRZC.png",
-    path: "/rising"
   }
+ 
 ];
 
 function ProgramSection({ program, index }) {
