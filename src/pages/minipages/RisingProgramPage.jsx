@@ -143,8 +143,10 @@ const RisingProgramPage = ({
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
+
+                      
                         >
-                          <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transform transition-all">
+                          <button className="bg-orange-500 font-montserrat font-bold text-white text-[27px] px-8 py-3 rounded-full hover:bg-blue-700 transform transition-all">
                             Apply Now
                           </button>
                         </motion.a>
