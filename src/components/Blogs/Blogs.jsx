@@ -23,6 +23,25 @@ const articles = [
   },
   {
     id: 2,
+    title: "Training & Development in the 21st Century: The Heartbeat of Effective Teams",
+    author: "Edwin Mutoro Situma",
+    date: "April 14, 2025",
+    excerpt: "In today’s fast-evolving workplace, characterized by global shifts, emerging technologies, and a rapidly diversifying workforce, training and development (T&D) is no longer a...",
+    content: `In today’s fast-evolving workplace, characterized by global shifts, emerging technologies, and a 
+rapidly diversifying workforce, training and development (T&D) is no longer a luxury—it’s a 
+lifeline. But not just any training. To be effective in the 21st century, T&D must be strategic, 
+inclusive, human-centered, and deeply integrated with organizational goals. When done right, it 
+doesn't just upgrade skills—it transforms teams.
+
+`,
+    imageUrl: "https://i.imgur.com/5CwT9hL.jpeg",
+    organization: "Craftwise Academy",
+    // followers: "18 followers",
+    path: "/Training&Development-in-the-21st-Century"
+  },
+  
+  {
+    id: 3,
     title: "Welcome to the Jungle: The Reality of the Modern Workplace",
     author: "Edwin Mutoro Situma",
     date: "March 14, 2025",
@@ -133,7 +152,7 @@ leaders?`,
     path: "/genz"
   },
   {
-    id: 3,
+    id: 4,
     title: "The Myth of Perfect Strategy: Why Execution Matters More!",
     author: "PERIS WAMBUI  |  Head of Strategy @ HFC Kenya | Driving Business Growth with Resource Mobilization",
     date: "March 6, 2025",
@@ -176,7 +195,7 @@ What’s your take on execution vs. strategy? Have you seen a great strategy fai
   },
  
   {
-    id: 4,
+    id: 5,
     title: "How Organizations Can Build a Learning Culture for Continuous Growth",
     author: "George Munge",
     date: "February 25, 2025",
@@ -250,7 +269,7 @@ The future belongs to organizations that invest in knowledge—because learning 
     path: "/learning-culture"
   },
   {
-    id: 5,
+    id: 6,
     title: "Built to Last: How to Create a Career & Organization That Thrives for Generations",
     author: "George Munge",
     date: "February 13, 2025",
