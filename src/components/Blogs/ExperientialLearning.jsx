@@ -73,7 +73,6 @@ in employee engagement and organizational performance.`,
      
 
       `
-
 • Higher Retention of Knowledge: Learners retain 75% of information when they practice
 by doing, compared to only 10% from reading (National Training Laboratories). 
 
