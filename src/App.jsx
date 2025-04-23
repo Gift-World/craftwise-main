@@ -19,6 +19,7 @@ import PosterSection from "./components/PosterSection";
 import PerfectStrategy from "./components/Blogs/PerfectStrategy";
 import Genz from "./components/Blogs/Genz";
 import TwentyFirstCentury from "./components/Blogs/TwentyFirstCentury"
+import ExperientialLearning from "./components/Blogs/ExperientialLearning";
 // Initialize Google Analytics
 ReactGA.initialize("G-453EHGH7V6"); // Replace with your GA4 Measurement ID
 
@@ -69,7 +70,8 @@ const App = () => {
         <Route path ="/masterclass2025" element={<PosterSection />} />
         <Route path ="/The-Myth-of-Perfect-Strategy" element={<PerfectStrategy />} />
         <Route path ="/genz" element={<Genz />} />
-        <Route path = "Training&Development-in-the-21st-Century" element ={<TwentyFirstCentury />} />
+        <Route path = "/Training&Development-in-the-21st-Century" element ={<TwentyFirstCentury />} />
+        <Route path = "/Experiential-Learning-Future-of-Corporate-Training" element ={<ExperientialLearning />} />
 
      </Routes>
     </>

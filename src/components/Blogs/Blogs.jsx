@@ -5,22 +5,24 @@ import Footer from '../Footer/Footer';
 const articles = [
   {
     id: 1,
-    button: "👉 Register Now !!",
-    link: "https://bit.ly/CraftwiseAcademyMasterClass2025",
-    title: "Your First 100 Days in a New Role",
-    // author: "George Munge",
-    // date: "February 25, 2025",
-    excerpt: "Your first 100 days in a new role set the foundation for your long-term success...",
-    content: `Your first 100 days in a new role set the foundation for your long-term success. 
-    But how do you navigate expectations, build credibility, and make an impact—without feeling overwhelmed? 
-    Join this expert-led, interactive Masterclass to learn more. Spots are limited!
+    title: "Why Experiential Learning Is the Future of Corporate Training in Africa",
+    author: "George Munge",
+    date: "April 23, 2025",
+    excerpt: "In today's rapidly evolving workplace, the gap between knowledge and performance has become increasingly evident.. While many African professionals hold technical qualifications and formal degrees,...",
+    content: `In today's rapidly evolving workplace, the gap between knowledge and performance has
+become increasingly evident. While many African professionals hold technical qualifications and
+formal degrees, they often struggle to translate this knowledge into impactful leadership and
+problem-solving in the workplace. This disconnect calls for a shift from traditional lecture-based
+training to more dynamic, engaging, and practical approaches. One solution stands out:
+experiential learning.
 
 `,
-    imageUrl: "https://i.imgur.com/eD7f1dz.jpeg",
+    imageUrl: "https://i.imgur.com/30Yy8SU.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/masterclass2025"
+    path: "/Experiential-Learning-Future-of-Corporate-Training"
   },
+  
   {
     id: 2,
     title: "Training & Development in the 21st Century: The Heartbeat of Effective Teams",
