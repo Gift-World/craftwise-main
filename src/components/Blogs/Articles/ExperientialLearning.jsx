@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../Footer/Footer';
+import Footer from '../../Footer/Footer';
 
 const ExperientialLearning = () => {
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ through experience, reflection, and application. Unlike passive forms of learnin
 or lectures, experiential learning involves active participation. Developed from the work of
 educational theorist David Kolb, the model emphasizes a cycle of concrete experience,
 reflective observation, abstract conceptualization, and active experimentation.
-In a corporate context, this could mean simulations, role-playing, on-the-job challenges, peer
+In a corporate context, this could mean simulations, role-playing, on-the-job challenges,peer
 collaboration, and feedback sessions. Instead of memorizing frameworks, learners apply them
 in real-time, refining their understanding through trial and reflection.`,
 ``,
@@ -105,7 +105,7 @@ here
 `
 
     ],
-    imageUrl: "https://i.imgur.com/30Yy8SU.jpeg",
+    imageUrl: "https://i.imgur.com/aHIguOT.jpeg",
     organization: "Craftwise Academy",
   };
 
