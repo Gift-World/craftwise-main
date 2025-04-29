@@ -76,7 +76,7 @@ At Craftwise Academy, we are proud to be lighting the path for Africa’s next g
 `
 
     ],
-    imageUrl: "https://i.imgur.com/30Yy8SU.jpeg",
+    imageUrl: "https://i.imgur.com/aHIguOT.jpeg",
     organization: "Craftwise Academy",
   };
 
