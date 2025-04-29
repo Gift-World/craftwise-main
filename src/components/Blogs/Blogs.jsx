@@ -21,7 +21,7 @@ the Emerging Managers Program that blend experiential learning with leadership p
 are crucial to shaping Africa's next generation of visionary lead
 
 `,
-    imageUrl: "https://i.imgur.com/30Yy8SU.jpeg",
+    imageUrl: "https://i.imgur.com/aHIguOT.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
     path: "/Bridging-the-Managerial-Gap"
