@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { FaLinkedin } from 'react-icons/fa';
 
 const teamMembers = [
+  { name: 'Harold Angila', image: '/harry.png', linkedin: 'https://www.linkedin.com/in/harold-angila?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
   { name: 'Pete Kariuki', image: 'https://i.imgur.com/rlRlE2z.png', linkedin: 'https://www.linkedin.com/in/pete-kariuki-48788767/' },
   { name: 'Terry Kiruki', image: 'https://i.imgur.com/DXxBjNY.png', linkedin: 'https://www.linkedin.com/in/terry-kiruki-mimano-b8317141/' },
   { name: 'Joe Gachira', image: 'https://i.imgur.com/QLu0K8p.png', linkedin: 'https://www.linkedin.com/in/joseph-gachira-27429626/' },
