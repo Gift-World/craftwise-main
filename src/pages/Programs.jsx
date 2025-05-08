@@ -118,12 +118,21 @@ function Programs() {
             <p className="text-xl max-w-2xl mx-auto">
               Empowering leaders and organizations through world-class education and development programs
             </p>
+         
           </motion.div>
          
         </div>
-        
+     
       </div>
-      {/* <Brochures /> */}
+      <div className="flex justify-start md:justify-start mt-4 px-4">
+        {/* This div will be aligned to the far right */}
+        <div className=" rounded-lg shadow-md">
+          <Brochures />
+          
+        </div>
+      </div>
+      
+      
 
       {/* Programs Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

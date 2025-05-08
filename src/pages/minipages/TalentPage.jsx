@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
+import Brochures from '../../components/Brochure/Brochures';
 
 const TalentPage = ({ 
   title, 
@@ -113,6 +114,7 @@ const TalentPage = ({
   <div className="absolute inset-0 bg-black bg-opacity-60" />
 </div>
 
+
         <div className="relative h-full flex items-center justify-center text-white  pt-32">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -137,9 +139,17 @@ const TalentPage = ({
               {subtitle}
             </motion.p>
           </motion.div>
+          
         </div>
+        
       </motion.div>
-
+      <div className="flex justify-start md:justify-start mt-4 px-4">
+        {/* This div will be aligned to the far right */}
+        <div className=" rounded-lg shadow-md">
+          <Brochures />
+          
+        </div>
+      </div>
       <div className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div

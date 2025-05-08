@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Footer from "../Footer/Footer";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-
+import Brochures from "../Brochure/Brochures";
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -69,6 +69,13 @@ const ContactSection = () => {
   return (
     <div>
       <div className="min-h-screen bg-orange-900 py-16">
+        <div className="flex justify-start md:justify-start mt-4 px-4">
+                {/* This div will be aligned to the far right */}
+                <div className=" rounded-lg shadow-md">
+                  <Brochures />
+                  
+                </div>
+              </div>
         <motion.section
           ref={sectionRef}
           initial="hidden"

@@ -1,6 +1,6 @@
 import TalentPage from '../minipages/TalentPage';
 import Footer from '../../components/Footer/Footer';
-import { FaChartLine, FaUsers, FaSyncAlt, FaLightbulb } from 'react-icons/fa';
+import { FaChartLine, FaUsers, FaSyncAlt } from 'react-icons/fa';
 
 const TalentBridge = () => {
   const programData = {

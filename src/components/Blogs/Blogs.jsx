@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import BlogSection from './BlogSection';
 import Footer from '../Footer/Footer';
-
+import Brochures from '../Brochure/Brochures';
 const articles = [
   {
     id: 1,
@@ -376,7 +376,13 @@ function Blogs() {
           </motion.div>
         </div>
       </div>
-
+      <div className="flex justify-start md:justify-start mt-4 px-4">
+        {/* This div will be aligned to the far right */}
+        <div className=" rounded-lg shadow-md">
+          <Brochures />
+          
+        </div>
+      </div>
       {/* Blog Content */}
       <main className="max-w-7xl font-montserrat mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {articles.map((article, index) => (
