@@ -1,6 +1,6 @@
 // import React from 'react'
 import { motion } from "framer-motion";
-
+import Brochures from "../components/Brochure/Brochures";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
@@ -30,8 +30,19 @@ function Home() {
           transition={{ duration: 0.5 }}
         >
           <Hero />
+          
         </motion.div>
+      
+      <div className="flex justify-end">
+        {/* This div will be aligned to the far right */}
+        <div className=" rounded-lg shadow-md">
+          <Brochures />
+        </div>
+      </div>
+    
         <About />
+        {/* <Brochures /> */}
+        
         <WhatWeDo />
         <SolutionSection />
         <OfficeLabsSection />

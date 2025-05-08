@@ -21,6 +21,8 @@ import Genz from "./components/Blogs/Articles/Genz";
 import TwentyFirstCentury from "./components/Blogs/Articles/TwentyFirstCentury"
 import ExperientialLearning from "./components/Blogs/Articles/ExperientialLearning";
 import ManagerialGap from "./components/Blogs/Articles/ManagerialGap";
+import Brochure from "./components/Brochure/Brochure";
+
 // Initialize Google Analytics
 ReactGA.initialize("G-453EHGH7V6"); // Replace with your GA4 Measurement ID
 
@@ -72,9 +74,10 @@ const App = () => {
         <Route path ="/The-Myth-of-Perfect-Strategy" element={<PerfectStrategy />} />
         <Route path ="/genz" element={<Genz />} />
         <Route path ="/Bridging-the-Managerial-Gap" element={<ManagerialGap />} />
-
         <Route path = "/Training&Development-in-the-21st-Century" element ={<TwentyFirstCentury />} />
         <Route path = "/Experiential-Learning-Future-of-Corporate-Training" element ={<ExperientialLearning />} />
+        <Route path ="/brochure" element={<Brochure />} />
+
 
      </Routes>
     </>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import BenefitCard from "./BenefitCard";
 import Footer from "../Footer/Footer";
+import Brochures from "../Brochure/Brochures";
 
 const benefits = [
   {
@@ -61,6 +62,7 @@ const BenefitsSection = () => {
               {benefits.map((benefit, index) => (
                 <BenefitCard key={index} {...benefit} />
               ))}
+              <Brochures />
             </div>
           </motion.div>
         </div>

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer/Footer';
+import Brochures from '../components/Brochure/Brochures';
 const programs = [
   {
     title: "RISING PROFESSIONALS PROGRAMME",
@@ -118,8 +119,11 @@ function Programs() {
               Empowering leaders and organizations through world-class education and development programs
             </p>
           </motion.div>
+         
         </div>
+        
       </div>
+      {/* <Brochures /> */}
 
       {/* Programs Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

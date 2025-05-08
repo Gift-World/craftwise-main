@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
-
 export default function Hero() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -68,6 +67,7 @@ export default function Hero() {
               </svg>
             </motion.button>
           </Link>
+         
         </motion.div>
     </div>
   );
