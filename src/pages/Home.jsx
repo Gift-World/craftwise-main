@@ -26,17 +26,17 @@ function Home() {
         <title>Craftwise Academy| Experience Learning, That Changes Everything.</title>
         <meta
           name="description"
-          content="We craft high-performing professionals to excel through hands-on learning, practical tools, and expert guidance that build confidence, spark innovation, and deliver real results"
+          content="Unlock your potential with the best learning programs. Join Craftwise Academy today!"
         />
-        <meta name="keywords" content="Craftwise, students, innovation, technology, campus battle, startups, leadership" />
+        <meta name="keywords" content="Craftwise, Corporate Leaders,Ambitious Professionals ,Organizations, Transformative Learning" />
         <link rel="canonical" href="https://craftwiseacademy.com/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="raftwise Academy| Experience Learning, That Changes Everything." />
+        <meta property="og:title" content="Craftwise Academy| Experience Learning, That Changes Everything." />
         <meta property="og:description" content="Join a continent-wide movement of student innovators and changemakers." />
         <meta property="og:url" content="https://craftwiseacademy.com/" />
-        <meta property="og:image" content="https://craftwiseacademy.com/images/og-cover.jpg" />
+        {/* <meta property="og:image" content="https://craftwiseacademy.com/images/og-cover.jpg" /> */}
 
         {/* Twitter */}
         {/* <meta name="twitter:card" content="summary_large_image" />
