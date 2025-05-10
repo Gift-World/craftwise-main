@@ -15,11 +15,35 @@ import TeamSection from "../TeamSection";
 import ImpactSection from "../components/Impact/ImpactSection";
 import PartnersSection from "../components/Partners/PartnersSection";
 import Footer from "../components/Footer/Footer";
+import { Helmet } from "react-helmet-async";
 // import Header from '../components/Header';
 
 function Home() {
   return (
     <div>
+       {/* 🔍 SEO META TAGS */}
+       <Helmet>
+        <title>Craftwise Academy| Experience Learning, That Changes Everything.</title>
+        <meta
+          name="description"
+          content="We craft high-performing professionals to excel through hands-on learning, practical tools, and expert guidance that build confidence, spark innovation, and deliver real results"
+        />
+        <meta name="keywords" content="Craftwise, students, innovation, technology, campus battle, startups, leadership" />
+        <link rel="canonical" href="https://craftwiseacademy.com/" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="raftwise Academy| Experience Learning, That Changes Everything." />
+        <meta property="og:description" content="Join a continent-wide movement of student innovators and changemakers." />
+        <meta property="og:url" content="https://craftwiseacademy.com/" />
+        <meta property="og:image" content="https://craftwiseacademy.com/images/og-cover.jpg" />
+
+        {/* Twitter */}
+        {/* <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Africa's Campus Battle | Empowering African Innovators" />
+        <meta name="twitter:description" content="A student-powered innovation platform for the next generation of African leaders." />
+        <meta name="twitter:image" content="https://africascampusbattle.org/images/og-cover.jpg" /> */}
+      </Helmet>
       <Navbar />
       <main>
         {/* <Navbar /> */}
