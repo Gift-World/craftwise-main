@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import BenefitCard from "./BenefitCard";
 import Footer from "../Footer/Footer";
 import Brochures from "../Brochure/Brochures";
-
+import { Helmet } from "react-helmet-async";
 const benefits = [
   {
     title: "Transformative Learning",
@@ -46,6 +46,22 @@ const BenefitsSection = () => {
 
   return (
     <div>
+       {/* SEO Meta Tags for Benefits Page */}
+       <Helmet>
+        <title>Craftwise Academy | Benefits of Transformative Learning</title>
+        <meta
+          name="description"
+          content="Explore the key benefits of joining Craftwise Academy, from transformative learning to career fulfillment."
+        />
+        <meta
+          name="keywords"
+          content="Craftwise Academy, Transformative Learning, Empathetic Leadership, Strategic Agility, Career Fuulfillment"
+        />
+        <link rel="canonical" href="https://craftwiseacademy.com/benefits" />
+
+       
+       
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-b from-white to-orange-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
