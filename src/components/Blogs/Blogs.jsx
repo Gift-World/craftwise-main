@@ -5,6 +5,27 @@ import Brochures from '../Brochure/Brochures';
 const articles = [
   {
     id: 1,
+    title: "Why Empathy Is Emerging as the Most Strategic Skill in Modern Leadership",
+    author: "Harold Ang'ila",
+    date: "May 16, 2025",
+    excerpt: "In today’s dynamic business environment—where change is constant, burnout is rising, and teams are more diverse than ever—one leadership skill is proving to be more powerful than once assumed: empathy.",
+    content: `In today’s dynamic business environment—where change is constant, burnout is rising, and
+teams are more diverse than ever—one leadership skill is proving to be more powerful than
+once assumed: empathy.
+Far from being a “soft” or sentimental trait, empathy is now recognised as a core leadership
+competency. Research from institutions like Harvard Business Review and McKinsey
+repeatedly point to empathy as a key driver of innovation, retention, collaboration, and
+performance. Yet, for many managers, empathy remains one of the hardest skills to
+consistently apply—especially when it’s not reciprocated.
+
+`,
+    imageUrl: "https://i.imgur.com/dvhezPi.jpeg",
+    organization: "Craftwise Academy",
+    // followers: "18 followers",
+    path: "/Empathy-as-the-most-Strategic-Skill"
+  },
+  {
+    id: 2,
     title: "Bridging the Managerial Gap: How African Companies Can Build Visionary Leaders from Within",
     author: "George Munge",
     date: "April 30, 2025",
@@ -28,7 +49,7 @@ are crucial to shaping Africa's next generation of visionary lead
   },
   
   {
-    id: 2,
+    id: 3,
     title: "Why Experiential Learning Is the Future of Corporate Training in Africa",
     author: "George Munge",
     date: "April 23, 2025",
@@ -48,7 +69,7 @@ experiential learning.
   },
   
   {
-    id: 3,
+    id: 4,
     title: "Training & Development in the 21st Century: The Heartbeat of Effective Teams",
     author: "Edwin Mutoro Situma",
     date: "April 14, 2025",
@@ -67,7 +88,7 @@ doesn't just upgrade skills—it transforms teams.
   },
   
   {
-    id: 4,
+    id: 5,
     title: "Welcome to the Jungle: The Reality of the Modern Workplace",
     author: "Edwin Mutoro Situma",
     date: "March 14, 2025",
@@ -178,7 +199,7 @@ leaders?`,
     path: "/genz"
   },
   {
-    id: 5,
+    id: 6,
     title: "The Myth of Perfect Strategy: Why Execution Matters More!",
     author: "PERIS WAMBUI  |  Head of Strategy @ HFC Kenya | Driving Business Growth with Resource Mobilization",
     date: "March 6, 2025",
@@ -221,7 +242,7 @@ What’s your take on execution vs. strategy? Have you seen a great strategy fai
   },
  
   {
-    id: 6,
+    id: 7,
     title: "How Organizations Can Build a Learning Culture for Continuous Growth",
     author: "George Munge",
     date: "February 25, 2025",
@@ -295,7 +316,7 @@ The future belongs to organizations that invest in knowledge—because learning 
     path: "/learning-culture"
   },
   {
-    id: 7,
+    id: 8,
     title: "Built to Last: How to Create a Career & Organization That Thrives for Generations",
     author: "George Munge",
     date: "February 13, 2025",
