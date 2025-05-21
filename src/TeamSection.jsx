@@ -7,7 +7,7 @@ const teamMembers = [
   { name: 'Terry Kiruki', image: 'https://i.imgur.com/DXxBjNY.png', linkedin: 'https://www.linkedin.com/in/terry-kiruki-mimano-b8317141/' },
   { name: 'Joe Gachira', image: 'https://i.imgur.com/QLu0K8p.png', linkedin: 'https://www.linkedin.com/in/joseph-gachira-27429626/' },
   { name: 'Maryann Somba', image: 'https://i.imgur.com/ejnhfW5.png', linkedin: 'https://www.linkedin.com/in/maryann-somba/' },
-  { name: 'Bernard Kariuki', image: 'https://i.imgur.com/oxpubqd.png', linkedin: 'https://www.linkedin.com/in/bernard-kariuki-a1709752/' },
+  // { name: 'Bernard Kariuki', image: 'https://i.imgur.com/oxpubqd.png', linkedin: 'https://www.linkedin.com/in/bernard-kariuki-a1709752/' },
   { name: 'Sheila Antoinnette', image: 'https://i.imgur.com/gwUpKbt.png', linkedin: 'https://www.linkedin.com/in/sheila-antoinette/' },
   { name: 'Ngibuini Mwaura', image: 'https://i.imgur.com/nk0SIDn.png', linkedin: 'https://www.linkedin.com/in/ngibuinimwaura/' },
   { name: 'Carol Kaye', image: 'https://i.imgur.com/Z7ifO8X.png', linkedin: 'https://www.linkedin.com/in/carolynekaye/' },
