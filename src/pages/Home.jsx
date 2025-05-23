@@ -23,12 +23,12 @@ function Home() {
     <div>
        {/* 🔍 SEO META TAGS */}
        <Helmet>
-        <title>Craftwise Academy| Experience Learning, That Changes Everything.</title>
-        <meta
+       <title>Craftwise Academy – Transformative Learning for Future Leaders</title>
+       <meta
           name="description"
           content="Unlock your potential with the best learning programs. Join Craftwise Academy today!"
         />
-        <meta name="keywords" content="Craftwise, Corporate Leaders,Ambitious Professionals ,Organizations, Transformative Learning" />
+        <meta name="keywords" content="Craftwise Academy,Craftwise,  Corporate Leaders,Ambitious Professionals ,Organizations, Transformative Learning" />
         <link rel="canonical" href="https://craftwiseacademy.com/" />
 
         
