@@ -46,12 +46,7 @@ function Home() {
           
         </motion.div>
       
-      <div className="flex justify-end">
-        {/* This div will be aligned to the far right */}
-        <div className=" rounded-lg shadow-md">
-          <Brochures />
-        </div>
-      </div>
+    
     
         <About />
         {/* <Brochures /> */}
