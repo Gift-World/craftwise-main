@@ -12,6 +12,11 @@ export default {
         accent: '#FFA500',
         textPrimary: "#ccd6f6",
         textSecondary: "#8892b0",
+        'craftwise-orange': '#FF7A00',
+        'craftwise-dark-orange': '#F26E21',
+        'craftwise-maroon': '#561C14',
+        'craftwise-brown': '#672218',
+        'craftwise-light': '#FFF9F5',
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'], // Default font

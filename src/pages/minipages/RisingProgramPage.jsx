@@ -138,7 +138,7 @@ const RisingProgramPage = ({
               {subtitle}
             </motion.p>
             <motion.a 
-                          href="https://www.surveymonkey.com/r/FMZKFK2" 
+                          href="https://forms.gle/6gWr9S4gYuBA3UDJ6" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.05 }}
@@ -338,7 +338,7 @@ const RisingProgramPage = ({
               Express Interest
             </motion.button>
             <motion.a 
-              href="https://www.surveymonkey.com/r/FMZKFK2" 
+              href="https://forms.gle/6gWr9S4gYuBA3UDJ6" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

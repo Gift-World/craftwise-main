@@ -114,9 +114,9 @@ function Programs() {
             transition={{ duration: 1 }}
             className="text-center text-white"
           >
-            <h1 className="text-5xl font-bold mb-4">Our Programs</h1>
+            <h1 className="text-5xl font-bold mb-4">Our Programmes</h1>
             <p className="text-xl max-w-2xl mx-auto">
-              Empowering leaders and organizations through world-class education and development programs
+              Empowering leaders and organizations through world-class education and development programmes
             </p>
          
           </motion.div>
