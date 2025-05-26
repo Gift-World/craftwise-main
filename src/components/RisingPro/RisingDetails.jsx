@@ -32,7 +32,7 @@ const RisingDetails = () => {
               </svg>
             </div>
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold">COST: 15,000 KSH</h3>
+              <h3 className="text-2xl md:text-3xl font-bold">INVESTMENT: 15,000 KSH</h3>
             </div>
           </div>
         </motion.div>

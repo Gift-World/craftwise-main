@@ -1,6 +1,7 @@
 // import React from 'react'
 import { motion } from "framer-motion";
-import Brochures from "../components/Brochure/Brochures";
+import { useState, useEffect } from 'react'
+import Modal from '../components/RisingPro/Modal'
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
@@ -20,6 +21,17 @@ import RisingPoster from "../components/RisingPro/RisingPoster";
 // import Header from '../components/Header';
 
 function Home() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Open the modal when the component mounts
+  useEffect(() => {
+    // Small delay to ensure smooth animation
+    const timer = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div>
        {/* 🔍 SEO META TAGS */}
@@ -46,7 +58,11 @@ function Home() {
           <Hero />
           
         </motion.div>
+        {/* <RisingPoster /> */}
+        
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <RisingPoster />
+      </Modal>
       
     
     
