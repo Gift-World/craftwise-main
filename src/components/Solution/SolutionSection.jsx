@@ -64,7 +64,7 @@ const SolutionSection = () => {
             className="relative"
           >
             <img 
-              src="https://i.imgur.com/0d15ose.jpeg"
+              src="/images/approach.avif"
               alt="Innovative learning"
               className="rounded-lg shadow-2xl"
             />
