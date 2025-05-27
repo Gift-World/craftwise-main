@@ -20,7 +20,7 @@ const RisingDetails = () => {
               </svg>
             </div>
             <div>
-              <h3 className="text-2xl font-montserrat md:text-3xl font-bold">START DATE: JULY, 2025</h3>
+              <h2 className="text-2xl font-montserrat md:text-3xl font-bold">START DATE: JULY, 2025</h2>
             </div>
           </div>
           
