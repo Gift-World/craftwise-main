@@ -55,6 +55,7 @@ function Modal({ isOpen, onClose, children }) {
               <button 
                 className="absolute top-4 right-4 bg-white text-gray-700 hover:text-black p-2 rounded-full shadow-md z-10"
                 onClick={onClose}
+                 aria-label="Close"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
