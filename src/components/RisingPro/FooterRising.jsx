@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 const MotionLink = motion(Link);
 
-const FooterRising = ({ applyLink}) => {
+const FooterRising = () => {
   return (
     <motion.div 
       className="py-8 px-4 flex flex-col md:flex-row items-center justify-center md:justify-between bg-white"
