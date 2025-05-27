@@ -2,24 +2,24 @@ import { useEffect, useRef } from 'react';
 import { FaLinkedin } from 'react-icons/fa';
 
 const teamMembers = [
-  { name: 'Harold Angila', image: '/harry.png', linkedin: 'https://www.linkedin.com/in/harold-angila?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-  { name: 'Pete Kariuki', image: 'https://i.imgur.com/rlRlE2z.png', linkedin: 'https://www.linkedin.com/in/pete-kariuki-48788767/' },
-  { name: 'Terry Kiruki', image: 'https://i.imgur.com/DXxBjNY.png', linkedin: 'https://www.linkedin.com/in/terry-kiruki-mimano-b8317141/' },
-  { name: 'Joe Gachira', image: 'https://i.imgur.com/QLu0K8p.png', linkedin: 'https://www.linkedin.com/in/joseph-gachira-27429626/' },
-  { name: 'Maryann Somba', image: 'https://i.imgur.com/ejnhfW5.png', linkedin: 'https://www.linkedin.com/in/maryann-somba/' },
+  { name: 'Harold Angila', image: '/images/harry.avif', linkedin: 'https://www.linkedin.com/in/harold-angila?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+  { name: 'Pete Kariuki', image: '/images/pete.avif', linkedin: 'https://www.linkedin.com/in/pete-kariuki-48788767/' },
+  { name: 'Terry Kiruki', image: '/images/terry.avif', linkedin: 'https://www.linkedin.com/in/terry-kiruki-mimano-b8317141/' },
+  { name: 'Joe Gachira', image: '/images/joe.avif', linkedin: 'https://www.linkedin.com/in/joseph-gachira-27429626/' },
+  { name: 'Maryann Somba', image: '/images/somba.avif', linkedin: 'https://www.linkedin.com/in/maryann-somba/' },
   // { name: 'Bernard Kariuki', image: 'https://i.imgur.com/oxpubqd.png', linkedin: 'https://www.linkedin.com/in/bernard-kariuki-a1709752/' },
-  { name: 'Sheila Antoinnette', image: 'https://i.imgur.com/gwUpKbt.png', linkedin: 'https://www.linkedin.com/in/sheila-antoinette/' },
-  { name: 'Ngibuini Mwaura', image: 'https://i.imgur.com/nk0SIDn.png', linkedin: 'https://www.linkedin.com/in/ngibuinimwaura/' },
-  { name: 'Carol Kaye', image: 'https://i.imgur.com/Z7ifO8X.png', linkedin: 'https://www.linkedin.com/in/carolynekaye/' },
-  { name: 'Edwin Mutoro', image: 'https://i.imgur.com/pJabNvR.png', linkedin: 'https://www.linkedin.com/in/edwinmutoro/?originalSubdomain=ke' },
-  { name: 'Nguka Ojwang', image: 'https://i.imgur.com/Nhf2Obx.png', linkedin: 'https://www.linkedin.com/in/nguka/' },
-  { name: 'Sylvia Njeri', image: 'https://i.imgur.com/Z0H1ghr.png', linkedin: 'https://www.linkedin.com/in/sylvia-githinji/' },
-  { name: 'Sam Kimera', image: 'https://i.imgur.com/JyJR0Tu.png', linkedin: 'https://www.linkedin.com/in/samkimera/' },
-  { name: 'Peris Wambui', image: 'https://i.imgur.com/FkFPQoG.png', linkedin: 'https://www.linkedin.com/in/peris-wambui-53547157/' },
-  { name: 'Joy Wangu', image: 'https://i.imgur.com/b230S9v.png', linkedin: ' https://www.linkedin.com/in/wangu-joy-b39285246/' },
-  { name: 'Nancy Gitonga', image: 'https://i.imgur.com/EC5fi0E.png', linkedin: ' https://www.linkedin.com/in/nancy-w-gitonga/' },
-  { name: 'George Munge', image: 'https://i.imgur.com/Hx2P5BG.png', linkedin: 'https://www.linkedin.com/in/george-munge-861ab8109/' },
-  { name: 'Denise Kibisu', image: 'https://i.imgur.com/7cYbZXv.png', linkedin: ' https://www.linkedin.com/in/denisekibisu/' }
+  { name: 'Sheila Antoinnette', image: '/images/sheila.avif', linkedin: 'https://www.linkedin.com/in/sheila-antoinette/' },
+  { name: 'Ngibuini Mwaura', image: '/images/ngibuini.avif', linkedin: 'https://www.linkedin.com/in/ngibuinimwaura/' },
+  { name: 'Carol Kaye', image: '/images/carol.avif', linkedin: 'https://www.linkedin.com/in/carolynekaye/' },
+  { name: 'Edwin Mutoro', image: '/images/edwin.avif', linkedin: 'https://www.linkedin.com/in/edwinmutoro/?originalSubdomain=ke' },
+  { name: 'Nguka Ojwang', image: '/images/nguka.avif', linkedin: 'https://www.linkedin.com/in/nguka/' },
+  { name: 'Sylvia Njeri', image: '/images/sylvia.avif', linkedin: 'https://www.linkedin.com/in/sylvia-githinji/' },
+  { name: 'Sam Kimera', image: '/images/sam.avif', linkedin: 'https://www.linkedin.com/in/samkimera/' },
+  { name: 'Peris Wambui', image: '/images/peris.avif', linkedin: 'https://www.linkedin.com/in/peris-wambui-53547157/' },
+  { name: 'Joy Wangu', image: '/images/joy.avif', linkedin: ' https://www.linkedin.com/in/wangu-joy-b39285246/' },
+  { name: 'Nancy Gitonga', image: '/images/nancy.avif', linkedin: ' https://www.linkedin.com/in/nancy-w-gitonga/' },
+  { name: 'George Munge', image: '/images/munge.avif', linkedin: 'https://www.linkedin.com/in/george-munge-861ab8109/' },
+  { name: 'Denise Kibisu', image: '/images/denise.avif', linkedin: ' https://www.linkedin.com/in/denisekibisu/' }
 ];
 
 const TeamSection = () => {
