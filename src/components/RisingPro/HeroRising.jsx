@@ -11,7 +11,7 @@ const HeroRising = () => {
       <div className="md:w-1/2 flex justify-center md:justify-start mb-6 md:mb-0">
         <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
           <img 
-            src="/images/popup.avif" 
+            src="/images/popup.webp" 
             alt="Young professionals smiling" 
             className="w-full h-full object-cover rounded-full"
           />
