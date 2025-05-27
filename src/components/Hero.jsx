@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <div 
     style={{
-      backgroundImage: "url('https://i.imgur.com/nPmR0FH.png')",
+      backgroundImage: "url('/images/banner.avif')",
       backgroundSize: "cover", // Ensures the image covers the entire div
       backgroundPosition: "center", // Centers the image
       backgroundRepeat: "no-repeat", // Prevents tiling

@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="">
             <Link to="/">
               <img
-                src="https://i.imgur.com/XcKmpWW.png"
+                src="/images/logo1.avif"
                 alt="logo"
                 className="h-36 object-contain w-auto md:w-56 -ml-5 md:-ml-14 -mt-5 md:-mt-6"
               />
