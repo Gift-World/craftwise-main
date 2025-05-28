@@ -23,6 +23,7 @@ import ExperientialLearning from "./components/Blogs/Articles/ExperientialLearni
 import ManagerialGap from "./components/Blogs/Articles/ManagerialGap";
 import Brochure from "./components/Brochure/Brochure";
 import Empathy from "./components/Blogs/Articles/Empathy";
+import EmotionalIntelligence from "./components/Blogs/Articles/EmotionalIntelligence";
 
 // Initialize Google Analytics
 ReactGA.initialize("G-453EHGH7V6"); // Replace with your GA4 Measurement ID
@@ -79,6 +80,8 @@ const App = () => {
         <Route path = "/Experiential-Learning-Future-of-Corporate-Training" element ={<ExperientialLearning />} />
         <Route path ="/brochure" element={<Brochure />} />
         <Route path="Empathy-as-the-most-Strategic-Skill" element={<Empathy/>} />
+        <Route path="Leading-with-Emotional-Intelligence" element={<EmotionalIntelligence/>} />
+
 
 
      </Routes>

@@ -3,8 +3,26 @@ import BlogSection from './BlogSection';
 import Footer from '../Footer/Footer';
 import Brochures from '../Brochure/Brochures';
 const articles = [
-  {
+   {
     id: 1,
+    title: "Leading with Emotional Intelligence: The Secret to Building High-Performing Teams",
+    author: "Edwin Mutoro",
+    date: "May 29, 2025",
+    excerpt: "Leadership today is no longer just about KPIs and strategies. It's about people.In a dynamic workplace where diversity of thought, background, and...",
+    content: `ILeadership today is no longer just about KPIs and strategies. It's about people.
+In a dynamic workplace where diversity of thought, background, and expectations is the norm,
+one skill continues to stand out as a critical differentiator between mediocre and exceptional
+leadership — Emotional Intelligence (EQ). EQ isn’t just a "nice-to-have" anymore; it's a
+leadership imperative.
+
+`,
+    imageUrl: "/images/intelligence.avif",
+    organization: "Craftwise Academy",
+    // followers: "18 followers",
+    path: "/Leading-with-Emotional-Intelligence"
+  },
+  {
+    id: 2,
     title: "Why Empathy Is Emerging as the Most Strategic Skill in Modern Leadership",
     author: "Harold Ang'ila",
     date: "May 16, 2025",
@@ -25,7 +43,7 @@ consistently apply—especially when it’s not reciprocated.
     path: "/Empathy-as-the-most-Strategic-Skill"
   },
   {
-    id: 2,
+    id: 3,
     title: "Bridging the Managerial Gap: How African Companies Can Build Visionary Leaders from Within",
     author: "George Munge",
     date: "April 30, 2025",
@@ -49,7 +67,7 @@ are crucial to shaping Africa's next generation of visionary lead
   },
   
   {
-    id: 3,
+    id: 4,
     title: "Why Experiential Learning Is the Future of Corporate Training in Africa",
     author: "George Munge",
     date: "April 23, 2025",
@@ -69,7 +87,7 @@ experiential learning.
   },
   
   {
-    id: 4,
+    id: 5,
     title: "Training & Development in the 21st Century: The Heartbeat of Effective Teams",
     author: "Edwin Mutoro Situma",
     date: "April 14, 2025",
@@ -88,7 +106,7 @@ doesn't just upgrade skills—it transforms teams.
   },
   
   {
-    id: 5,
+    id: 6,
     title: "Welcome to the Jungle: The Reality of the Modern Workplace",
     author: "Edwin Mutoro Situma",
     date: "March 14, 2025",
@@ -199,7 +217,7 @@ leaders?`,
     path: "/genz"
   },
   {
-    id: 6,
+    id: 7,
     title: "The Myth of Perfect Strategy: Why Execution Matters More!",
     author: "PERIS WAMBUI  |  Head of Strategy @ HFC Kenya | Driving Business Growth with Resource Mobilization",
     date: "March 6, 2025",
@@ -242,7 +260,7 @@ What’s your take on execution vs. strategy? Have you seen a great strategy fai
   },
  
   {
-    id: 7,
+    id: 8,
     title: "How Organizations Can Build a Learning Culture for Continuous Growth",
     author: "George Munge",
     date: "February 25, 2025",
@@ -316,7 +334,7 @@ The future belongs to organizations that invest in knowledge—because learning 
     path: "/learning-culture"
   },
   {
-    id: 8,
+    id: 9,
     title: "Built to Last: How to Create a Career & Organization That Thrives for Generations",
     author: "George Munge",
     date: "February 13, 2025",
