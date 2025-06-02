@@ -1,14 +1,9 @@
-import { motion } from "framer-motion";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-const PartnerCard = ({ logo, name, rating, delay, website }) => {
+const PartnerCard = ({ logo, name, website }) => {
   return (
     <div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay }}
-      whileHover={{ scale: 1.05 }}
+     
       className="flex flex-col items-center"
     >
       <div className="flex h-48 w-48 items-center justify-center rounded-full bg-white p-6 shadow-lg transition-shadow hover:shadow-xl">
@@ -18,9 +13,7 @@ const PartnerCard = ({ logo, name, rating, delay, website }) => {
         {[...Array(5)].map((_, i) => (
           <span
             key={i}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: delay + i * 0.1 }}
+           
             className="text-2xl text-yellow-400"
           >
             ⭐

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const PosterSection = () => {
@@ -16,16 +15,12 @@ const PosterSection = () => {
   return (
     <div className="mx-auto max-w-4xl">
       <article
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        
         className="overflow-hidden rounded-lg bg-white shadow-lg"
       >
         <div className="flex flex-col items-center p-6 text-center">
           <img
-            initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            
             src={poster.imageUrl}
             alt={poster.title}
             className="mb-6 w-full max-w-[600px] rounded-lg shadow-lg"
@@ -47,9 +42,7 @@ const PosterSection = () => {
         </div>
       </article>
       <button
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.3 }}
+        
         onClick={() => navigate("/blogs")}
         className="group mb-6 flex items-center space-x-2 px-6 py-3 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
       >

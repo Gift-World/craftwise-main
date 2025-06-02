@@ -1,13 +1,8 @@
-import { motion } from "framer-motion";
 
-const ImpactCard = ({ icon, title, description, index }) => {
+const ImpactCard = ({ icon, title, description }) => {
   return (
     <div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.2 }}
-      whileHover={{ scale: 1.05 }}
+      
       className="rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl"
     >
       <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">

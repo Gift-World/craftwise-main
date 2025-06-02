@@ -1,12 +1,9 @@
-import { motion } from "framer-motion";
 
 const HeaderRising = () => {
   return (
     <header
       className="flex justify-center px-4 pt-8 md:pt-12"
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.2, duration: 0.5 }}
+     
     >
       <div className="flex items-center justify-center md:justify-start">
         <div className="logo-container flex items-center">

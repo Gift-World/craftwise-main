@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {  AnimatePresence } from "framer-motion";
 
 function Modal({ isOpen, onClose, children }) {
   // Handle escape key press to close the modal
@@ -25,9 +25,9 @@ function Modal({ isOpen, onClose, children }) {
     };
   }, [isOpen, onClose]);
 
-  const handleModalClick = (e) => {
-    e.stopPropagation();
-  };
+  // const handleModalClick = (e) => {
+  //   e.stopPropagation();
+  // };
 
   return (
     <AnimatePresence>
@@ -35,17 +35,12 @@ function Modal({ isOpen, onClose, children }) {
         <>
           <div
             className="fixed inset-0 z-40 bg-black/50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            
             onClick={onClose}
           />
           <div
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            
             onClick={onClose}
           >
             <div

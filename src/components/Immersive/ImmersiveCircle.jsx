@@ -1,18 +1,14 @@
-import { motion } from "framer-motion";
 
-const ImmersiveCircle = ({ title, description, icon, delay }) => {
+const ImmersiveCircle = ({ title, description, icon }) => {
   return (
     <div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay, duration: 0.5 }}
+     
       className="relative"
     >
       <div className="relative">
         {/* Dotted circle animation */}
         <div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+          
           className="absolute inset-0 rounded-full"
           style={{
             background: `conic-gradient(from 0deg, transparent 0%, rgba(251, 146, 60, 0.2) 20%, transparent 40%)`,

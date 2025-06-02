@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import BenefitCard from "./BenefitCard";
 import Footer from "../Footer/Footer";
@@ -63,9 +62,7 @@ const BenefitsSection = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
             ref={ref}
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8 }}
+            
             className="mb-12 text-center"
           >
             <h2 className="mb-8 font-montserrat text-4xl font-bold text-gray-900">

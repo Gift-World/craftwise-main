@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-function BlogSection({ article, index }) {
+function BlogSection({ article}) {
   const navigate = useNavigate();
 
   const handleReadMore = () => {
@@ -10,9 +9,7 @@ function BlogSection({ article, index }) {
 
   return (
     <div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
+     
       className="flex flex-col items-center gap-8 border-b border-gray-200 py-16 last:border-b-0 md:flex-row"
     >
       <div className="w-full md:w-1/2">
@@ -46,8 +43,7 @@ function BlogSection({ article, index }) {
         </p>
         <button
           onClick={handleReadMore}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          
           className="group inline-flex items-center font-semibold text-indigo-600"
         >
           Read more

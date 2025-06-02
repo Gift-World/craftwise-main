@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ImpactCard from "./ImpactCard";
 
@@ -31,25 +30,19 @@ const ImpactSection = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8 }}
+          
           className="text-center"
         >
           <h2
             className="mb-4 font-montserrat text-4xl font-bold text-gray-900"
-            initial={{ opacity: 0, y: -20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.2 }}
+            
           >
             THE IMPACT
           </h2>
 
           <p
             className="mx-auto mb-12 max-w-3xl font-montserrat text-[19px] font-medium text-gray-600"
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.4 }}
+           
           >
             CraftWise Academy doesn't just teach; we create leaders, innovators,
             and changemakers.

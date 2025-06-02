@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Footer from "../Footer/Footer";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
@@ -12,7 +11,7 @@ const ContactSection = () => {
   });
 
   const [formError, setFormError] = useState("");
-  const { ref: sectionRef, inView } = useInView({
+  const { ref: sectionRef } = useInView({
     threshold: 0.2,
     triggerOnce: true,
   });
@@ -77,16 +76,7 @@ const ContactSection = () => {
         </div>
         <section
           ref={sectionRef}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.8, staggerChildren: 0.2 },
-            },
-          }}
+          
           id="contact"
           className="relative overflow-hidden py-16"
         >

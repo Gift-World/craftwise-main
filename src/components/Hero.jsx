@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 export default function Hero() {
@@ -41,15 +40,12 @@ export default function Hero() {
       <div
         ref={ref}
         className="z-10 space-y-6 p-4 pl-8 pt-8 text-white md:w-1/2 md:pl-32"
-        initial={{ x: -100, opacity: 0 }}
-        animate={inView ? { x: 0, opacity: 1 } : {}}
-        transition={{ duration: 1.8 }}
+        
       >
         <Link to="/programs">
           <button
             className="relative flex items-center justify-center gap-2 overflow-hidden rounded-full border border-white/30 bg-accent px-5 py-3 text-sm font-bold text-white shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:border-white/60"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
+            
           >
             Programmes Offered
             <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6">

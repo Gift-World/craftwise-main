@@ -1,12 +1,9 @@
-import { motion } from "framer-motion";
 
 const ContentSection = ({ title, items, icon }) => {
   return (
     <div
       className="rounded-lg bg-craftwise-maroon p-6"
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 1.0, duration: 0.6 }}
+      
     >
       <div className="mb-4 flex items-center">
         <div className="mr-3">
@@ -63,9 +60,7 @@ const ContentSection = ({ title, items, icon }) => {
           <li
             key={index}
             className="mb-3 flex items-start"
-            initial={{ x: -10, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1.1 + index * 0.1, duration: 0.5 }}
+            
           >
             <span className="mr-3 text-2xl text-craftwise-orange">•</span>
             <span className="text-lg">{item}</span>

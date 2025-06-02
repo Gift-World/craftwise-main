@@ -4,7 +4,6 @@ import HeroRising from "./HeroRising";
 import RisingDetails from "./RisingDetails";
 import ContentSection from "./ContentSection";
 import FooterRising from "./FooterRising";
-import { motion } from "framer-motion";
 
 function RisingPoster() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -32,9 +31,7 @@ function RisingPoster() {
   return (
     <div
       className="relative min-h-screen overflow-hidden bg-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isLoaded ? 1 : 0 }}
-      transition={{ duration: 0.5 }}
+     
     >
       {/* Background shape */}
       <div className="absolute left-0 top-0 z-0 h-full w-full overflow-hidden">

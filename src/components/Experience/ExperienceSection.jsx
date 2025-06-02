@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ExperienceCard from "./ExperienceCard";
 
@@ -37,9 +36,7 @@ const ExperienceSection = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8 }}
+         
         >
           <h2 className="mb-4 font-montserrat text-4xl font-bold text-gray-900">
             FLEXIBLE TRAINING

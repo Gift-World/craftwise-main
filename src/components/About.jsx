@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const About = () => {
@@ -12,25 +11,19 @@ const About = () => {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          
           className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2"
         >
           <div>
             <h1
               className="mb-7 font-montserrat text-4xl font-bold text-gray-600"
-              initial={{ opacity: 0.4, x: -40 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.5 }}
+              
             >
               About us
             </h1>
             <h1
               className="mb-6 font-montserrat text-3xl font-medium text-gray-900"
-              initial={{ opacity: 0, x: -50 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.2 }}
+              
             >
               CraftWise Academy:
               <span className="block font-montserrat font-bold text-orange-500">
@@ -39,9 +32,7 @@ const About = () => {
             </h1>
             <p
               className="mb-8 font-montserrat text-[18px] font-medium text-black"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.4 }}
+              
             >
               We craft high-performing professionals to excel through hands-on
               learning, practical tools, and expert guidance that build
@@ -49,9 +40,7 @@ const About = () => {
             </p>
             <p
               className="mb-8 font-montserrat text-[18px] font-medium text-black"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.6 }}
+             
             >
               More than just a training center—CraftWise Academy is where career
               advancement and organizational transformation come alive. Say
@@ -60,9 +49,7 @@ const About = () => {
             </p>
           </div>
           <div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            
             className="relative"
           >
             <img

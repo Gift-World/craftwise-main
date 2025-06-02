@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ApproachCard from "./ApproachCard";
 
@@ -36,9 +35,7 @@ const SolutionSection = () => {
             </h1>
             <p
               className="mb-8 font-montserrat text-[19px] font-medium text-gray-800"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.4 }}
+            
             >
               Breaking away from the traditional, overcrowded training market!!!
             </p>
@@ -64,9 +61,7 @@ const SolutionSection = () => {
       </div>
       <div
         ref={ref}
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.3 }}
+       
         className="mb-4 text-center"
       >
         <p className="mx-auto p-5 font-montserrat text-[17px] font-medium text-gray-800">

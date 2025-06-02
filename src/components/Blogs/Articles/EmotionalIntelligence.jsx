@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../Footer/Footer";
 
@@ -97,9 +96,7 @@ To lead well in this era, we must do more than manage tasks. We must connect wit
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="mx-auto max-w-4xl">
         <button
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3 }}
+          
           onClick={() => navigate("/blogs")}
           className="group mb-6 flex items-center space-x-2 px-6 py-3 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
         >
@@ -122,16 +119,12 @@ To lead well in this era, we must do more than manage tasks. We must connect wit
         </button>
 
         <article
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          
           className="overflow-hidden rounded-lg bg-white shadow-lg"
         >
           <div className="p-6">
             <div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+             
               className="space-y-6"
             >
               <div className="flex items-center space-x-4 text-gray-600">
@@ -149,9 +142,7 @@ To lead well in this era, we must do more than manage tasks. We must connect wit
               </div>
 
               <img
-                initial={{ scale: 1.1, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6 }}
+               
                 src={article.imageUrl}
                 alt={article.title}
                 className="mb-8 h-[400px] w-full rounded-lg object-cover shadow-lg"
@@ -181,9 +172,7 @@ To lead well in this era, we must do more than manage tasks. We must connect wit
                     #leadership
                   </span> */}
                   <button
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3 }}
+                    
                     onClick={() => navigate("/blogs")}
                     className="group mb-6 flex items-center space-x-2 px-6 py-3 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
                   >

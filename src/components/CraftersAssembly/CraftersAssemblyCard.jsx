@@ -1,13 +1,8 @@
-import { motion } from "framer-motion";
 
-const CraftersAssemblyCard = ({ icon, title, description, delay }) => {
+const CraftersAssemblyCard = ({ icon, title, description }) => {
   return (
     <div
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay, duration: 0.5 }}
-      whileHover={{ scale: 1.05 }}
+      
       className="flex items-start space-x-4 rounded-lg bg-white p-6 shadow-lg transition-shadow hover:shadow-xl"
     >
       <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-orange-500">

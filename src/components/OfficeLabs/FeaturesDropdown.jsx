@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {  AnimatePresence } from "framer-motion";
 
 const features = [
   {
@@ -33,9 +33,7 @@ const FeaturesDropdown = () => {
       {features.map((feature, index) => (
         <div
           key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.2 }}
+         
           className="overflow-hidden rounded-lg bg-white font-montserrat text-[15px] shadow-md"
         >
           <button
@@ -51,8 +49,7 @@ const FeaturesDropdown = () => {
               </span>
             </div>
             <span
-              animate={{ rotate: expandedIndex === index ? 180 : 0 }}
-              transition={{ duration: 0.3 }}
+             
             >
               ▼
             </span>
@@ -61,10 +58,7 @@ const FeaturesDropdown = () => {
           <AnimatePresence>
             {expandedIndex === index && (
               <div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
+                
                 className="bg-orange-50 px-6 py-4"
               >
                 <p className="text-gray-700">{feature.description}</p>

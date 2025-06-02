@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-function BrochureSection({ article, index }) {
+function BrochureSection({ article }) {
   const navigate = useNavigate();
 
   const handleReadMore = () => {
@@ -11,8 +10,7 @@ function BrochureSection({ article, index }) {
   return (
     <button
       onClick={handleReadMore}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      
       className="relative flex items-center justify-center gap-2 overflow-hidden rounded-full border border-white/30 bg-accent px-5 py-3 text-sm font-bold text-white shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:border-white/60"
     >
       Download our programs Brochure Here

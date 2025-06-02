@@ -1,7 +1,3 @@
-// import React from 'react'
-import { motion } from "framer-motion";
-// import { useState, useEffect } from 'react'
-// import Modal from '../components/RisingPro/Modal'
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
@@ -53,13 +49,8 @@ function Home() {
       <main>
         {/* <Navbar /> */}
 
-        <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+       
           <Hero />
-        </div>
         {/* <RisingPoster /> */}
 
         {/* <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>

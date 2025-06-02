@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import BlogSection from "./BlogSection";
 import Footer from "../Footer/Footer";
 import Brochures from "../Brochure/Brochures";
@@ -419,9 +418,7 @@ function Blogs() {
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+           
             className="text-center text-white"
           >
             <h1 className="mb-4 font-montserrat text-5xl font-bold">

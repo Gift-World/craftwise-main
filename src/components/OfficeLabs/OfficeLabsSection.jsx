@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import FeaturesDropdown from "./FeaturesDropdown";
 
@@ -13,9 +12,7 @@ const OfficeLabsSection = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.3 }}
+          
         >
           <h2 className="mb-2 font-montserrat text-4xl font-semibold text-gray-900">
             The CraftWise Office Labs
@@ -23,9 +20,7 @@ const OfficeLabsSection = () => {
 
           <div className="mb-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
             <div
-              initial={{ opacity: 0, x: -50 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.2 }}
+             
             >
               <p className="mt-8 font-montserrat text-[18px] font-medium text-black">
                 A Leading-edge training environment that simulates a fully
@@ -42,9 +37,7 @@ const OfficeLabsSection = () => {
             </div>
 
             <div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ delay: 0.4 }}
+              
               className="relative"
             >
               <img

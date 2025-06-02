@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
@@ -38,9 +37,9 @@ const programs = [
   },
 ];
 
-function ProgramSection({ program, index }) {
+function ProgramSection({ program }) {
   const navigate = useNavigate();
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -52,9 +51,6 @@ function ProgramSection({ program, index }) {
   return (
     <div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
       className="flex flex-col items-center gap-8 border-b border-gray-200 py-16 last:border-b-0 md:flex-row"
     >
       <div className="w-full md:w-1/2">
@@ -72,8 +68,6 @@ function ProgramSection({ program, index }) {
         </p>
         <button
           onClick={handleReadMore}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
           className="read-more text-coral-red group inline-flex items-center font-semibold"
         >
           Read more
@@ -112,9 +106,7 @@ function Programs() {
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+          
             className="text-center text-white"
           >
             <h1 className="mb-4 text-5xl font-bold">Our Programmes</h1>

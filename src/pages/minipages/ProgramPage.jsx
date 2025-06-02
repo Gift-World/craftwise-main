@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
@@ -24,7 +23,7 @@ const ProgramPage = ({
     message: "",
   });
 
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
@@ -67,44 +66,16 @@ const ProgramPage = ({
     setShowForm(false);
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
+  
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
+  
 
-  const scaleVariants = {
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-
+ 
   return (
     <div className="min-h-screen">
       <div
         className="relative h-[80vh] overflow-hidden"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        
       >
         <div
           className="absolute inset-0 min-h-screen transform overflow-hidden bg-cover bg-no-repeat transition-transform duration-700 hover:scale-105"
@@ -115,24 +86,18 @@ const ProgramPage = ({
 
         <div className="relative flex h-full items-center justify-center pt-32 text-white">
           <div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            
             className="max-w-4xl text-center"
           >
             <h1
               className="mb-4 font-montserrat text-4xl font-bold"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              
             >
               {title}
             </h1>
             <p
               className="font-montserrat text-2xl font-semibold"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
+              
             >
               {subtitle}
             </p>
@@ -143,19 +108,15 @@ const ProgramPage = ({
       <div className="bg-gray-50 py-16">
         <div className="mx-auto max-w-6xl px-4">
           <div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+            
             className="mb-16 text-center"
           >
             <h2
-              variants={itemVariants}
               className="mb-4 font-montserrat text-3xl font-black text-orange-500"
             >
               {title1}
             </h2>
             <p
-              variants={itemVariants}
               className="mx-auto font-montserrat text-[18px] text-gray-600"
             >
               {description}
@@ -164,9 +125,7 @@ const ProgramPage = ({
 
           <div ref={ref} className="mb-16 grid gap-12 md:grid-cols-2">
             <div
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
+             
             >
               <h2 className="mb-8 font-montserrat text-3xl font-bold">
                 What You'll Master
@@ -175,8 +134,7 @@ const ProgramPage = ({
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    variants={itemVariants}
-                    whileHover={scaleVariants.hover}
+                    
                     className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md"
                   >
                     <div className="rounded-full bg-orange-500 p-3">
@@ -194,9 +152,7 @@ const ProgramPage = ({
             </div>
 
             <div
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
+             
             >
               <h2 className="mb-8 font-montserrat text-3xl font-bold">
                 Who Should Apply?
@@ -205,8 +161,7 @@ const ProgramPage = ({
                 {eligibility.map((item, index) => (
                   <div
                     key={index}
-                    variants={itemVariants}
-                    whileHover={scaleVariants.hover}
+                   
                     className="flex items-center space-x-3 rounded-lg bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md"
                   >
                     <FaCheck className="flex-shrink-0 text-green-500" />
@@ -218,9 +173,7 @@ const ProgramPage = ({
           </div>
 
           <div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            
             className="mb-16 text-center"
           >
             <h2 className="mb-8 font-montserrat text-3xl font-bold">
@@ -238,8 +191,7 @@ const ProgramPage = ({
                 return (
                   <div
                     key={index}
-                    variants={itemVariants}
-                    whileHover={{ scale: 1.05 }}
+                    
                     className={`rounded-lg p-6 shadow-lg transition-shadow duration-300 hover:shadow-2xl ${bgGradients[index % bgGradients.length]} text-white`}
                   >
                     <p className="font-montserrat text-white">{tool}</p>
@@ -250,16 +202,14 @@ const ProgramPage = ({
           </div>
 
           <div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            
             className="mb-16 text-center"
           >
             <h2 className="mb-4 font-montserrat text-3xl font-bold">
               Program Outcome
             </h2>
             <p
-              variants={itemVariants}
+
               className="mx-auto max-w-3xl text-xl text-gray-600"
             >
               {outcome1}
@@ -272,12 +222,10 @@ const ProgramPage = ({
             <div className="grid gap-8 md:grid-cols-2">
               <div
                 className="space-y-4"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
+               
               >
                 <div
-                  variants={itemVariants}
+                  
                   className="flex items-center space-x-3"
                 >
                   <span className="text-2xl">📅</span>
@@ -286,7 +234,7 @@ const ProgramPage = ({
                   </span>
                 </div>
                 <div
-                  variants={itemVariants}
+                
                   className="flex items-center space-x-3"
                 >
                   <span className="text-2xl">🎓</span>
@@ -297,17 +245,14 @@ const ProgramPage = ({
               </div>
               <div
                 className="space-y-3 font-montserrat"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
+                
               >
                 {duration.components.map((component, index) => (
                   <div
                     key={index}
-                    variants={itemVariants}
+                    
                     className="flex items-start space-x-2"
-                    whileHover={{ x: 10 }}
-                    transition={{ duration: 0.2 }}
+                   
                   >
                     <FaCheck className="mt-1 flex-shrink-0 text-green-300" />
                     <span>{component}</span>
@@ -318,14 +263,11 @@ const ProgramPage = ({
           </div>
 
           <div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            
             className="flex justify-center space-x-6 font-montserrat"
           >
             <button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              
               onClick={() => setShowForm(true)}
               className="transform rounded-full bg-orange-500 px-8 py-3 text-white transition-all hover:bg-orange-600"
             >
@@ -335,15 +277,14 @@ const ProgramPage = ({
               href="https://0au0uzstrck.typeform.com/to/EcsAcnpt"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              
             >
               <button className="transform rounded-full bg-blue-600 px-8 py-3 text-white transition-all hover:bg-blue-700">
                 Apply Now
               </button>
             </a>
           </div>
-          <p variants={itemVariants} className="mx-auto p-6 text-xl text-black">
+          <p  className="mx-auto p-6 text-xl text-black">
             {outcome}
           </p>
         </div>
@@ -351,16 +292,11 @@ const ProgramPage = ({
 
       {showForm && (
         <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
         >
           <div
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.5, opacity: 0 }}
-            transition={{ type: "spring", damping: 25 }}
+            
             className="w-full max-w-md rounded-lg bg-white p-8"
           >
             <h3 className="mb-4 text-2xl font-bold">Express Interest</h3>
@@ -418,16 +354,14 @@ const ProgramPage = ({
                   type="button"
                   onClick={() => setShowForm(false)}
                   className="px-4 py-2 text-gray-600 hover:text-gray-800"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                 
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   className="rounded-md bg-orange-500 px-6 py-2 text-white hover:bg-orange-600"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                 
                 >
                   Submit
                 </button>

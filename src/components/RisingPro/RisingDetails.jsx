@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 const RisingDetails = () => {
   return (
@@ -6,9 +5,7 @@ const RisingDetails = () => {
       <div className="mx-auto max-w-5xl">
         <div
           className="flex flex-col items-center justify-between gap-6 md:flex-row md:gap-10"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
+          
         >
           <div className="flex items-center">
             <div className="mr-4">

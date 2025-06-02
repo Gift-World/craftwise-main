@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const WhyItMattersSection = () => {
-  const [ref, inView] = useInView({
+  const [ref ] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -15,9 +14,7 @@ const WhyItMattersSection = () => {
           className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2"
         >
           <div
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            
           >
             <h2 className="mb-8 font-montserrat text-4xl font-bold text-gray-900">
               Why it matters:
@@ -25,9 +22,7 @@ const WhyItMattersSection = () => {
 
             <div
               className="rounded-lg bg-orange-500 p-8 text-white shadow-xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.4 }}
+              
             >
               <h3 className="mb-4 font-montserrat text-2xl font-bold">
                 Career Fulfillment:
@@ -45,9 +40,7 @@ const WhyItMattersSection = () => {
 
           <div
             className="relative"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.6 }}
+            
           >
             <img
               src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2h5JTIwaXQlMjBtYXR0ZXJzJTIwYWZyaWNhbiUyMHBob3Rvc3xlbnwwfHwwfHx8MA%3D%3D"
@@ -56,13 +49,11 @@ const WhyItMattersSection = () => {
             />
             <div
               className="absolute -left-4 -top-4 h-24 w-24 rounded-full bg-orange-500 opacity-20"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 3, repeat: Infinity }}
+              
             />
             <div
               className="absolute -bottom-4 -right-4 h-32 w-32 rounded-full bg-orange-500 opacity-20"
-              animate={{ scale: [1.2, 1, 1.2] }}
-              transition={{ duration: 3, repeat: Infinity }}
+              
             />
           </div>
         </div>

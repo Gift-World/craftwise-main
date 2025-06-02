@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
@@ -25,7 +24,7 @@ const TalentPage = ({
     message: "",
   });
 
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
@@ -68,44 +67,17 @@ const TalentPage = ({
     setShowForm(false);
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
+ 
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
+  
 
-  const scaleVariants = {
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
+  
 
   return (
     <div className="min-h-screen">
       <div
         className="relative h-[80vh] overflow-hidden"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        
       >
         <div
           className="absolute inset-0 min-h-screen transform overflow-hidden bg-cover bg-no-repeat transition-transform duration-700 hover:scale-105"
@@ -116,24 +88,18 @@ const TalentPage = ({
 
         <div className="relative flex h-full items-center justify-center pt-32 text-white">
           <div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+           
             className="max-w-4xl text-center"
           >
             <h1
               className="mb-4 font-montserrat text-4xl font-bold"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              
             >
               {title}
             </h1>
             <p
               className="font-montserrat text-2xl font-semibold"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
+             
             >
               {subtitle}
             </p>
@@ -149,19 +115,17 @@ const TalentPage = ({
       <div className="bg-gray-50 py-16">
         <div className="mx-auto max-w-6xl px-4">
           <div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+            
             className="mb-16 text-center"
           >
             <h2
-              variants={itemVariants}
+              
               className="mb-4 font-montserrat text-3xl font-black text-orange-500"
             >
               {title1}
             </h2>
             <p
-              variants={itemVariants}
+            
               className="mx-auto font-montserrat text-[18px] text-gray-600"
             >
               {description}
@@ -171,9 +135,7 @@ const TalentPage = ({
           <div ref={ref} className="mb-16 flex flex-col gap-8 md:flex-row">
             {/* Employers Section */}
             <div
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
+              
               className="w-full p-7 md:w-1/2"
             >
               <h2 className="mb-8 font-montserrat text-3xl font-bold text-black">
@@ -193,8 +155,7 @@ const TalentPage = ({
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    variants={itemVariants}
-                    whileHover={scaleVariants.hover}
+                    
                     className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md"
                   >
                     <div className="rounded-full bg-orange-500 p-3">
@@ -208,12 +169,11 @@ const TalentPage = ({
                     </div>
                   </div>
                 ))}
-                <h3 className="font-montserrat text-[16px] font-semibold text-white">
+                <h3 className="font-montserrat text-[16px] font-semibold text-black">
                   Secure your access to top-tier talent today!
                 </h3>
                 <button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  
                   onClick={() => setShowForm(true)}
                   className="transform rounded-full bg-orange-500 px-8 py-3 text-white transition-all hover:bg-orange-600"
                 >
@@ -224,9 +184,7 @@ const TalentPage = ({
 
             {/* Job Seekers Section */}
             <div
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
+              
               className="w-full p-7 md:w-1/2"
             >
               <h2 className="mb-8 font-montserrat text-3xl font-bold text-black">
@@ -246,8 +204,7 @@ const TalentPage = ({
                 {eligibility.map((item, index) => (
                   <div
                     key={index}
-                    variants={itemVariants}
-                    whileHover={scaleVariants.hover}
+                    
                     className="flex items-center space-x-3 rounded-lg bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md"
                   >
                     <FaCheck className="flex-shrink-0 text-orange-500" />
@@ -257,8 +214,7 @@ const TalentPage = ({
               </div>
 
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                
                 onClick={() => setShowForm(true)}
                 className="mt-7 transform rounded-full bg-orange-500 px-8 py-3 text-white transition-all hover:bg-orange-600"
               >
@@ -268,9 +224,7 @@ const TalentPage = ({
           </div>
 
           <div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            
             className="mb-16 text-center"
           >
             <h2 className="mb-8 font-montserrat text-3xl font-bold">
@@ -292,8 +246,7 @@ const TalentPage = ({
                 return (
                   <div
                     key={index}
-                    variants={itemVariants}
-                    whileHover={{ scale: 1.05 }}
+                    
                     className={`rounded-lg p-6 shadow-lg transition-shadow duration-300 hover:shadow-2xl ${bgGradients[index % bgGradients.length]} text-white`}
                   >
                     <p className="font-montserrat text-white">{tool}</p>
@@ -316,16 +269,14 @@ const TalentPage = ({
           </p>
           <div className="flex flex-col justify-center gap-4 md:flex-row">
             <button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              
               onClick={() => setShowForm(true)}
               className="transform rounded-full bg-orange-500 px-8 py-3 text-white transition-all hover:bg-orange-600"
             >
               Get Pre-Vetted Talent
             </button>
             <button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+             
               onClick={() => setShowForm(true)}
               className="transform rounded-full bg-orange-500 px-8 py-3 text-white transition-all hover:bg-orange-600"
             >
@@ -337,16 +288,11 @@ const TalentPage = ({
 
       {showForm && (
         <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
         >
           <div
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.5, opacity: 0 }}
-            transition={{ type: "spring", damping: 25 }}
+            
             className="w-full max-w-md rounded-lg bg-white p-8"
           >
             <h3 className="mb-4 text-2xl font-bold">Express Interest</h3>
@@ -404,16 +350,14 @@ const TalentPage = ({
                   type="button"
                   onClick={() => setShowForm(false)}
                   className="px-4 py-2 text-gray-600 hover:text-gray-800"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   className="rounded-md bg-orange-500 px-6 py-2 text-white hover:bg-orange-600"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  
                 >
                   Submit
                 </button>

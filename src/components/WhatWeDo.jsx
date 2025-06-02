@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const ServiceCard = ({ title, description, icon, delay }) => {
-  const [ref, inView] = useInView({
+const ServiceCard = ({ title, description, icon }) => {
+  const [ref] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -10,9 +9,7 @@ const ServiceCard = ({ title, description, icon, delay }) => {
   return (
     <div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay, duration: 0.4 }}
+      
       className="rounded-lg bg-white p-6 shadow-lg transition-shadow hover:shadow-xl"
     >
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-orange-100">
@@ -35,9 +32,7 @@ const WhatWeDo = () => {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div
           ref={ref}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5 }}
+         
           className="mb-4 text-center"
         >
           <h2 className="mb-10 font-montserrat text-4xl font-bold text-gray-900">
@@ -67,9 +62,7 @@ const WhatWeDo = () => {
         </div>
         <div
           ref={ref}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5 }}
+         
           className="mb-4 text-center"
         >
           <p className="mx-auto p-5 font-montserrat text-[17px] font-medium text-gray-800">

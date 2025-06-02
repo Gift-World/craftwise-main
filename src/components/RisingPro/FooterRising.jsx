@@ -7,9 +7,7 @@ const FooterRising = () => {
   return (
     <div
       className="flex flex-col items-center justify-center bg-white px-4 py-8 md:flex-row md:justify-between"
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 1.2, duration: 0.6 }}
+     
     >
       <div className="mb-6 md:mb-0">
         <MotionLink

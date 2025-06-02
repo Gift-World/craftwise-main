@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -7,8 +6,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+     
       className="fixed z-50 w-full bg-white shadow-lg"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

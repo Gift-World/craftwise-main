@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import PartnerCard from "./PartnerCard";
 
@@ -24,7 +23,7 @@ const partners = [
 ];
 
 const PartnersSection = () => {
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -37,16 +36,12 @@ const PartnersSection = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8 }}
+          
           className="text-center"
         >
           <h2
             className="mb-16 font-montserrat text-5xl font-bold text-orange-500"
-            initial={{ opacity: 0, y: -20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.2 }}
+            
           >
             PARTNERS
           </h2>
@@ -59,9 +54,7 @@ const PartnersSection = () => {
 
           <div
             className="absolute left-0 right-0 mt-12 h-1 bg-orange-500"
-            initial={{ scaleX: 0 }}
-            animate={inView ? { scaleX: 1 } : {}}
-            transition={{ delay: 0.8, duration: 1 }}
+           
           />
         </div>
       </div>

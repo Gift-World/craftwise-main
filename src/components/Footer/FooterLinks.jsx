@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
@@ -70,26 +69,20 @@ const FooterLinks = () => {
 
   return (
     <div className="grid w-full grid-cols-1 gap-8 text-center sm:grid-cols-2 md:gap-12 lg:grid-cols-4">
-      {Object.entries(links).map(([category, items], categoryIndex) => (
+      {Object.entries(links).map(([category, items]) => (
         <div
           key={category}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: categoryIndex * 0.2 }}
+         
           className="flex flex-col items-center"
         >
           <h3 className="mb-4 font-montserrat text-2xl font-semibold text-orange-500">
             {category}
           </h3>
           <ul className="space-y-2">
-            {items.map((item, itemIndex) => (
+            {items.map((item ) => (
               <li
                 key={item.name}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: categoryIndex * 0.2 + itemIndex * 0.1 }}
+                
               >
                 <a
                   href={item.url ? item.url : `#${item.sectionId}`}
