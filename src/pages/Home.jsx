@@ -41,7 +41,7 @@ function Home() {
         />
         <meta
           name="keywords"
-          content="Craftwise Academy,Craftwise,  Corporate Leaders,Ambitious Professionals ,Organizations, Transformative Learning"
+          content="Craftwise Academy, Craftwise, Corporate Leaders, Ambitious Professionals ,Organizations, Transformative Learning"
         />
         <link rel="canonical" href="https://craftwiseacademy.com/" />
       </Helmet>
