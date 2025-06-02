@@ -37,11 +37,11 @@ function Home() {
         </title>
         <meta
           name="description"
-          content="Unlock your potential with the best learning programs. Join Craftwise Academy today!"
+          content="Craftwise Academy provides online learning and professional training programs in Kenya. Empower your career and organization with real-world skills and leadership development.Unlock your potential with the best learning programs. Join Craftwise Academy today!"
         />
         <meta
           name="keywords"
-          content="Craftwise Academy, Craftwise, Corporate Leaders, Ambitious Professionals ,Organizations, Transformative Learning"
+          content="Craftwise Academy, Craftwise, Corporate Leaders ,Organizations, Transformative Learning, Online courses Kenya, professional training, corporate learning, career development"
         />
         <link rel="canonical" href="https://craftwiseacademy.com/" />
       </Helmet>

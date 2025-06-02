@@ -2,6 +2,8 @@ import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import Brochures from "../components/Brochure/Brochures";
+import { Helmet } from "react-helmet-async";
+
 const programs = [
   {
     title: "RISING PROFESSIONALS PROGRAMME",
@@ -93,6 +95,18 @@ function ProgramSection({ program }) {
 function Programs() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+  <title>Craftwise Academy Programmes | Leadership & Career Development</title>
+  <meta
+    name="description"
+    content="Explore Craftwise Academy's transformative programs designed for rising professionals, new managers, emerging leaders, and legacy executives. Unlock growth today."
+  />
+  <meta
+    name="keywords"
+    content="Craftwise Academy programs, leadership training Kenya, rising professionals development, new manager training, executive education, emerging leaders programme, legacy leaders programme, career growth, organizational transformation, management skills, leadership skills"
+  />
+  <link rel="canonical" href="https://craftwiseacademy.com/programs" />
+</Helmet>
       {/* Hero Section */}
       <div
         style={{

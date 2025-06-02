@@ -1,6 +1,9 @@
 import BlogSection from "./BlogSection";
 import Footer from "../Footer/Footer";
 import Brochures from "../Brochure/Brochures";
+import { Helmet } from "react-helmet-async";
+
+
 const articles = [
   {
     id: 1,
@@ -405,6 +408,18 @@ The future belongs to organizations that invest in knowledge—because learning 
 function Blogs() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+  <title>Blog – Leadership, Learning & Workplace Insights | Craftwise Academy</title>
+  <meta
+    name="description"
+    content="Explore expert insights on emotional intelligence, leadership, career growth, and learning culture from the Craftwise Academy team."
+  />
+  <meta
+    name="keywords"
+    content="Craftwise blog, leadership insights, emotional intelligence, career growth, workplace training Kenya, learning culture, organizational development"
+  />
+  <link rel="canonical" href="https://craftwiseacademy.com/blogs" />
+</Helmet>
       {/* Hero Section */}
       <div
         style={{
