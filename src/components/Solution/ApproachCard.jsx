@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const ApproachCard = ({ title, icon }) => {
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       // transition={{ delay }}
-      className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+      className="rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
     >
-      <div className="text-4xl mb-4">{icon}</div>
+      <div className="mb-4 text-4xl">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
-    </motion.div>
+    </div>
   );
 };
 

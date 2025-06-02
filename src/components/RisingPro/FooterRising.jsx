@@ -1,31 +1,29 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 import { Link } from "react-router-dom";
 const MotionLink = motion(Link);
 
 const FooterRising = () => {
   return (
-    <motion.div 
-      className="py-8 px-4 flex flex-col md:flex-row items-center justify-center md:justify-between bg-white"
+    <div
+      className="flex flex-col items-center justify-center bg-white px-4 py-8 md:flex-row md:justify-between"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1.2, duration: 0.6 }}
     >
       <div className="mb-6 md:mb-0">
-        <MotionLink 
-           to="/rising"
-          // target="_blank" 
+        <MotionLink
+          to="/rising"
+          // target="_blank"
           rel="noopener noreferrer"
-          className="apply-button bg-craftwise-orange text-white font-bold py-3 px-10 rounded-full text-xl inline-block"
+          className="apply-button inline-block rounded-full bg-craftwise-orange px-10 py-3 text-xl font-bold text-white"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           APPLY NOW
         </MotionLink>
       </div>
-      
-     
-    </motion.div>
+    </div>
   );
 };
 

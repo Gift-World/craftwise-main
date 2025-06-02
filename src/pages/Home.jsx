@@ -21,7 +21,7 @@ import { Helmet } from "react-helmet-async";
 // import Header from '../components/Header';
 
 function Home() {
-    // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Open the modal when the component mounts
   // useEffect(() => {
@@ -34,41 +34,42 @@ function Home() {
   // }, []);
   return (
     <div>
-       {/* 🔍 SEO META TAGS */}
-       <Helmet>
-       <title>Craftwise Academy – Transformative Learning for Future Leaders</title>
-       <meta
+      {/* 🔍 SEO META TAGS */}
+      <Helmet>
+        <title>
+          Craftwise Academy – Transformative Learning for Future Leaders
+        </title>
+        <meta
           name="description"
           content="Unlock your potential with the best learning programs. Join Craftwise Academy today!"
         />
-        <meta name="keywords" content="Craftwise Academy,Craftwise,  Corporate Leaders,Ambitious Professionals ,Organizations, Transformative Learning" />
+        <meta
+          name="keywords"
+          content="Craftwise Academy,Craftwise,  Corporate Leaders,Ambitious Professionals ,Organizations, Transformative Learning"
+        />
         <link rel="canonical" href="https://craftwiseacademy.com/" />
-
-        
       </Helmet>
       <Navbar />
       <main>
         {/* <Navbar /> */}
 
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
           <Hero />
-          
-        </motion.div>
+        </div>
         {/* <RisingPoster /> */}
-        
-          {/* <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+
+        {/* <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <RisingPoster />
       </Modal>
        */}
-    
-    
+
         <About />
         {/* <Brochures /> */}
-        
+
         <WhatWeDo />
         <SolutionSection />
         <OfficeLabsSection />

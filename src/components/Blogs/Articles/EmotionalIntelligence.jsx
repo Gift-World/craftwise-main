@@ -1,11 +1,12 @@
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import Footer from '../../Footer/Footer';
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import Footer from "../../Footer/Footer";
 
 const EmotionalIntelligence = () => {
   const navigate = useNavigate();
   const article = {
-    title: "Leading with Emotional Intelligence: The Secret to Building High-Performing Teams",
+    title:
+      "Leading with Emotional Intelligence: The Secret to Building High-Performing Teams",
     author: "Edwin Mutoro",
     date: "May 29, 2025",
     subheadings: [
@@ -15,11 +16,10 @@ const EmotionalIntelligence = () => {
       "Evidence-Based Impact of Emotional Intelligence on Team Performance",
       "A Real-World Scenario",
       "Why It Matters Now — Especially in Africa",
-      "Final Thought"
+      "Final Thought",
     ],
     content: [
       `Leadership today is no longer just about KPIs and strategies. It's about people. In a dynamic workplace where diversity of thought, background, and expectations is the norm, one skill continues to stand out as a critical differentiator between mediocre and exceptional leadership — Emotional Intelligence (EQ). EQ isn’t just a "nice-to-have" anymore; it's a leadership imperative.`,
-
 
       `Leaders and managers are constantly navigating complex interpersonal landscapes — from managing team dynamics and inspiring performance to handling conflict and communicating change. In these moments, emotional intelligence becomes the glue that holds everything together.
 
@@ -70,7 +70,7 @@ const EmotionalIntelligence = () => {
       
       `,
 
-`The significance of emotional intelligence in leadership isn't just theoretical; it's backed by substantial research:
+      `The significance of emotional intelligence in leadership isn't just theoretical; it's backed by substantial research:
 
       •  Enhanced Team Productivity: A study by the University of Pennsylvania found that teams with high emotional intelligence outperform their peers by 20% in productivity and employee satisfaction. 
 
@@ -84,11 +84,10 @@ const EmotionalIntelligence = () => {
       `Picture this: A team underperforms due to unclear communication and low morale. A manager steps in — not with top-down directives — but by listening. They host a check-in session, encourage openness, acknowledge concerns, and offer support. They clarify roles, co-create new workflows, and check back regularly. Within weeks, team energy shifts, trust builds, and performance rebounds. 
       
       The difference? Emotional Intelligence.`,
-`As African workplaces become more multi-generational, hybrid, and culturally diverse, leadership must evolve. Emotional intelligence equips leaders to embrace nuance, understand generational motivations, and foster resilience. It’s not just about managing teams — it’s about empowering people.`,
-`Technical skill may land you a leadership title — but emotional intelligence is what earns you leadership trust.
+      `As African workplaces become more multi-generational, hybrid, and culturally diverse, leadership must evolve. Emotional intelligence equips leaders to embrace nuance, understand generational motivations, and foster resilience. It’s not just about managing teams — it’s about empowering people.`,
+      `Technical skill may land you a leadership title — but emotional intelligence is what earns you leadership trust.
 
-To lead well in this era, we must do more than manage tasks. We must connect with people, understand their worlds, and lead with heart.`
-
+To lead well in this era, we must do more than manage tasks. We must connect with people, understand their worlds, and lead with heart.`,
     ],
     imageUrl: "/images/intelligence.avif",
     organization: "Craftwise Academy",
@@ -96,38 +95,40 @@ To lead well in this era, we must do more than manage tasks. We must connect wit
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto">
-        <motion.button
+      <div className="mx-auto max-w-4xl">
+        <button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          onClick={() => navigate('/blogs')}
-          className="mb-6 px-6 py-3 text-indigo-600 hover:text-indigo-800 transition-colors duration-300 flex items-center space-x-2 group"
+          onClick={() => navigate("/blogs")}
+          className="group mb-6 flex items-center space-x-2 px-6 py-3 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
         >
-          <svg 
-            className="w-5 h-5 transform transition-transform group-hover:-translate-x-1" 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            className="h-5 w-5 transform transition-transform group-hover:-translate-x-1"
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          <span className="text-orange-600 font-montserrat">Back to Articles</span>
-        </motion.button>
+          <span className="font-montserrat text-orange-600">
+            Back to Articles
+          </span>
+        </button>
 
-        <motion.article 
+        <article
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-white rounded-lg shadow-lg overflow-hidden"
+          className="overflow-hidden rounded-lg bg-white shadow-lg"
         >
           <div className="p-6">
-            <motion.div
+            <div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -136,40 +137,42 @@ To lead well in this era, we must do more than manage tasks. We must connect wit
               <div className="flex items-center space-x-4 text-gray-600">
                 <span className="font-medium">{article.organization}</span>
               </div>
-              
+
               <h1 className="text-4xl font-bold text-gray-800">
                 {article.title}
               </h1>
-              
+
               <div className="flex items-center text-gray-600">
                 <span>{article.author}</span>
                 <span className="mx-2">•</span>
                 <span>{article.date}</span>
               </div>
 
-              <motion.img
+              <img
                 initial={{ scale: 1.1, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6 }}
                 src={article.imageUrl}
                 alt={article.title}
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-8"
+                className="mb-8 h-[400px] w-full rounded-lg object-cover shadow-lg"
               />
 
-              <div className="prose lg:prose-xl font-montserrat text-gray-700 leading-relaxed">
+              <div className="prose lg:prose-xl font-montserrat leading-relaxed text-gray-700">
                 <p>{article.content[0]}</p>
-                
+
                 {article.subheadings.map((subheading, index) => (
                   <div key={index} className="mt-8">
-                    <h2 className="font-montserrat font-bold text-orange-500 mt-4">
+                    <h2 className="mt-4 font-montserrat font-bold text-orange-500">
                       {subheading}
                     </h2>
-                    <p className="mt-4 font-montserrat whitespace-pre-line">{article.content[index + 1]}</p>
+                    <p className="mt-4 whitespace-pre-line font-montserrat">
+                      {article.content[index + 1]}
+                    </p>
                   </div>
                 ))}
               </div>
-              
-              <div className="flex items-center justify-between pt-8 border-t border-gray-200">
+
+              <div className="flex items-center justify-between border-t border-gray-200 pt-8">
                 <div className="flex items-center space-x-2">
                   {/* <span className="px-3 py-1 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-300 cursor-pointer">
                     #career
@@ -177,33 +180,33 @@ To lead well in this era, we must do more than manage tasks. We must connect wit
                   <span className="px-3 py-1 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-300 cursor-pointer">
                     #leadership
                   </span> */}
-                  <motion.button
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3 }}
-          onClick={() => navigate('/blogs')}
-          className="mb-6 px-6 py-3 text-indigo-600 hover:text-indigo-800 transition-colors duration-300 flex items-center space-x-2 group"
-        >
-          <svg 
-            className="w-5 h-5 transform transition-transform group-hover:-translate-x-1" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-          <span className="text-orange-600">Back to Articles</span>
-        </motion.button>
+                  <button
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                    onClick={() => navigate("/blogs")}
+                    className="group mb-6 flex items-center space-x-2 px-6 py-3 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
+                  >
+                    <svg
+                      className="h-5 w-5 transform transition-transform group-hover:-translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                    <span className="text-orange-600">Back to Articles</span>
+                  </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.article>
+        </article>
       </div>
       <Footer />
     </div>

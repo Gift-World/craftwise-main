@@ -1,58 +1,56 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const ServiceCard = ({ title, description, icon, delay }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   return (
-    <motion.div
+    <div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay, duration: 0.4 }}
-      className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+      className="rounded-lg bg-white p-6 shadow-lg transition-shadow hover:shadow-xl"
     >
-      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-orange-100">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+      <h3 className="mb-2 text-xl font-semibold text-gray-900">{title}</h3>
       <p className="text-gray-600">{description}</p>
-    </motion.div>
+    </div>
   );
 };
 
 const WhatWeDo = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   return (
-    <div id='what-we-do' className=" bg-gradient-to-b from-orange-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <motion.div
+    <div id="what-we-do" className="bg-gradient-to-b from-orange-50 to-white">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div
           ref={ref}
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-4"
+          className="mb-4 text-center"
         >
-          <h2  className="text-4xl font-montserrat font-bold text-gray-900 mb-10">
+          <h2 className="mb-10 font-montserrat text-4xl font-bold text-gray-900">
             We Serve ...
           </h2>
-         
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <ServiceCard
-            title=  "Ambitious Professionals"
+            title="Ambitious Professionals"
             description="Looking to elevate their careers through practical, hands-on learning experiences."
             icon={<span className="text-2xl">👥</span>}
             delay={0.2}
-            
           />
           <ServiceCard
             title="Corporate Leaders"
@@ -67,18 +65,19 @@ const WhatWeDo = () => {
             delay={0.6}
           />
         </div>
-        <motion.div
+        <div
           ref={ref}
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-4"
+          className="mb-4 text-center"
         >
-         
-          <p  className=" font-montserrat text-[17px] text-gray-800 font-medium  mx-auto p-5">
-            Whether you are an aspiring manager, a seasoned leader, or an HR professional seeking innovative training solutions, CraftWise Academy is crafted just for you.
+          <p className="mx-auto p-5 font-montserrat text-[17px] font-medium text-gray-800">
+            Whether you are an aspiring manager, a seasoned leader, or an HR
+            professional seeking innovative training solutions, CraftWise
+            Academy is crafted just for you.
           </p>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

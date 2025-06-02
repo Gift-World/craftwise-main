@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
-const PartnerCard = ({ logo, name, rating, delay,website }) => {
+const PartnerCard = ({ logo, name, rating, delay, website }) => {
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -11,32 +11,31 @@ const PartnerCard = ({ logo, name, rating, delay,website }) => {
       whileHover={{ scale: 1.05 }}
       className="flex flex-col items-center"
     >
-      <div className="bg-white w-48 h-48 rounded-full flex items-center justify-center p-6 shadow-lg hover:shadow-xl transition-shadow">
-        <img src={logo} alt={name} className="w-32 h-32 object-contain" />
+      <div className="flex h-48 w-48 items-center justify-center rounded-full bg-white p-6 shadow-lg transition-shadow hover:shadow-xl">
+        <img src={logo} alt={name} className="h-32 w-32 object-contain" />
       </div>
-      <div className="flex mt-4 space-x-1">
+      <div className="mt-4 flex space-x-1">
         {[...Array(5)].map((_, i) => (
-          <motion.span
+          <span
             key={i}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: delay + (i * 0.1) }}
+            transition={{ delay: delay + i * 0.1 }}
             className="text-2xl text-yellow-400"
           >
             ⭐
-          </motion.span>
+          </span>
         ))}
       </div>
       <a
         href={website}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 hover:text-white  space-x-1  relative flex items-center justify-center gap-2 px-5 py-2.5 text-yellow-500 font-bold text-sm   border-white/30 rounded-full shadow-lg overflow-hidden hover:scale-105 hover:border-white/60 transition-transform duration-300 ease-in-out  mx-auto"
+        className="relative mx-auto mt-4 flex items-center justify-center gap-2 space-x-1 overflow-hidden rounded-full border-white/30 px-5 py-2.5 text-sm font-bold text-yellow-500 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:border-white/60 hover:text-white"
       >
         <FaExternalLinkAlt size={20} />
-        
       </a>
-    </motion.div>
+    </div>
   );
 };
 

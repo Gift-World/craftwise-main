@@ -1,40 +1,40 @@
-import { motion } from 'framer-motion';
-import { useParams, useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { useParams, useNavigate } from "react-router-dom";
 
 const BlogArticle = ({ articles }) => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const article = articles.find(a => a.path === `/blog/${slug}`);
+  const article = articles.find((a) => a.path === `/blog/${slug}`);
 
   if (!article) {
     return <div>Article not found</div>;
   }
 
   return (
-    <motion.article 
+    <article
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg"
+      className="mx-auto max-w-4xl rounded-lg bg-white shadow-lg"
     >
-      <button 
-        onClick={() => navigate('/blogs')}
-        className="inline-block px-6 py-4 text-indigo-600 hover:text-indigo-800 transition-colors duration-300"
+      <button
+        onClick={() => navigate("/blogs")}
+        className="inline-block px-6 py-4 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
       >
         ← Back to Articles
       </button>
-      
+
       <div className="p-6">
-        <motion.img
+        <img
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6 }}
           src={article.imageUrl}
           alt={article.title}
-          className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-8"
+          className="mb-8 h-[400px] w-full rounded-lg object-cover shadow-lg"
         />
-        
-        <motion.div
+
+        <div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -44,43 +44,41 @@ const BlogArticle = ({ articles }) => {
             <span className="font-medium">{article.organization}</span>
             <span className="text-sm">{article.followers}</span>
           </div>
-          
-          <h1 className="text-4xl font-bold text-gray-800">
-            {article.title}
-          </h1>
-          
+
+          <h1 className="text-4xl font-bold text-gray-800">{article.title}</h1>
+
           <div className="flex items-center text-gray-600">
             <span>{article.author}</span>
             <span className="mx-2">•</span>
             <span>{article.date}</span>
           </div>
-          
-          <div className="prose lg:prose-xl text-gray-700 leading-relaxed whitespace-pre-line">
+
+          <div className="prose lg:prose-xl whitespace-pre-line leading-relaxed text-gray-700">
             {article.content}
           </div>
-          
-          <div className="flex items-center justify-between pt-8 border-t border-gray-200">
+
+          <div className="flex items-center justify-between border-t border-gray-200 pt-8">
             <div className="flex items-center space-x-4">
-              <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+              <button className="rounded-lg bg-indigo-600 px-4 py-2 text-white transition-colors duration-300 hover:bg-indigo-700">
                 Share
               </button>
-              <button className="px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors duration-300">
+              <button className="rounded-lg border border-indigo-600 px-4 py-2 text-indigo-600 transition-colors duration-300 hover:bg-indigo-50">
                 Follow
               </button>
             </div>
             <div className="flex items-center space-x-2">
               <span className="text-gray-600">Tags:</span>
-              <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors duration-300 cursor-pointer">
+              <span className="cursor-pointer rounded-full bg-gray-100 px-3 py-1 text-gray-700 transition-colors duration-300 hover:bg-gray-200">
                 #career
               </span>
-              <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors duration-300 cursor-pointer">
+              <span className="cursor-pointer rounded-full bg-gray-100 px-3 py-1 text-gray-700 transition-colors duration-300 hover:bg-gray-200">
                 #leadership
               </span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.article>
+    </article>
   );
 };
 

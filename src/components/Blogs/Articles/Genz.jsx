@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import Footer from '../../Footer/Footer';
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import Footer from "../../Footer/Footer";
 
 const Genz = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Genz = () => {
       "Bridging the Gap: Training & Development as the Game-Changer",
       "How do GenZ then thrive in the WorkPlace",
       "The Role of Organizational Psychology in the Future Workplace",
-      "HR & Learning Managers: The Call to Action"
+      "HR & Learning Managers: The Call to Action",
     ],
     content: [
       `The Gen Z workforce is redefining the traditional workplace, bringing with them new expectations,
@@ -113,7 +113,7 @@ ownership of your journey.
 
      Welcome to the jungle—now go and conquer it. 🚀
 Are we ready to stop complaining about Gen Z and start building the next generation of
-leaders?`
+leaders?`,
     ],
     imageUrl: "https://i.imgur.com/LSflXJU.jpeg",
     organization: "Craftwise Academy",
@@ -121,38 +121,40 @@ leaders?`
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto">
-        <motion.button
+      <div className="mx-auto max-w-4xl">
+        <button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          onClick={() => navigate('/blogs')}
-          className="mb-6 px-6 py-3 text-indigo-600 hover:text-indigo-800 transition-colors duration-300 flex items-center space-x-2 group"
+          onClick={() => navigate("/blogs")}
+          className="group mb-6 flex items-center space-x-2 px-6 py-3 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
         >
-          <svg 
-            className="w-5 h-5 transform transition-transform group-hover:-translate-x-1" 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            className="h-5 w-5 transform transition-transform group-hover:-translate-x-1"
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          <span className="text-orange-600 font-montserrat">Back to Articles</span>
-        </motion.button>
+          <span className="font-montserrat text-orange-600">
+            Back to Articles
+          </span>
+        </button>
 
-        <motion.article 
+        <article
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-white rounded-lg shadow-lg overflow-hidden"
+          className="overflow-hidden rounded-lg bg-white shadow-lg"
         >
           <div className="p-6">
-            <motion.div
+            <div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -161,74 +163,76 @@ leaders?`
               <div className="flex items-center space-x-4 text-gray-600">
                 <span className="font-medium">{article.organization}</span>
               </div>
-              
+
               <h1 className="text-4xl font-bold text-gray-800">
                 {article.title}
               </h1>
-              
+
               <div className="flex items-center text-gray-600">
                 <span>{article.author}</span>
                 <span className="mx-2">•</span>
                 <span>{article.date}</span>
               </div>
 
-              <motion.img
+              <img
                 initial={{ scale: 1.1, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6 }}
                 src={article.imageUrl}
                 alt={article.title}
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-8"
+                className="mb-8 h-[400px] w-full rounded-lg object-cover shadow-lg"
               />
 
-              <div className="prose lg:prose-xl font-montserrat text-gray-700 leading-relaxed">
+              <div className="prose lg:prose-xl font-montserrat leading-relaxed text-gray-700">
                 <p>{article.content[0]}</p>
-                
+
                 {article.subheadings.map((subheading, index) => (
                   <div key={index} className="mt-8">
-                    <h2 className="font-montserrat font-bold text-orange-500 mt-4">
+                    <h2 className="mt-4 font-montserrat font-bold text-orange-500">
                       {subheading}
                     </h2>
-                    <p className="mt-4 font-montserrat whitespace-pre-line">{article.content[index + 1]}</p>
+                    <p className="mt-4 whitespace-pre-line font-montserrat">
+                      {article.content[index + 1]}
+                    </p>
                   </div>
                 ))}
               </div>
-              
-              <div className="flex items-center justify-between pt-8 border-t border-gray-200">
+
+              <div className="flex items-center justify-between border-t border-gray-200 pt-8">
                 <div className="flex items-center space-x-2">
-                  <span className="px-3 py-1 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-300 cursor-pointer">
+                  <span className="cursor-pointer rounded-full bg-orange-500 px-3 py-1 text-white transition-colors duration-300 hover:bg-orange-600">
                     #career
                   </span>
-                  <span className="px-3 py-1 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-300 cursor-pointer">
+                  <span className="cursor-pointer rounded-full bg-orange-500 px-3 py-1 text-white transition-colors duration-300 hover:bg-orange-600">
                     #leadership
                   </span>
-                  <motion.button
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3 }}
-          onClick={() => navigate('/blogs')}
-          className="mb-6 px-6 py-3 text-indigo-600 hover:text-indigo-800 transition-colors duration-300 flex items-center space-x-2 group"
-        >
-          <svg 
-            className="w-5 h-5 transform transition-transform group-hover:-translate-x-1" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-          <span className="text-orange-600">Back to Articles</span>
-        </motion.button>
+                  <button
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                    onClick={() => navigate("/blogs")}
+                    className="group mb-6 flex items-center space-x-2 px-6 py-3 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
+                  >
+                    <svg
+                      className="h-5 w-5 transform transition-transform group-hover:-translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                    <span className="text-orange-600">Back to Articles</span>
+                  </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.article>
+        </article>
       </div>
       <Footer />
     </div>

@@ -1,52 +1,54 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useState } from 'react';
-import { FaCheck } from 'react-icons/fa';
-import Brochures from '../../components/Brochure/Brochures';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+import { FaCheck } from "react-icons/fa";
+import Brochures from "../../components/Brochure/Brochures";
 
-const TalentPage = ({ 
-  title, 
+const TalentPage = ({
+  title,
   subtitle,
   title1,
   description,
-  backgroundImage, 
-  features, 
+  backgroundImage,
+  features,
   tools,
   outcome,
   outcome1,
   duration,
-  eligibility 
+  eligibility,
 }) => {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
   const { ref, inView } = useInView({
     threshold: 0.1,
-    triggerOnce: true
+    triggerOnce: true,
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    const subject = encodeURIComponent(`Program Interest from ${formData.name}`);
+
+    const subject = encodeURIComponent(
+      `Program Interest from ${formData.name}`,
+    );
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone}\n\n` +
-      `Message: ${formData.message}`
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n\n` +
+        `Message: ${formData.message}`,
     );
-  
+
     const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=joy@craftwiseacademy.com&su=${subject}&body=${body}`;
     const mailtoLink = `mailto:joy@craftwiseacademy.com?subject=${subject}&body=${body}`;
-  
+
     // Special link for Android (opens Gmail app directly)
     const gmailIntent = `intent://compose?to=joy@craftwiseacademy.com&subject=${subject}&body=${body}#Intent;scheme=mailto;package=com.google.android.gm;end;`;
-  
+
     if (/Android/i.test(navigator.userAgent)) {
       // Try opening Gmail app on Android
       window.location.href = gmailIntent;
@@ -62,19 +64,18 @@ const TalentPage = ({
         }
       }, 1000);
     }
-  
+
     setShowForm(false);
   };
-  
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3
-      }
-    }
+        staggerChildren: 0.3,
+      },
+    },
   };
 
   const itemVariants = {
@@ -84,305 +85,322 @@ const TalentPage = ({
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const scaleVariants = {
     hover: {
       scale: 1.05,
       transition: {
-        duration: 0.2
-      }
-    }
+        duration: 0.2,
+      },
+    },
   };
 
   return (
     <div className="min-h-screen">
-      <motion.div 
+      <div
         className="relative h-[80vh] overflow-hidden"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-       <div   
-      
-  className="inset-0 bg-cover  bg-no-repeat absolute min-h-screen overflow-hidden transform hover:scale-105 transition-transform duration-700"
-  style={{ backgroundImage: `url(${backgroundImage})` }}
->
-  <div className="absolute inset-0 bg-black bg-opacity-60" />
-</div>
+        <div
+          className="absolute inset-0 min-h-screen transform overflow-hidden bg-cover bg-no-repeat transition-transform duration-700 hover:scale-105"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-60" />
+        </div>
 
-
-        <div className="relative h-full flex items-center justify-center text-white  pt-32">
-          <motion.div
+        <div className="relative flex h-full items-center justify-center pt-32 text-white">
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-center max-w-4xl"
+            className="max-w-4xl text-center"
           >
-            <motion.h1 
-              className=" font-montserrat  text-4xl font-bold mb-4"
+            <h1
+              className="mb-4 font-montserrat text-4xl font-bold"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               {title}
-            </motion.h1>
-            <motion.p 
-              className=" font-montserrat font-semibold text-2xl"
+            </h1>
+            <p
+              className="font-montserrat text-2xl font-semibold"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               {subtitle}
-            </motion.p>
-          </motion.div>
-          
+            </p>
+          </div>
         </div>
-        
-      </motion.div>
-      <div className="flex justify-start md:justify-start mt-4 px-4">
+      </div>
+      <div className="mt-4 flex justify-start px-4 md:justify-start">
         {/* This div will be aligned to the far right */}
-        <div className=" rounded-lg shadow-md">
+        <div className="rounded-lg shadow-md">
           <Brochures />
-          
         </div>
       </div>
       <div className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.div
+        <div className="mx-auto max-w-6xl px-4">
+          <div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="text-center mb-16"
+            className="mb-16 text-center"
           >
-            <motion.h2 
+            <h2
               variants={itemVariants}
-              className="text-3xl font-black font-montserrat text-orange-500 mb-4"
+              className="mb-4 font-montserrat text-3xl font-black text-orange-500"
             >
               {title1}
-            </motion.h2>
-            <motion.p 
+            </h2>
+            <p
               variants={itemVariants}
-              className="text-[18px] text-gray-600 font-montserrat  mx-auto"
+              className="mx-auto font-montserrat text-[18px] text-gray-600"
             >
               {description}
-            </motion.p>
-          </motion.div>
-
-        
-
-          <div ref={ref} className="flex flex-col md:flex-row mb-16 gap-8">
-  {/* Employers Section */}
-  <motion.div
-    variants={containerVariants}
-    initial="hidden"
-    animate={inView ? "visible" : "hidden"}
-    className=" p-7 w-full md:w-1/2"
-  >
-    <h2 className="text-3xl text-black font-montserrat font-bold mb-8">
-      For Employers:
-    </h2>
-    <h3 className='font-bold text-orange-500 font-montserrat text-[20px]'> Get Job-Ready Talent with ZERO Hiring Fees</h3>
-    <h4 className="font-montserrat text-[15px] text-gray-600 font-semibold mb-7">
-      Hiring the wrong person is costly. What if you could get high-quality, pre-trained professionals ready to deliver from Day 1—at no cost?
-    </h4>
-    
-    <div className="font-montserrat space-y-6">
-      {features.map((feature, index) => (
-        <motion.div
-          key={index}
-          variants={itemVariants}
-          whileHover={scaleVariants.hover}
-          className="flex items-start space-x-4 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300  bg-white "
-        >
-          <div className="bg-orange-500 p-3 rounded-full">
-            {feature.icon}
+            </p>
           </div>
-          <div >
-            <h3 className="text-orange-500 font-semibold text-lg">{feature.title}</h3>
-            <p className="text-gray-600">{feature.description}</p>
+
+          <div ref={ref} className="mb-16 flex flex-col gap-8 md:flex-row">
+            {/* Employers Section */}
+            <div
+              variants={containerVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              className="w-full p-7 md:w-1/2"
+            >
+              <h2 className="mb-8 font-montserrat text-3xl font-bold text-black">
+                For Employers:
+              </h2>
+              <h3 className="font-montserrat text-[20px] font-bold text-orange-500">
+                {" "}
+                Get Job-Ready Talent with ZERO Hiring Fees
+              </h3>
+              <h4 className="mb-7 font-montserrat text-[15px] font-semibold text-gray-600">
+                Hiring the wrong person is costly. What if you could get
+                high-quality, pre-trained professionals ready to deliver from
+                Day 1—at no cost?
+              </h4>
+
+              <div className="space-y-6 font-montserrat">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    variants={itemVariants}
+                    whileHover={scaleVariants.hover}
+                    className="flex items-start space-x-4 rounded-lg bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md"
+                  >
+                    <div className="rounded-full bg-orange-500 p-3">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-orange-500">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+                <h3 className="font-montserrat text-[16px] font-semibold text-white">
+                  Secure your access to top-tier talent today!
+                </h3>
+                <button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setShowForm(true)}
+                  className="transform rounded-full bg-orange-500 px-8 py-3 text-white transition-all hover:bg-orange-600"
+                >
+                  Get Pre-Vetted Talent
+                </button>
+              </div>
+            </div>
+
+            {/* Job Seekers Section */}
+            <div
+              variants={containerVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              className="w-full p-7 md:w-1/2"
+            >
+              <h2 className="mb-8 font-montserrat text-3xl font-bold text-black">
+                For Job Seekers:
+              </h2>
+              <h3 className="font-montserrat text-[20px] font-bold text-orange-500">
+                {" "}
+                Your Shortcut to a High-Paying Job Starts Here
+              </h3>
+              <h4 className="mb-7 font-montserrat text-[15px] font-semibold text-gray-600">
+                You’re doing everything right—so why aren’t you getting hired?
+                Most job seekers lack the workplace skills that employers
+                actually want.
+              </h4>
+
+              <div className="space-y-4 font-montserrat">
+                {eligibility.map((item, index) => (
+                  <div
+                    key={index}
+                    variants={itemVariants}
+                    whileHover={scaleVariants.hover}
+                    className="flex items-center space-x-3 rounded-lg bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md"
+                  >
+                    <FaCheck className="flex-shrink-0 text-orange-500" />
+                    <span className="text-gray-600">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setShowForm(true)}
+                className="mt-7 transform rounded-full bg-orange-500 px-8 py-3 text-white transition-all hover:bg-orange-600"
+              >
+                Get Hired Faster
+              </button>
+            </div>
           </div>
-        </motion.div>
-      ))}
-      <h3 className="font-montserrat text-white font-semibold text-[16px]">
-        Secure your access to top-tier talent today!
-      </h3>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setShowForm(true)}
-        className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
-      >
-        Get Pre-Vetted Talent
-      </motion.button>
-    </div>
-  </motion.div>
-  
 
-  {/* Job Seekers Section */}
-  <motion.div
-    variants={containerVariants}
-    initial="hidden"
-    animate={inView ? "visible" : "hidden"}
-    className=" p-7 w-full md:w-1/2"
-  >
-    <h2 className="text-3xl font-bold text-black font-montserrat mb-8">
-      For Job Seekers: 
-    </h2>
-    <h3 className="font-bold text-orange-500 font-montserrat text-[20px]"> Your Shortcut to a High-Paying Job Starts Here</h3>
-    <h4 className="font-montserrat text-[15px] text-gray-600 font-semibold mb-7">
-      You’re doing everything right—so why aren’t you getting hired? 
-      Most job seekers lack the workplace skills that employers actually want.
-    </h4>
-
-    <div className="font-montserrat space-y-4">
-      {eligibility.map((item, index) => (
-        <motion.div
-          key={index}
-          variants={itemVariants}
-          whileHover={scaleVariants.hover}
-          className="flex items-center bg-white space-x-3 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-        >
-          <FaCheck className="text-orange-500 flex-shrink-0" />
-          <span className="text-gray-600">{item}</span>
-        </motion.div>
-      ))}
-    </div>
-
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      onClick={() => setShowForm(true)}
-      className="bg-orange-500 text-white px-8 mt-7 py-3 rounded-full hover:bg-orange-600 transform transition-all"
-    >
-      Get Hired Faster
-    </motion.button>
-  </motion.div>
-</div>
-
-
-
-          <motion.div
-  variants={containerVariants}
-  initial="hidden"
-  animate={inView ? "visible" : "hidden"}
-  className="text-center mb-16"
->
-  <h2 className="text-3xl font-montserrat font-bold mb-8">Why CraftWise Talent Bridge?</h2>
-  <h4 className="font-montserrat p-5">Unlike job boards or traditional recruitment firms, we do more than match resumes.</h4>
-  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-    {tools.map((tool, index) => {
-      // Define an array of unique background gradients for each card
-      const bgGradients = [
-        "bg-gradient-to-r from-orange-500 to-orange-500",
-        "bg-gradient-to-r from-orange-500 to-orange-500",
-        "bg-gradient-to-r from-orange-500 to-orange-500",
-        "bg-gradient-to-r from-orange-500 to-orange-500",
-      ];
-      return (
-        <motion.div
-          key={index}
-          variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
-          className={`p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 
-            ${bgGradients[index % bgGradients.length]} text-white`}
-        >
-          <p className=" text-white font-montserrat">{tool}</p>
-        </motion.div>
-      );
-    })}
-  </div>
-</motion.div>
-
-        
+          <div
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="mb-16 text-center"
+          >
+            <h2 className="mb-8 font-montserrat text-3xl font-bold">
+              Why CraftWise Talent Bridge?
+            </h2>
+            <h4 className="p-5 font-montserrat">
+              Unlike job boards or traditional recruitment firms, we do more
+              than match resumes.
+            </h4>
+            <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+              {tools.map((tool, index) => {
+                // Define an array of unique background gradients for each card
+                const bgGradients = [
+                  "bg-gradient-to-r from-orange-500 to-orange-500",
+                  "bg-gradient-to-r from-orange-500 to-orange-500",
+                  "bg-gradient-to-r from-orange-500 to-orange-500",
+                  "bg-gradient-to-r from-orange-500 to-orange-500",
+                ];
+                return (
+                  <div
+                    key={index}
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.05 }}
+                    className={`rounded-lg p-6 shadow-lg transition-shadow duration-300 hover:shadow-2xl ${bgGradients[index % bgGradients.length]} text-white`}
+                  >
+                    <p className="font-montserrat text-white">{tool}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
-       
       </div>
-      <div className="bg-secondary text-white py-16">
+      <div className="bg-secondary py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">The Future of Hiring & Career Success Starts Here</h2>
-          <p className="mb-8 max-w-2xl mx-auto font-montserrat">CraftWise Talent Bridge isn't just another job-matching platform—it's a game-changer for businesses and ambitious professionals.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <motion.button
+          <h2 className="mb-8 text-3xl font-bold">
+            The Future of Hiring & Career Success Starts Here
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl font-montserrat">
+            CraftWise Talent Bridge isn't just another job-matching
+            platform—it's a game-changer for businesses and ambitious
+            professionals.
+          </p>
+          <div className="flex flex-col justify-center gap-4 md:flex-row">
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowForm(true)}
-              className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transform transition-all"
+              className="transform rounded-full bg-orange-500 px-8 py-3 text-white transition-all hover:bg-orange-600"
             >
               Get Pre-Vetted Talent
-            </motion.button>
-            <motion.button
+            </button>
+            <button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowForm(true)}
-              className="bg-orange-500 text-white px-8  py-3 rounded-full hover:bg-orange-600 transform transition-all"
+              className="transform rounded-full bg-orange-500 px-8 py-3 text-white transition-all hover:bg-orange-600"
             >
               Get Hired Faster
-            </motion.button>
+            </button>
           </div>
         </div>
-        </div>
-      
+      </div>
 
       {showForm && (
-        <motion.div
+        <div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
         >
-          <motion.div
+          <div
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.5, opacity: 0 }}
             transition={{ type: "spring", damping: 25 }}
-            className="bg-white rounded-lg p-8 max-w-md w-full"
+            className="w-full max-w-md rounded-lg bg-white p-8"
           >
-            <h3 className="text-2xl font-bold mb-4">Express Interest</h3>
+            <h3 className="mb-4 text-2xl font-bold">Express Interest</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium mb-1">Name</label>
+                <label className="mb-1 block text-sm font-medium">Name</label>
                 <input
                   type="text"
-                  className="w-full border rounded-md px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
+                  className="w-full rounded-md border px-3 py-2 transition-all duration-200 focus:border-transparent focus:ring-2 focus:ring-orange-500"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Email</label>
+                <label className="mb-1 block text-sm font-medium">Email</label>
                 <input
                   type="email"
-                  className="w-full border rounded-md px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
+                  className="w-full rounded-md border px-3 py-2 transition-all duration-200 focus:border-transparent focus:ring-2 focus:ring-orange-500"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Phone</label>
+                <label className="mb-1 block text-sm font-medium">Phone</label>
                 <input
                   type="tel"
-                  className="w-full border rounded-md px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
+                  className="w-full rounded-md border px-3 py-2 transition-all duration-200 focus:border-transparent focus:ring-2 focus:ring-orange-500"
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
+                  }
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Message</label>
+                <label className="mb-1 block text-sm font-medium">
+                  Message
+                </label>
                 <textarea
-                  className="w-full border rounded-md px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
+                  className="w-full rounded-md border px-3 py-2 transition-all duration-200 focus:border-transparent focus:ring-2 focus:ring-orange-500"
                   rows="4"
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                 ></textarea>
               </div>
               <div className="flex justify-end space-x-4">
-                <motion.button
+                <button
                   type="button"
                   onClick={() => setShowForm(false)}
                   className="px-4 py-2 text-gray-600 hover:text-gray-800"
@@ -390,19 +408,19 @@ const TalentPage = ({
                   whileTap={{ scale: 0.95 }}
                 >
                   Cancel
-                </motion.button>
-                <motion.button
+                </button>
+                <button
                   type="submit"
-                  className="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600"
+                  className="rounded-md bg-orange-500 px-6 py-2 text-white hover:bg-orange-600"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Submit
-                </motion.button>
+                </button>
               </div>
             </form>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
     </div>
   );

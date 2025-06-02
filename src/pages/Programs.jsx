@@ -1,45 +1,48 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useNavigate } from 'react-router-dom';
-import Footer from '../components/Footer/Footer';
-import Brochures from '../components/Brochure/Brochures';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer/Footer";
+import Brochures from "../components/Brochure/Brochures";
 const programs = [
   {
     title: "RISING PROFESSIONALS PROGRAMME",
     subtitle: "Empowering Early Career Success",
-    description: "A foundational program designed to accelerate the growth of emerging professionals.",
+    description:
+      "A foundational program designed to accelerate the growth of emerging professionals.",
     image: "https://i.imgur.com/6GjLRZC.png",
-    path: "/rising"
+    path: "/rising",
   },
   {
     title: "NEW MANAGERS PROGRAMME",
     subtitle: "Transitioning from Individual Contributor to Leader",
-    description: "A comprehensive program designed for new managers, focusing on essential leadership skills and team management fundamentals.",
+    description:
+      "A comprehensive program designed for new managers, focusing on essential leadership skills and team management fundamentals.",
     image: "https://i.imgur.com/Y94ziMX.png",
-    path: "/managers"
+    path: "/managers",
   },
   {
     title: "EMERGING LEADERS PROGRAMME",
     subtitle: "Preparing for Senior Leadership Roles",
-    description: "An advanced program for emerging leaders ready to take on greater organizational responsibilities.",
+    description:
+      "An advanced program for emerging leaders ready to take on greater organizational responsibilities.",
     image: "https://i.imgur.com/1NTh8oR.png",
-    path: "/emerging"
+    path: "/emerging",
   },
   {
     title: "LEGACY LEADERS PROGRAMME",
     subtitle: "Shaping Organizational Transformation",
-    description: "An executive program focused on building lasting organizational impact and cultural transformation.",
+    description:
+      "An executive program focused on building lasting organizational impact and cultural transformation.",
     image: "https://i.imgur.com/qsWTkfs.png",
-    path: "/legacy"
-  }
- 
+    path: "/legacy",
+  },
 ];
 
 function ProgramSection({ program, index }) {
   const navigate = useNavigate();
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const handleReadMore = () => {
@@ -47,49 +50,49 @@ function ProgramSection({ program, index }) {
   };
 
   return (
-    <motion.div
+    <div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="flex flex-col md:flex-row items-center gap-8 py-16 border-b border-gray-200 last:border-b-0"
+      className="flex flex-col items-center gap-8 border-b border-gray-200 py-16 last:border-b-0 md:flex-row"
     >
       <div className="w-full md:w-1/2">
-        <img 
-          src={program.image} 
+        <img
+          src={program.image}
           alt={program.title}
-          className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+          className="h-[400px] w-full rounded-lg object-cover shadow-lg"
         />
       </div>
-      <div className="w-full md:w-1/2 space-y-4">
+      <div className="w-full space-y-4 md:w-1/2">
         <h2 className="text-3xl font-bold text-gray-800">{program.title}</h2>
         <h3 className="text-xl text-gray-600">{program.subtitle}</h3>
-        <p className="text-lg text-gray-600 leading-relaxed">
+        <p className="text-lg leading-relaxed text-gray-600">
           {program.description}
         </p>
-        <motion.button
+        <button
           onClick={handleReadMore}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="read-more text-coral-red font-semibold inline-flex items-center group"
+          className="read-more text-coral-red group inline-flex items-center font-semibold"
         >
           Read more
-          <svg 
-            className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
               d="M9 5l7 7-7 7"
             />
           </svg>
-        </motion.button>
+        </button>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -97,45 +100,40 @@ function Programs() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div 
+      <div
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '70vh',
-          width: '100%',
-          position: 'relative'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "70vh",
+          width: "100%",
+          position: "relative",
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <motion.div 
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className="text-center text-white"
           >
-            <h1 className="text-5xl font-bold mb-4">Our Programmes</h1>
-            <p className="text-xl max-w-2xl mx-auto">
-              Empowering leaders and organizations through world-class education and development programmes
+            <h1 className="mb-4 text-5xl font-bold">Our Programmes</h1>
+            <p className="mx-auto max-w-2xl text-xl">
+              Empowering leaders and organizations through world-class education
+              and development programmes
             </p>
-         
-          </motion.div>
-         
+          </div>
         </div>
-     
       </div>
-      <div className="flex justify-start md:justify-start mt-4 px-4">
+      <div className="mt-4 flex justify-start px-4 md:justify-start">
         {/* This div will be aligned to the far right */}
-        <div className=" rounded-lg shadow-md">
+        <div className="rounded-lg shadow-md">
           <Brochures />
-          
         </div>
       </div>
-      
-      
 
       {/* Programs Section */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         {programs.map((program, index) => (
           <ProgramSection key={index} program={program} index={index} />
         ))}

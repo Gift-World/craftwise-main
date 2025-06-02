@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function BlogSection({ article, index }) {
   const navigate = useNavigate();
@@ -9,64 +9,64 @@ function BlogSection({ article, index }) {
   };
 
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="flex flex-col md:flex-row items-center gap-8 py-16 border-b border-gray-200 last:border-b-0"
+      className="flex flex-col items-center gap-8 border-b border-gray-200 py-16 last:border-b-0 md:flex-row"
     >
       <div className="w-full md:w-1/2">
-        <img 
-          src={article.imageUrl} 
+        <img
+          src={article.imageUrl}
           alt={article.title}
-          className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+          className="h-[400px] w-full rounded-lg object-cover shadow-lg"
         />
       </div>
-      <div className="w-full md:w-1/2 space-y-4">
+      <div className="w-full space-y-4 md:w-1/2">
         <div className="flex items-center space-x-4 text-gray-600">
           <span className="font-medium">{article.organization}</span>
           <span className="text-sm">{article.followers}</span>
         </div>
         <h2 className="text-3xl font-bold text-gray-800">{article.title}</h2>
-        <motion.a
-            href={article.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 font-montserrat text-[30px] inline-block text-orange-500 px-6 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
-          >
-            {article.button}
-          </motion.a>
-        <div className="flex items-center text-gray-600 text-sm">
+        <a
+          href={article.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-block rounded-lg px-6 py-3 font-montserrat text-[30px] text-lg font-bold text-orange-500 transition-colors duration-300"
+        >
+          {article.button}
+        </a>
+        <div className="flex items-center text-sm text-gray-600">
           <span>{article.author}</span>
           <span className="mx-2">•</span>
           <span>{article.date}</span>
         </div>
-        <p className="text-lg text-gray-600 leading-relaxed line-clamp-3">
+        <p className="line-clamp-3 text-lg leading-relaxed text-gray-600">
           {article.excerpt}
         </p>
-        <motion.button
+        <button
           onClick={handleReadMore}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="text-indigo-600 font-semibold inline-flex items-center group"
+          className="group inline-flex items-center font-semibold text-indigo-600"
         >
           Read more
-          <svg 
-            className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
               d="M9 5l7 7-7 7"
             />
           </svg>
-        </motion.button>
+        </button>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

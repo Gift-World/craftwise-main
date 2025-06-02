@@ -46,8 +46,8 @@ const BenefitsSection = () => {
 
   return (
     <div>
-       {/* SEO Meta Tags for Benefits Page */}
-       <Helmet>
+      {/* SEO Meta Tags for Benefits Page */}
+      <Helmet>
         <title>Craftwise Academy | Benefits of Transformative Learning</title>
         <meta
           name="description"
@@ -58,29 +58,26 @@ const BenefitsSection = () => {
           content="Craftwise Academy, Transformative Learning, Empathetic Leadership, Strategic Agility, Career Fuulfillment"
         />
         <link rel="canonical" href="https://craftwiseacademy.com/benefits" />
-
-       
-       
       </Helmet>
       <div className="min-h-screen bg-gradient-to-b from-white to-orange-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
             ref={ref}
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="mb-12 text-center"
           >
-            <h2 className=" font-montserrat text-4xl font-bold text-gray-900 mb-8">
+            <h2 className="mb-8 font-montserrat text-4xl font-bold text-gray-900">
               BENEFITS
             </h2>
-            <div className=" font-montserrat text-[17px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 gap-8 font-montserrat text-[17px] md:grid-cols-2 lg:grid-cols-3">
               {benefits.map((benefit, index) => (
                 <BenefitCard key={index} {...benefit} />
               ))}
               <Brochures />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
       <Footer />

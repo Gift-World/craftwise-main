@@ -35,7 +35,7 @@ const ContactSection = () => {
 
     const subject = encodeURIComponent(`Message from ${formData.name}`);
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:\n${formData.message}`,
     );
     const recipient = "info@craftwiseacademy.com";
 
@@ -47,7 +47,7 @@ const ContactSection = () => {
   const openGmail = () => {
     const subject = encodeURIComponent(`Message from ${formData.name}`);
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:\n${formData.message}`,
     );
     const recipient = "info@craftwiseacademy.com";
 
@@ -58,7 +58,7 @@ const ContactSection = () => {
   const openOutlook = () => {
     const subject = encodeURIComponent(`Message from ${formData.name}`);
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage:\n${formData.message}`,
     );
     const recipient = "info@craftwiseacademy.com";
 
@@ -69,14 +69,13 @@ const ContactSection = () => {
   return (
     <div>
       <div className="min-h-screen bg-orange-900 py-16">
-        <div className="flex justify-start md:justify-start mt-4 px-4">
-                {/* This div will be aligned to the far right */}
-                <div className=" rounded-lg shadow-md">
-                  <Brochures />
-                  
-                </div>
-              </div>
-        <motion.section
+        <div className="mt-4 flex justify-start px-4 md:justify-start">
+          {/* This div will be aligned to the far right */}
+          <div className="rounded-lg shadow-md">
+            <Brochures />
+          </div>
+        </div>
+        <section
           ref={sectionRef}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -91,26 +90,26 @@ const ContactSection = () => {
           id="contact"
           className="relative overflow-hidden py-16"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Contact Us</h2>
-              <p className="text-white/80 text-2xl">
+          <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-4xl font-bold text-white">Contact Us</h2>
+              <p className="text-2xl text-white/80">
                 Get in touch with the CraftWise Academy team
               </p>
-            </motion.div>
+            </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid gap-8 md:grid-cols-2">
               {/* Contact Form */}
-              <motion.div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl">
+              <div className="rounded-2xl bg-white/10 p-8 shadow-xl backdrop-blur-lg">
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   {formError && (
-                    <motion.div className="bg-red-500/10 border border-red-500/20 text-red-200 text-center p-3 rounded-lg">
+                    <div className="rounded-lg border border-red-500/20 bg-red-500/10 p-3 text-center text-red-200">
                       <p>{formError}</p>
-                    </motion.div>
+                    </div>
                   )}
 
                   <div>
-                    <label className="block text-sm font-medium text-white/90 mb-2">
+                    <label className="mb-2 block text-sm font-medium text-white/90">
                       Name
                     </label>
                     <input
@@ -118,13 +117,13 @@ const ContactSection = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/50"
+                      className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-white/50"
                       placeholder="Your Name"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-white/90 mb-2">
+                    <label className="mb-2 block text-sm font-medium text-white/90">
                       Email
                     </label>
                     <input
@@ -132,13 +131,13 @@ const ContactSection = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/50"
+                      className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-white/50"
                       placeholder="your@email.com"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-white/90 mb-2">
+                    <label className="mb-2 block text-sm font-medium text-white/90">
                       Message
                     </label>
                     <textarea
@@ -146,30 +145,28 @@ const ContactSection = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows="4"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/50"
+                      className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-white/50"
                       placeholder="Your message..."
                     />
                   </div>
 
                   {/* Email Send Options */}
                   <div className="grid grid-cols-3 gap-4">
-                    
                     <button
                       type="button"
                       onClick={openGmail}
-                      className="bg-orange-700 text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:bg-orange-500 transition-all duration-300"
+                      className="rounded-lg bg-orange-700 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:bg-orange-500"
                     >
                       Send Message
                     </button>
-                    
                   </div>
                 </form>
-              </motion.div>
+              </div>
 
               {/* Contact Info */}
-              <motion.div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl">
+              <div className="rounded-2xl bg-white/10 p-8 shadow-xl backdrop-blur-lg">
                 <div className="space-y-8">
-                  <h3 className="text-2xl font-semibold text-white mb-8">
+                  <h3 className="mb-8 text-2xl font-semibold text-white">
                     Contact Information
                   </h3>
 
@@ -191,11 +188,11 @@ const ContactSection = () => {
                     },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start space-x-4">
-                      <div className="p-4 bg-secondary/20 rounded-xl">
-                        <item.icon className="text-white text-xl" />
+                      <div className="rounded-xl bg-secondary/20 p-4">
+                        <item.icon className="text-xl text-white" />
                       </div>
                       <div>
-                        <h4 className="font-medium text-white text-lg mb-1">
+                        <h4 className="mb-1 text-lg font-medium text-white">
                           {item.title}
                         </h4>
                         <p className="text-white/70">{item.content}</p>
@@ -203,10 +200,10 @@ const ContactSection = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
-        </motion.section>
+        </section>
       </div>
       <Footer />
     </div>

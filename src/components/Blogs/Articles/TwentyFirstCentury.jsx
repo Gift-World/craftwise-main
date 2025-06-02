@@ -1,11 +1,12 @@
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import Footer from '../../Footer/Footer';
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import Footer from "../../Footer/Footer";
 
 const TwentyFirstCentury = () => {
   const navigate = useNavigate();
   const article = {
-    title: "Training & Development in the 21st Century: The Heartbeat of Effective Teams",
+    title:
+      "Training & Development in the 21st Century: The Heartbeat of Effective Teams",
     author: " Edwin Mutoro Situma",
     date: "April 14, 2025",
     subheadings: [
@@ -18,7 +19,6 @@ const TwentyFirstCentury = () => {
       "Where Training Meets Team Development",
       "Organizational Psychology: The Secret Sauce",
       "Conclusion: Invest in the Human Engine",
-      
     ],
     content: [
       `In today’s fast-evolving workplace, characterized by global shifts, emerging technologies, and a 
@@ -36,35 +36,34 @@ acquired through one-off workshops.
 According to the Harvard Business Review, companies that adopt a culture of continuous 
 learning outperform competitors in innovation, employee retention, and productivity. So, what 
 makes training and development truly effective today?`,
-`Gone are the days of generic, cookie-cutter training modules. Effective training today must be 
+      `Gone are the days of generic, cookie-cutter training modules. Effective training today must be 
 tailored to real challenges teams face in their roles. It must reflect the cultural nuances, 
 industry trends, and skill gaps relevant to the team.
 Whether it's equipping frontline staff with better digital tools or helping managers develop 
 emotional intelligence to lead diverse teams—relevance is the foundation of engagement.`,
-`21st-century training isn't confined to a classroom. Blended learning—which combines online 
+      `21st-century training isn't confined to a classroom. Blended learning—which combines online 
 platforms, real-time coaching, interactive workshops, and peer-led learning—is more engaging 
 and accessible. In Africa, where mobile penetration is high, mobile-based microlearning is 
 gaining traction.
 Experiential learning—learning by doing—is especially effective. Think simulation-based 
 training, team challenges, role-play, and real-time feedback loops. This hands-on approach helps 
 teams internalize concepts and immediately apply them in their workflow.`,
-`Technical skills are no longer enough. High-functioning teams thrive on trust, empathy, 
+      `Technical skills are no longer enough. High-functioning teams thrive on trust, empathy, 
 adaptability, and collaboration—skills rooted in emotional intelligence. Effective T&D 
 programs are now embedding human skills as core components.
 For instance, training that teaches conflict resolution, active listening, and psychological safety 
 helps teams build deeper connections, which directly impacts performance.`,
-`Training shouldn't end after a session. Sustained growth happens through ongoing support. 
+      `Training shouldn't end after a session. Sustained growth happens through ongoing support. 
 Coaching and mentorship programs provide a framework for reflection, accountability, and 
 application.
 In African organizational cultures where hierarchy can sometimes stifle open communication, 
 mentorship becomes a powerful bridge—especially when guided by cultural sensitivity and 
 shared lived experiences.
 `,
-`Using feedback, performance data, and behavioral insights, organizations can now tailor 
+      `Using feedback, performance data, and behavioral insights, organizations can now tailor 
 development plans to individual and team needs. Tools from organizational psychology, such as 
 personality assessments, team diagnostics, and psychometric evaluations, ensure that 
 development efforts aren’t just good—they’re smart.`,
-     
 
       `There is a strong correlation between effective training and team development:
 
@@ -86,7 +85,7 @@ teams resolve conflicts more constructively and maintain productivity under pres
 
 `,
 
-`Organizational psychology plays a silent but vital role in enhancing T&D effectiveness. By 
+      `Organizational psychology plays a silent but vital role in enhancing T&D effectiveness. By 
 studying group dynamics, individual motivation, leadership styles, and culture, it enables the 
 design of training programs that align learning with behavior change.
 For example:
@@ -99,12 +98,12 @@ For example:
 
 
 `,
-`At the core of every thriving organization are people—working, learning, evolving together. 
+      `At the core of every thriving organization are people—working, learning, evolving together. 
 Training and development in the 21st century is no longer about ticking boxes. It’s about 
 unlocking potential, fostering collaborative cultures, and equipping leaders and teams to 
 navigate change with confidence.
 To build great teams, organizations must commit to intentional, relevant, and psychologicallyinformed development strategies. The question is no longer “Should we invest in T&D?” but 
-“Are we doing it in a way that transforms our people and drives performance?”`
+“Are we doing it in a way that transforms our people and drives performance?”`,
     ],
     imageUrl: "https://i.imgur.com/5CwT9hL.jpeg",
     organization: "Craftwise Academy",
@@ -112,38 +111,40 @@ To build great teams, organizations must commit to intentional, relevant, and ps
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto">
-        <motion.button
+      <div className="mx-auto max-w-4xl">
+        <button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          onClick={() => navigate('/blogs')}
-          className="mb-6 px-6 py-3 text-indigo-600 hover:text-indigo-800 transition-colors duration-300 flex items-center space-x-2 group"
+          onClick={() => navigate("/blogs")}
+          className="group mb-6 flex items-center space-x-2 px-6 py-3 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
         >
-          <svg 
-            className="w-5 h-5 transform transition-transform group-hover:-translate-x-1" 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            className="h-5 w-5 transform transition-transform group-hover:-translate-x-1"
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          <span className="text-orange-600 font-montserrat">Back to Articles</span>
-        </motion.button>
+          <span className="font-montserrat text-orange-600">
+            Back to Articles
+          </span>
+        </button>
 
-        <motion.article 
+        <article
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-white rounded-lg shadow-lg overflow-hidden"
+          className="overflow-hidden rounded-lg bg-white shadow-lg"
         >
           <div className="p-6">
-            <motion.div
+            <div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -152,70 +153,70 @@ To build great teams, organizations must commit to intentional, relevant, and ps
               <div className="flex items-center space-x-4 text-gray-600">
                 <span className="font-medium">{article.organization}</span>
               </div>
-              
+
               <h1 className="text-4xl font-bold text-gray-800">
                 {article.title}
               </h1>
-              
+
               <div className="flex items-center text-gray-600">
                 <span>{article.author}</span>
                 <span className="mx-2">•</span>
                 <span>{article.date}</span>
               </div>
 
-              <motion.img
+              <img
                 initial={{ scale: 1.1, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6 }}
                 src={article.imageUrl}
                 alt={article.title}
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg mb-8"
+                className="mb-8 h-[400px] w-full rounded-lg object-cover shadow-lg"
               />
 
-              <div className="prose lg:prose-xl font-montserrat text-gray-700 leading-relaxed">
+              <div className="prose lg:prose-xl font-montserrat leading-relaxed text-gray-700">
                 <p>{article.content[0]}</p>
-                
+
                 {article.subheadings.map((subheading, index) => (
                   <div key={index} className="mt-8">
-                    <h2 className="font-montserrat font-bold text-orange-500 mt-4">
+                    <h2 className="mt-4 font-montserrat font-bold text-orange-500">
                       {subheading}
                     </h2>
-                    <p className="mt-4 font-montserrat whitespace-pre-line">{article.content[index + 1]}</p>
+                    <p className="mt-4 whitespace-pre-line font-montserrat">
+                      {article.content[index + 1]}
+                    </p>
                   </div>
                 ))}
               </div>
-              
-              <div className="flex items-center justify-between pt-8 border-t border-gray-200">
+
+              <div className="flex items-center justify-between border-t border-gray-200 pt-8">
                 <div className="flex items-center space-x-2">
-                  
-                  
-                  <motion.button
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3 }}
-          onClick={() => navigate('/blogs')}
-          className="mb-6 px-6 py-3 text-indigo-600 hover:text-indigo-800 transition-colors duration-300 flex items-center space-x-2 group"
-        >
-          <svg 
-            className="w-5 h-5 transform transition-transform group-hover:-translate-x-1" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-          <span className="text-orange-600">Back to Articles</span>
-        </motion.button>
+                  <button
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                    onClick={() => navigate("/blogs")}
+                    className="group mb-6 flex items-center space-x-2 px-6 py-3 text-indigo-600 transition-colors duration-300 hover:text-indigo-800"
+                  >
+                    <svg
+                      className="h-5 w-5 transform transition-transform group-hover:-translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                    <span className="text-orange-600">Back to Articles</span>
+                  </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.article>
+        </article>
       </div>
       <Footer />
     </div>

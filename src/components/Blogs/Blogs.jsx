@@ -1,14 +1,16 @@
-import { motion } from 'framer-motion';
-import BlogSection from './BlogSection';
-import Footer from '../Footer/Footer';
-import Brochures from '../Brochure/Brochures';
+import { motion } from "framer-motion";
+import BlogSection from "./BlogSection";
+import Footer from "../Footer/Footer";
+import Brochures from "../Brochure/Brochures";
 const articles = [
-   {
+  {
     id: 1,
-    title: "Leading with Emotional Intelligence: The Secret to Building High-Performing Teams",
+    title:
+      "Leading with Emotional Intelligence: The Secret to Building High-Performing Teams",
     author: "Edwin Mutoro",
     date: "May 29, 2025",
-    excerpt: "Leadership today is no longer just about KPIs and strategies. It's about people.In a dynamic workplace where diversity of thought, background, and...",
+    excerpt:
+      "Leadership today is no longer just about KPIs and strategies. It's about people.In a dynamic workplace where diversity of thought, background, and...",
     content: `ILeadership today is no longer just about KPIs and strategies. It's about people.
 In a dynamic workplace where diversity of thought, background, and expectations is the norm,
 one skill continues to stand out as a critical differentiator between mediocre and exceptional
@@ -19,14 +21,16 @@ leadership imperative.
     imageUrl: "/images/intelligence.avif",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/Leading-with-Emotional-Intelligence"
+    path: "/Leading-with-Emotional-Intelligence",
   },
   {
     id: 2,
-    title: "Why Empathy Is Emerging as the Most Strategic Skill in Modern Leadership",
+    title:
+      "Why Empathy Is Emerging as the Most Strategic Skill in Modern Leadership",
     author: "Harold Ang'ila",
     date: "May 16, 2025",
-    excerpt: "In today’s dynamic business environment—where change is constant, burnout is rising, and teams are more diverse than ever—one leadership skill is proving to be more powerful than once assumed: empathy.",
+    excerpt:
+      "In today’s dynamic business environment—where change is constant, burnout is rising, and teams are more diverse than ever—one leadership skill is proving to be more powerful than once assumed: empathy.",
     content: `In today’s dynamic business environment—where change is constant, burnout is rising, and
 teams are more diverse than ever—one leadership skill is proving to be more powerful than
 once assumed: empathy.
@@ -40,14 +44,16 @@ consistently apply—especially when it’s not reciprocated.
     imageUrl: "https://i.imgur.com/dvhezPi.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/Empathy-as-the-most-Strategic-Skill"
+    path: "/Empathy-as-the-most-Strategic-Skill",
   },
   {
     id: 3,
-    title: "Bridging the Managerial Gap: How African Companies Can Build Visionary Leaders from Within",
+    title:
+      "Bridging the Managerial Gap: How African Companies Can Build Visionary Leaders from Within",
     author: "George Munge",
     date: "April 30, 2025",
-    excerpt: "Across Africa, industries are evolving at breakneck speed. Yet one persistent bottleneck threatens to slow progress: the shortage of effective middle managers. In sectors ranging from finance to technology, agriculture to energy, the managerial gap is a reality many organizations can no longer i...",
+    excerpt:
+      "Across Africa, industries are evolving at breakneck speed. Yet one persistent bottleneck threatens to slow progress: the shortage of effective middle managers. In sectors ranging from finance to technology, agriculture to energy, the managerial gap is a reality many organizations can no longer i...",
     content: `Across Africa, industries are evolving at breakneck speed. Yet one persistent bottleneck
 threatens to slow progress: the shortage of effective middle managers. In sectors ranging from
 finance to technology, agriculture to energy, the "managerial gap" is a reality many organizations
@@ -63,15 +69,17 @@ are crucial to shaping Africa's next generation of visionary lead
     imageUrl: "https://i.imgur.com/aHIguOT.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/Bridging-the-Managerial-Gap"
+    path: "/Bridging-the-Managerial-Gap",
   },
-  
+
   {
     id: 4,
-    title: "Why Experiential Learning Is the Future of Corporate Training in Africa",
+    title:
+      "Why Experiential Learning Is the Future of Corporate Training in Africa",
     author: "George Munge",
     date: "April 23, 2025",
-    excerpt: "In today's rapidly evolving workplace, the gap between knowledge and performance has become increasingly evident.. While many African professionals hold technical qualifications and formal degrees,...",
+    excerpt:
+      "In today's rapidly evolving workplace, the gap between knowledge and performance has become increasingly evident.. While many African professionals hold technical qualifications and formal degrees,...",
     content: `In today's rapidly evolving workplace, the gap between knowledge and performance has
 become increasingly evident. While many African professionals hold technical qualifications and
 formal degrees, they often struggle to translate this knowledge into impactful leadership and
@@ -83,15 +91,17 @@ experiential learning.
     imageUrl: "https://i.imgur.com/30Yy8SU.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/Experiential-Learning-Future-of-Corporate-Training"
+    path: "/Experiential-Learning-Future-of-Corporate-Training",
   },
-  
+
   {
     id: 5,
-    title: "Training & Development in the 21st Century: The Heartbeat of Effective Teams",
+    title:
+      "Training & Development in the 21st Century: The Heartbeat of Effective Teams",
     author: "Edwin Mutoro Situma",
     date: "April 14, 2025",
-    excerpt: "In today’s fast-evolving workplace, characterized by global shifts, emerging technologies, and a rapidly diversifying workforce, training and development (T&D) is no longer a...",
+    excerpt:
+      "In today’s fast-evolving workplace, characterized by global shifts, emerging technologies, and a rapidly diversifying workforce, training and development (T&D) is no longer a...",
     content: `In today’s fast-evolving workplace, characterized by global shifts, emerging technologies, and a 
 rapidly diversifying workforce, training and development (T&D) is no longer a luxury—it’s a 
 lifeline. But not just any training. To be effective in the 21st century, T&D must be strategic, 
@@ -102,15 +112,16 @@ doesn't just upgrade skills—it transforms teams.
     imageUrl: "https://i.imgur.com/5CwT9hL.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/Training&Development-in-the-21st-Century"
+    path: "/Training&Development-in-the-21st-Century",
   },
-  
+
   {
     id: 6,
     title: "Welcome to the Jungle: The Reality of the Modern Workplace",
     author: "Edwin Mutoro Situma",
     date: "March 14, 2025",
-    excerpt: "The Gen Z workforce is redefining the traditional workplace, bringing with them new expectations, digital fluency, and a demand for purpose-driven ...",
+    excerpt:
+      "The Gen Z workforce is redefining the traditional workplace, bringing with them new expectations, digital fluency, and a demand for purpose-driven ...",
     content: ` Welcome to the Jungle: The Reality of the Modern Workplace
 The Gen Z workforce is redefining the traditional workplace, bringing with them new expectations,
 digital fluency, and a demand for purpose-driven work. Unlike previous generations, Gen Z values
@@ -214,14 +225,16 @@ leaders?`,
     imageUrl: "https://i.imgur.com/LSflXJU.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/genz"
+    path: "/genz",
   },
   {
     id: 7,
     title: "The Myth of Perfect Strategy: Why Execution Matters More!",
-    author: "PERIS WAMBUI  |  Head of Strategy @ HFC Kenya | Driving Business Growth with Resource Mobilization",
+    author:
+      "PERIS WAMBUI  |  Head of Strategy @ HFC Kenya | Driving Business Growth with Resource Mobilization",
     date: "March 6, 2025",
-    excerpt: "Let’s be honest, most of us love a good strategy session. It’s like planning a dream vacation: mapping out every detail, imagining how smooth everything will go, picturing the perfect outcome. And then reality hits 😬 you miss your flight, lose your luggage, and ...",
+    excerpt:
+      "Let’s be honest, most of us love a good strategy session. It’s like planning a dream vacation: mapping out every detail, imagining how smooth everything will go, picturing the perfect outcome. And then reality hits 😬 you miss your flight, lose your luggage, and ...",
     content: ` Let’s be honest, most of us love a good strategy session. It’s like planning a dream vacation: mapping out every detail, imagining how smooth everything will go, picturing the perfect outcome. And then reality hits 😬 you miss your flight, lose your luggage, and end up eating questionable airport sandwiches. That’s what happens when execution doesn’t match strategy.
 
 The Flawed Obsession with the ‘Perfect’ Strategy
@@ -256,15 +269,17 @@ What’s your take on execution vs. strategy? Have you seen a great strategy fai
     imageUrl: "https://i.imgur.com/fUkk0mV.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/The-Myth-of-Perfect-Strategy"
+    path: "/The-Myth-of-Perfect-Strategy",
   },
- 
+
   {
     id: 8,
-    title: "How Organizations Can Build a Learning Culture for Continuous Growth",
+    title:
+      "How Organizations Can Build a Learning Culture for Continuous Growth",
     author: "George Munge",
     date: "February 25, 2025",
-    excerpt: "In today's fast-paced corporate environment, organizations must prioritize learning and development to remain competitive. A strong learning culture fosters continuous growth, enhances employee engagement, and improves overall productivity...",
+    excerpt:
+      "In today's fast-paced corporate environment, organizations must prioritize learning and development to remain competitive. A strong learning culture fosters continuous growth, enhances employee engagement, and improves overall productivity...",
     content: `
 How Organizations Can Build a Learning Culture for Continuous Growth.
 By George Munge
@@ -331,14 +346,16 @@ The future belongs to organizations that invest in knowledge—because learning 
     imageUrl: "https://i.imgur.com/NuhymtZ.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/learning-culture"
+    path: "/learning-culture",
   },
   {
     id: 9,
-    title: "Built to Last: How to Create a Career & Organization That Thrives for Generations",
+    title:
+      "Built to Last: How to Create a Career & Organization That Thrives for Generations",
     author: "George Munge",
     date: "February 13, 2025",
-    excerpt: "In today's fast-changing world, many careers and businesses rise and fall at an alarming rate. Short-term trends often dictate success, but some professionals and organizations break the cycle to achieve lasting impact...",
+    excerpt:
+      "In today's fast-changing world, many careers and businesses rise and fall at an alarming rate. Short-term trends often dictate success, but some professionals and organizations break the cycle to achieve lasting impact...",
     content: `In today's fast-changing world, many careers and businesses rise and fall at an alarming rate. Short-term trends often dictate success, but some professionals and organizations break the cycle to achieve lasting impact. What sets them apart? How do they future-proof themselves in a world obsessed with quick wins? Jim Collins' Built to Last: Successful Habits of Visionary Companies uncovers that long-term success isn't about luck or a single brilliant idea. It's about having a solid foundation, embracing a visionary mindset, and committing to continuous growth. Whether you're an ambitious young professional, a middle manager, or a C-suite executive, these lessons can transform your approach to career and business success.
 
       Core Values: The Foundation of Long-Term Success
@@ -382,48 +399,49 @@ The future belongs to organizations that invest in knowledge—because learning 
     imageUrl: "https://i.imgur.com/potnzqb.jpeg",
     organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/built-to-last"
+    path: "/built-to-last",
   },
- 
 ];
 
 function Blogs() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div 
+      <div
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.imgur.com/4jBBPw8.jpeg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '70vh',
-          width: '100%',
-          position: 'relative'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "70vh",
+          width: "100%",
+          position: "relative",
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <motion.div 
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className="text-center text-white"
           >
-            <h1 className="text-5xl font-montserrat font-bold mb-4">Our News And Insights</h1>
-            <p className="text-xl font-montserrat max-w-2xl mx-auto">
-              Insights and advice from our team of experts on leadership, career growth, and organizational development
+            <h1 className="mb-4 font-montserrat text-5xl font-bold">
+              Our News And Insights
+            </h1>
+            <p className="mx-auto max-w-2xl font-montserrat text-xl">
+              Insights and advice from our team of experts on leadership, career
+              growth, and organizational development
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
-      <div className="flex justify-start md:justify-start mt-4 px-4">
+      <div className="mt-4 flex justify-start px-4 md:justify-start">
         {/* This div will be aligned to the far right */}
-        <div className=" rounded-lg shadow-md">
+        <div className="rounded-lg shadow-md">
           <Brochures />
-          
         </div>
       </div>
       {/* Blog Content */}
-      <main className="max-w-7xl font-montserrat mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="mx-auto max-w-7xl px-4 py-8 font-montserrat sm:px-6 lg:px-8">
         {articles.map((article, index) => (
           <BlogSection key={article.id} article={article} index={index} />
         ))}
