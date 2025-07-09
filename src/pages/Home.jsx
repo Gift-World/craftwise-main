@@ -13,6 +13,7 @@ import ImpactSection from "../components/Impact/ImpactSection";
 import PartnersSection from "../components/Partners/PartnersSection";
 import Footer from "../components/Footer/Footer";
 import { Helmet } from "react-helmet-async";
+import Companies from "../components/Companies";
 // import RisingPoster from "../components/RisingPro/RisingPoster";
 // import Header from '../components/Header';
 
@@ -69,6 +70,7 @@ function Home() {
         <CraftersAssemblySection />
         <WhyItMattersSection />
         <TeamSection />
+        <Companies />
         <ImpactSection />
         <PartnersSection />
         <Footer />
