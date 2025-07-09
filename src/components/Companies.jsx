@@ -14,10 +14,10 @@ function Companies() {
       name: "Spinners & Spinners",
       logo: "/images/spinners.png"
     },
-    // {
-    //   name: "Ultra Events",
-    //   logo: "/ultra.webp"
-    // },
+    {
+      name: "Emerging Leaders",
+      logo: "/images/emerging.png"
+    },
     {
       name: "Gas2Go",
       logo: "/images/gas2go.png"
