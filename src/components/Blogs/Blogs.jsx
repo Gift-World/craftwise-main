@@ -18,7 +18,7 @@ const articles = [
     imageUrl: "/images/eventbanner2.jpeg",
     // organization: "Craftwise Academy",
     // followers: "18 followers",
-    path: "/People-First-Performance-Always-Masterclass",
+    path: "/masterclass",
   },
   {
     id: 2,

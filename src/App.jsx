@@ -84,7 +84,7 @@ const App = () => {
         <Route path="/Empathy-as-the-most-Strategic-Skill" element={<Empathy/>} />
         <Route path="/Leading-with-Emotional-Intelligence" element={<EmotionalIntelligence/>} />
         <Route path="/Truths-Every-First-Time-Manager-Needs" element={<HardTruths />} />
-        <Route path="/People-First-Performance-Always-Masterclass" element={<EventPage />} />
+        <Route path="/masterclass" element={<EventPage />} />
 
 
 
