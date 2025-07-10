@@ -6,10 +6,7 @@ function Companies() {
       name: "Cotecna",
       logo: "/images/cotecna.png"
     },
-    // {
-    //   name: "Uber",
-    //   logo: "/uber.webp"
-    // },
+  
     {
       name: "Spinners & Spinners",
       logo: "/images/spinners.png"
@@ -23,77 +20,7 @@ function Companies() {
       logo: "/images/gas2go.png"
     }
    
-    // {
-    //   name: "Legacy Arts ",
-    //   logo: "/legacy.webp"
-    // },
-    
-    // {
-    //   name: "KUDSA",
-    //   logo: "/kudsa.webp"
-    // },
-    // {
-    //   name: "Coca Cola",
-    //   logo: "/cola.webp"
-    // },
-    // {
-    //   name: "Youth Enterprise",
-    //   logo: "/youth.webp"
-    // },
-    // {
-    //   name: "SPM BUZZ",
-    //   logo: "/spm.webp"
-    // },
-    // {
-    //   name: "KCC",
-    //   logo: "/kcc.webp"
-    // },
-    // {
-    //   name: "Le Capture Studios",
-    //   logo: "/lecapture.webp"
-    // },
-    // {
-    //   name: "KFCB",
-    //   logo: "/kfcb.webp"
-    // },
-    // {
-    //   name: "Sanaa Academy",
-    //   logo: "/academy.webp"
-    // },
-    // {
-    //   name: "Post Bank",
-    //   logo: "/postbank.webp"
-    // },
-    // {
-    //   name: "Tropical Heat",
-    //   logo: "/tropical.webp"
-    // },
-    // {
-    //   name: "Afrostreet",
-    //   logo: "/afrostreet.webp"
-    // },
-    // {
-    //   name: "Blue Lilac Tours And Travel",
-    //   logo: "/lilac.webp"
-    // },
-    // {
-    //   name: "AASU",
-    //   logo: "/aasu.webp"
-    // },
-    
-    // {
-    //   name: "Sanaa Post",
-    //   logo: "/post.webp"
-    // },
-    // {
-    //     name: "Kaka Empire",
-    //     logo: "/kaka.webp"
-    //   },
-      
-    //   {
-    //     name: "KITFIT",
-    //     logo: "/kitfit.svg"
-    //   }
+   
 
   ];
 

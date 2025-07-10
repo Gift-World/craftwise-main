@@ -3,6 +3,23 @@ import PartnerCard from "./PartnerCard";
 
 const partners = [
   {
+      name: "Cotecna",
+      logo: "/images/cotecna.png"
+    },
+  
+    {
+      name: "Spinners & Spinners",
+      logo: "/images/spinners.png"
+    },
+    {
+      name: "Emerging Leaders",
+      logo: "/images/emerging.png"
+    },
+    {
+      name: "Gas2Go",
+      logo: "/images/gas2go.png"
+    },
+  {
     name: "Inuka",
     logo: "/images/inuka2.png",
     website: "https://inukaleadership.net/",
@@ -43,12 +60,22 @@ const PartnersSection = () => {
             className="mb-16 font-montserrat text-5xl font-bold text-orange-500"
             
           >
-            PARTNERS
+           CLIENTS & PARTNERS
           </h2>
 
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+          {/* <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
             {partners.map((partner, index) => (
               <PartnerCard key={index} {...partner} />
+            ))}
+          </div> */}
+           <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+            {partners.map((partner, index) => (
+              <PartnerCard 
+                key={index} 
+                name={partner.name}
+                logo={partner.logo}
+                website={partner.website} // Only passed if exists
+              />
             ))}
           </div>
 

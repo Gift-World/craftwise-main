@@ -25,6 +25,7 @@ import Brochure from "./components/Brochure/Brochure";
 import Empathy from "./components/Blogs/Articles/Empathy";
 import EmotionalIntelligence from "./components/Blogs/Articles/EmotionalIntelligence";
 import HardTruths from "./components/Blogs/Articles/HardTruths";
+import EventPage from "./components/Blogs/Articles/EventPage";
 
 // Initialize Google Analytics
 ReactGA.initialize("G-453EHGH7V6"); // Replace with your GA4 Measurement ID
@@ -83,6 +84,7 @@ const App = () => {
         <Route path="/Empathy-as-the-most-Strategic-Skill" element={<Empathy/>} />
         <Route path="/Leading-with-Emotional-Intelligence" element={<EmotionalIntelligence/>} />
         <Route path="/Truths-Every-First-Time-Manager-Needs" element={<HardTruths />} />
+        <Route path="/People-First-Performance-Always-Masterclass" element={<EventPage />} />
 
 
 
