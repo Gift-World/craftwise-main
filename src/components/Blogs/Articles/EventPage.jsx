@@ -71,9 +71,9 @@ const EventPage = () => {
                 <img
                   src="/images/eventbanner2.jpeg"
                   alt="Executive Leadership Event"
-                  className="w-full h-full object-cover rounded-2xl shadow-2xl hover-scale"
+                  className="w-full h-full object-cover rounded-2xl hover-scale"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
+                <div className="absolute inset-0  to-transparent rounded-2xl"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                 
                 </div>
@@ -344,7 +344,7 @@ This 90 minute virtual event brings together a curated group of senior leaders a
                 href="https://zoom.us/meeting/register/GC_NRs1wSCakAMW5EFt7Yg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex font-montserrat text-gray-900 items-center justify-center px-12 py-4 bg-accent-500 font-bold text-lg rounded-lg hover:bg-accent-600 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl animate-pulse-slow"
+                className="inline-flex font-montserrat text-black bg-craftwise-orange items-center justify-center px-12 py-4 bg-accent-500 font-bold text-lg rounded-lg hover:bg-accent-600 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl animate-pulse-slow"
               >
                 Reserve My Seat Now
                 <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
