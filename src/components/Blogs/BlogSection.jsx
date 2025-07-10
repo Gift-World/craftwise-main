@@ -16,7 +16,7 @@ function BlogSection({ article}) {
         <img
           src={article.imageUrl}
           alt={article.title}
-          className="h-[400px] w-full rounded-lg object-cover shadow-lg"
+          className="h-[500px] w-full rounded-lg object-cover shadow-lg"
         />
       </div>
       <div className="w-full space-y-4 md:w-1/2">

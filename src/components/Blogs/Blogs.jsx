@@ -8,6 +8,21 @@ const articles = [
   {
     id: 1,
     title:
+      "“People First, Performance Always”",
+    author: " Craftwise Academy",
+    // date: "June 20, 2025",
+    excerpt:
+      "Transform your managers into high-impact leaders with Craftwise Academy. Join this powerful session of live simulations, expert insights, and proven frameworks.Reserve your spot now!!",
+    content: `
+`,
+    imageUrl: "/images/eventbanner2.jpeg",
+    // organization: "Craftwise Academy",
+    // followers: "18 followers",
+    path: "/People-First-Performance-Always-Masterclass",
+  },
+  {
+    id: 2,
+    title:
       "The 5 Hard Truths Every First-Time Manager Needs to Hear",
     author: "George Munge",
     date: "June 20, 2025",
@@ -24,7 +39,7 @@ self, of systems, and of how success is measured.
     path: "/Truths-Every-First-Time-Manager-Needs",
   },
   {
-    id: 2,
+    id: 3,
     title:
       "Leading with Emotional Intelligence: The Secret to Building High-Performing Teams",
     author: "Edwin Mutoro",
@@ -44,7 +59,7 @@ leadership imperative.
     path: "/Leading-with-Emotional-Intelligence",
   },
   {
-    id: 3,
+    id: 4,
     title:
       "Why Empathy Is Emerging as the Most Strategic Skill in Modern Leadership",
     author: "Harold Ang'ila",
@@ -67,7 +82,7 @@ consistently apply—especially when it’s not reciprocated.
     path: "/Empathy-as-the-most-Strategic-Skill",
   },
   {
-    id: 4,
+    id: 5,
     title:
       "Bridging the Managerial Gap: How African Companies Can Build Visionary Leaders from Within",
     author: "George Munge",
@@ -93,7 +108,7 @@ are crucial to shaping Africa's next generation of visionary lead
   },
 
   {
-    id: 5,
+    id: 6,
     title:
       "Why Experiential Learning Is the Future of Corporate Training in Africa",
     author: "George Munge",
@@ -115,7 +130,7 @@ experiential learning.
   },
 
   {
-    id: 6,
+    id: 7,
     title:
       "Training & Development in the 21st Century: The Heartbeat of Effective Teams",
     author: "Edwin Mutoro Situma",
@@ -136,7 +151,7 @@ doesn't just upgrade skills—it transforms teams.
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Welcome to the Jungle: The Reality of the Modern Workplace",
     author: "Edwin Mutoro Situma",
     date: "March 14, 2025",
@@ -248,7 +263,7 @@ leaders?`,
     path: "/genz",
   },
   {
-    id: 8,
+    id: 9,
     title: "The Myth of Perfect Strategy: Why Execution Matters More!",
     author:
       "PERIS WAMBUI  |  Head of Strategy @ HFC Kenya | Driving Business Growth with Resource Mobilization",
@@ -293,7 +308,7 @@ What’s your take on execution vs. strategy? Have you seen a great strategy fai
   },
 
   {
-    id: 9,
+    id: 10,
     title:
       "How Organizations Can Build a Learning Culture for Continuous Growth",
     author: "George Munge",
@@ -369,7 +384,7 @@ The future belongs to organizations that invest in knowledge—because learning 
     path: "/learning-culture",
   },
   {
-    id: 10,
+    id: 11,
     title:
       "Built to Last: How to Create a Career & Organization That Thrives for Generations",
     author: "George Munge",
