@@ -331,14 +331,18 @@ const CraftwiseAcademy = () => {
                   </div>
                 </div>
                 <div className="relative z-10">
-                  <div className="flex items-center mb-6">
+                  <div className="flex items-center p-4 mb-6">
 
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
-                      <span className="text-primary-600 font-bold text-2xl">CW</span>
+                    <div className=" overflow-hidden border-2 border-primary-600 w-16 h-16 bg-white rounded-full flex items-center justify-center ">
+                      <img
+                        src="/images/cw-logo.png"
+                        alt="Craftwise Academy Logo"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
 
                     <div>
-                      <h3 className="text-2xl  font-montserrat  font-bold">Craftwise Academy</h3>
+                      <h3 className="text-2xl  font-montserrat p-2 font-bold">Craftwise Academy</h3>
                       <p className="text-primary-100  font-montserrat ">Experience Learning,
                         That Changes Everything.</p>
                     </div>
