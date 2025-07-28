@@ -46,7 +46,7 @@ const CraftwiseAcademy = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen pt-16 bg-white">
       {/* Live Banner */}
       <motion.div
         initial={{ y: -50, opacity: 0 }}
