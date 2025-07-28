@@ -86,7 +86,7 @@ const CraftwiseAcademy = () => {
                 Ready to Transform Into a
                 <span className="text-primary-600 font-montserrat"> Strategic Manager</span>?
               </h1>
-              <p className="text-xl text-primary-600 font-semibold">
+              <p className="text-xl font-montserrat text-primary-600 font-semibold">
                 Leadership is about strategy, transformation, and executive readiness. CraftWise Academy’s Skyline Programme prepares high‑potential professionals to lead with clarity and impact.
               </p>
               <motion.a
@@ -268,7 +268,7 @@ const CraftwiseAcademy = () => {
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-primary-600">Our Expert Trainers</h3>
+                <h3 className="text-2xl font-bold font-montserrat  text-primary-600">Our Expert Trainers</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <motion.div
@@ -320,10 +320,10 @@ const CraftwiseAcademy = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500 rounded-full -mr-16 -mt-16 opacity-50"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary-700 rounded-full -ml-12 -mb-12 opacity-30"></div>
                 <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-2xl font-bold text-primary-600 mb-6">Who Should Apply?</h3>
+                  <h3 className="text-2xl font-bold font-montserrat  text-primary-600 mb-6">Who Should Apply?</h3>
                   <div className="space-y-4">
                     {eligibility.map((item, index) => (
-                      <div key={index} className="flex items-start space-x-3">
+                      <div key={index} className="flex font-montserrat  items-start space-x-3">
                         <FaCheck className="flex-shrink-0 text-green-500 mt-1" />
                         <p className="text-dark-700">{item}</p>
                       </div>
