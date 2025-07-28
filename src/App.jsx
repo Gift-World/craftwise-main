@@ -26,6 +26,7 @@ import Empathy from "./components/Blogs/Articles/Empathy";
 import EmotionalIntelligence from "./components/Blogs/Articles/EmotionalIntelligence";
 import HardTruths from "./components/Blogs/Articles/HardTruths";
 import EventPage from "./components/Blogs/Articles/EventPage";
+import CraftwiseAcademy from "./components/Blogs/Articles/CraftwiseAcademy.jsx";
 
 // Initialize Google Analytics
 ReactGA.initialize("G-453EHGH7V6"); // Replace with your GA4 Measurement ID
@@ -67,6 +68,7 @@ const App = () => {
         <Route path="/legacy" element={<LegacyLeadersProgram />} />
         <Route path="/rising" element={<RisingProfessionalsProgram />} />
         <Route path="/" element={<Home />} />
+        <Route path="/skyline-managers" element={<CraftwiseAcademy />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/benefits" element={<BenefitsSection />} />
         <Route path="/contact" element={<ContactSection />} />

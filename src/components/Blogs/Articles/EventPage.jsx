@@ -61,7 +61,7 @@ const EventPage = () => {
     <div className="min-h-screen bg-gray-50">
           
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-primary text-white">
+      <section className="relative overflow-hidden bg-gradient-primary1 text-white">
         
         <div className="absolute inset-0 bg-gray-100 bg-opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -231,7 +231,7 @@ This 90 minute virtual event brings together a curated group of senior leaders a
                   <p className="text-gray-600 font-montserrat leading-relaxed">{feature.description}</p>
                 </div>
                 {hoveredCard === index && (
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-purple-600/5 rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary1-500/5 to-purple-600/5 rounded-2xl"></div>
                 )}
               </div>
             ))}
@@ -267,16 +267,16 @@ This 90 minute virtual event brings together a curated group of senior leaders a
               loading="lazy"
             />
           ) : (
-            <div className="w-full h-full bg-gradient-primary flex items-center justify-center">
+            <div className="w-full h-full bg-gradient-primary1 flex items-center justify-center">
               <span className="text-3xl font-montserrat font-bold text-white">
                 {member.name.split(' ').map(n => n[0]).join('')}
               </span>
             </div>
           )}
         </div>
-         <p className="text-primary-600 text-craftwise-orange font-montserrat font-medium">{member.guest}</p>
+         <p className="text-primary1-600 text-craftwise-orange font-montserrat font-medium">{member.guest}</p>
         <h3 className="text-xl font-montserrat font-bold text-gray-900 mt-4">{member.name}</h3>
-        <p className="text-primary-600 text-craftwise-orange font-montserrat font-medium">{member.title}</p>
+        <p className="text-primary1-600 text-craftwise-orange font-montserrat font-medium">{member.title}</p>
        
         <p className="text-gray-600 font-montserrat leading-relaxed">{member.description}</p>
       </div>
@@ -288,7 +288,7 @@ This 90 minute virtual event brings together a curated group of senior leaders a
         <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center space-y-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-            <div className="bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-2xl p-8 shadow-xl">
+            <div className="bg-gradient-to-r from-primary1-500 to-purple-600 text-white rounded-2xl p-8 shadow-xl">
               <h2 className="text-2xl font-montserrat text-gray-900 font-bold mb-4">Transform Your Managers Into Culture & Performance Multipliers</h2>
               <p className="text-lg text-gray-600 font-montserrat leading-relaxed">
                Equip your managers with the skills to inspire trust, retain talent, and deliver measurable business results. This exclusive Craftwise Academy session combines live simulations, peer dialogue, and expert insights tailored for today’s complex workplace challenges. Designed for senior leaders, managers and HR executives, it offers practical frameworks to transform managers into culture and performance multipliers.
@@ -329,7 +329,7 @@ This 90 minute virtual event brings together a curated group of senior leaders a
       </section> */}
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-primary text-white">
+      <section className="py-20 bg-gradient-primary1 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`space-y-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             <div className="space-y-4">

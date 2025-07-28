@@ -22,7 +22,7 @@ const programs = [
     path: "/managers",
   },
   {
-    title: "EMERGING LEADERS PROGRAMME",
+    title: "SKYLINE MANAGERS PROGRAMME",
     subtitle: "Preparing for Senior Leadership Roles",
     description:
       "An advanced program for emerging leaders ready to take on greater organizational responsibilities.",

@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import {useState} from 'react';
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import WhatWeDo from "../components/WhatWeDo";
@@ -8,28 +9,24 @@ import ImmersiveSection from "../components/Immersive/ImmersiveSection";
 import ExperienceSection from "../components/Experience/ExperienceSection";
 import CraftersAssemblySection from "../components/CraftersAssembly/CraftersAssemblySection";
 import WhyItMattersSection from "../components/WhyItMatters/WhyItMattersSection";
+// import CraftwiseAcademy  from "../components/Blogs/Articles/CraftwiseAcademy.jsx";
 import TeamSection from "../TeamSection";
 import ImpactSection from "../components/Impact/ImpactSection";
 import PartnersSection from "../components/Partners/PartnersSection";
 import Footer from "../components/Footer/Footer";
 import { Helmet } from "react-helmet-async";
+import ProgramAlert from "../components/ProgramAlert.jsx";
 // import EventPage from "../components/Blogs/Articles/EventPage";
 // import Companies from "../components/Companies";
 // import RisingPoster from "../components/RisingPro/RisingPoster";
 // import Header from '../components/Header';
 
 function Home() {
-  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [showAlert, setShowAlert] = useState(true)
+  // const handleDismiss = () => {
+  //   setShowAlert(false)
+  // }
 
-  // Open the modal when the component mounts
-  // useEffect(() => {
-  //   // Small delay to ensure smooth animation
-  //   const timer = setTimeout(() => {
-  //     setIsModalOpen(true);
-  //   }, 500);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
   return (
     <div>
       {/* 🔍 SEO META TAGS */}
@@ -53,14 +50,13 @@ function Home() {
 
        
           <Hero />
-        {/* <RisingPoster /> */}
 
-        {/* <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <RisingPoster />
-      </Modal>
-       */}
 
         <About />
+        {/*{showAlert && (*/}
+        {/*  <ProgramAlert onDismiss={handleDismiss} />*/}
+        {/*)}*/}
+        {/*<CraftwiseAcademy />*/}
         {/* <EventPage /> */}
         {/* <Brochures /> */}
 
