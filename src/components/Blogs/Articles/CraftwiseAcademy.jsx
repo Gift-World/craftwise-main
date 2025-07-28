@@ -1,8 +1,17 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Footer from '../../Footer/Footer';
+import { FaCheck } from "react-icons/fa";
+
+
 
 const CraftwiseAcademy = () => {
+  const eligibility = [
+    "Mid-Level Managers & High-Potential Leaders – Take the next step toward senior leadership",
+    "Department Heads & Functional Leaders – Expand your strategic influence",
+    "Fast-Track Professionals – Develop the executive presence and decision-making skills",
+    "Team Leaders Managing Complex Projects – Strengthen leadership capabilities"
+  ];
   const calculateTimeLeft = () => {
     const targetDate = new Date("2025-09-03T00:00:00");
     const now = new Date();
@@ -78,8 +87,7 @@ const CraftwiseAcademy = () => {
                 <span className="text-primary-600 font-montserrat"> Strategic Manager</span>?
               </h1>
               <p className="text-xl text-primary-600 font-semibold">
-                The Skyline Managers Program Will Show You How to Lead with Impact,
-                Drive Performance and Achieve Exceptional Business Results
+                Leadership is about strategy, transformation, and executive readiness. CraftWise Academy’s Skyline Programme prepares high‑potential professionals to lead with clarity and impact.
               </p>
               <motion.a
                 href="https://paystack.shop/pay/skylinemanagers"
@@ -147,7 +155,7 @@ const CraftwiseAcademy = () => {
         variants={containerVariants}
         className="bg-craftwise-maroon py-16 px-4"
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.h2
             variants={itemVariants}
             className="text-3xl  font-montserrat  md:text-4xl font-bold text-white text-center mb-16"
@@ -155,26 +163,34 @@ const CraftwiseAcademy = () => {
             What You'll Master In This Managerial Program:
           </motion.h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-4 ">
             {[
               {
-                title: "Innovation & Influence",
+                title: "Strategic Impact",
                 subtitle: "Master Advanced Managing Techniques",
-                description: "Inspire teams, drive creative problem-solving, and enhance executive presence.",
-                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=faces"
+                description: "Align initiatives with business goals and manage multi-stakeholder environments.",
+                image: "/images/CWA-Skyline.png"
               },
               {
                 title: "Advanced People Management",
                 subtitle: "Drive Results Through People",
                 description: "Lead, coach, and foster innovation while creating psychologically safe teams.",
-                image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop&crop=faces"
+                image: "/images/harry-training.png"
               },
               {
                 title: "Change Management",
                 subtitle: "Lead Transformation with Confidence",
                 description: "Master leading through transitions, organizational shifts, and adaptive management.",
-                image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop&crop=faces"
-              }
+                image: "/images/change.png"
+              },
+              {
+                title: "Innovation & Influence",
+                subtitle: "Master Advanced Managing Techniques",
+                description: "Inspire teams, drive creative problem-solving, and enhance executive presence.",
+                image: "/images/training-skyline.png"
+              },
+
+
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -276,7 +292,7 @@ const CraftwiseAcademy = () => {
                       className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-600"
                     >
                       <img
-                        src="/images/mwaura.png"
+                        src="/images/gibbz.png"
                         alt="Ngibuini Mwaura"
                         className="w-full h-full object-cover"
                       />
@@ -303,12 +319,24 @@ const CraftwiseAcademy = () => {
               <div className="bg-primary-600 rounded-2xl p-8 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500 rounded-full -mr-16 -mt-16 opacity-50"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary-700 rounded-full -ml-12 -mb-12 opacity-30"></div>
-
+                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                  <h3 className="text-2xl font-bold text-primary-600 mb-6">Who Should Apply?</h3>
+                  <div className="space-y-4">
+                    {eligibility.map((item, index) => (
+                      <div key={index} className="flex items-start space-x-3">
+                        <FaCheck className="flex-shrink-0 text-green-500 mt-1" />
+                        <p className="text-dark-700">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">
+
                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
                       <span className="text-primary-600 font-bold text-2xl">CW</span>
                     </div>
+
                     <div>
                       <h3 className="text-2xl  font-montserrat  font-bold">Craftwise Academy</h3>
                       <p className="text-primary-100  font-montserrat ">Experience Learning,
@@ -316,11 +344,11 @@ const CraftwiseAcademy = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-4 text-primary-50">
-                    <p>📧 info@craftwiseacademy.com</p>
-                    <p>🌐 www.craftwiseacademy.com</p>
-                    <p>📞 +254715208322</p>
-                  </div>
+                  {/*<div className="space-y-4 text-primary-50">*/}
+                  {/*  <p>📧 info@craftwiseacademy.com</p>*/}
+                  {/*  <p>🌐 www.craftwiseacademy.com</p>*/}
+                  {/*  <p>📞 +254715208322</p>*/}
+                  {/*</div>*/}
                 </div>
               </div>
             </motion.div>
@@ -336,7 +364,7 @@ const CraftwiseAcademy = () => {
         variants={containerVariants}
         className="bg-craftwise-maroon py-16 px-4"
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.h2
             variants={itemVariants}
             className="text-3xl  font-montserrat  md:text-4xl font-bold text-white text-center mb-16"
@@ -344,8 +372,13 @@ const CraftwiseAcademy = () => {
             Advance Your Career with Strategic Insight
           </motion.h2>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-4 gap-4 mb-12">
             {[
+              {
+                title: "Leadership in Action",
+                description: "Immersive leadership simulations & decision-making challenges",
+                icon: "🏆"
+              },
               {
                 title: "Accelerated Career Growth",
                 description: "Capstone project solving a high-level organizational challenge",
