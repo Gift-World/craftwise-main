@@ -252,12 +252,7 @@ const CraftwiseAcademy = () => {
         className="bg-gray-50 py-16 px-4"
       >
         <div className="max-w-6xl mx-auto">
-          {/*<motion.h2*/}
-          {/*  variants={itemVariants}*/}
-          {/*  className="text-4xl md:text-5xl font-bold text-dark-800 text-center mb-16"*/}
-          {/*>*/}
-          {/*  Meet Your Expert Trainers*/}
-          {/*</motion.h2>*/}
+
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="space-y-8">
@@ -280,15 +275,15 @@ const CraftwiseAcademy = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-600"
-                    >
-                      <img
-                        src="/images/harry.avif"
-                        alt="Harold Angila"
-                        className="w-full h-full object-cover"
-                      />
-                    </motion.div>
+                    whileHover={{ scale: 1.1 }}
+                    className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-600"
+                  >
+                    <img
+                      src="/images/harry.avif"
+                      alt="Harold Angila"
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
                     <div>
                       <h4 className="font-bold text-dark-800 text-lg  font-montserrat ">Harold Angila</h4>
                       <p className="text-dark-600  font-montserrat ">Leadership Development Expert</p>
@@ -297,7 +292,7 @@ const CraftwiseAcademy = () => {
                   <div className="flex items-center space-x-4">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-600"
+                      className="w-20 h-20  sm:w-22 sm:h-20 rounded-full overflow-hidden border-2 border-primary-600"
                     >
                       <img
                         src="/images/gibbz.png"
@@ -305,6 +300,7 @@ const CraftwiseAcademy = () => {
                         className="w-full h-full object-cover"
                       />
                     </motion.div>
+
                     <div>
                       <h4 className="font-bold  font-montserrat  text-dark-800 text-lg">Ngibuini Mwaura</h4>
                       <p className="text-dark-600  font-montserrat ">Learning & Design Lead - Craftwise Academy</p>
@@ -372,11 +368,7 @@ const CraftwiseAcademy = () => {
                     </div>
                   </div>
 
-                  {/*<div className="space-y-4 text-primary-50">*/}
-                  {/*  <p>📧 info@craftwiseacademy.com</p>*/}
-                  {/*  <p>🌐 www.craftwiseacademy.com</p>*/}
-                  {/*  <p>📞 +254715208322</p>*/}
-                  {/*</div>*/}
+
                 </div>
               </div>
             </motion.div>
