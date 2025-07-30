@@ -97,7 +97,7 @@ const CraftwiseAcademy = () => {
                 Leadership is about strategy, transformation, and executive readiness. CraftWise Academy’s Skyline Programme prepares high‑potential professionals to lead with clarity and impact.
               </p>
               <motion.a
-                href="https://paystack.shop/pay/skylinemanagers"
+                href="https://paystack.shop/pay/skylinemanagerscw"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -137,7 +137,7 @@ const CraftwiseAcademy = () => {
                 <p className="text-sm  font-montserrat  text-dark-600 mt-4">3rd September, 1900 EAT</p>
               </div>
               <motion.a
-                href="https://paystack.shop/pay/skylinemanagers"
+                href="https://paystack.shop/pay/skylinemanagerscw"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
@@ -227,7 +227,7 @@ const CraftwiseAcademy = () => {
             className="text-center mt-12"
           >
             <motion.a
-              href="https://paystack.shop/pay/skylinemanagers"
+              href="https://paystack.shop/pay/skylinemanagerscw"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -467,7 +467,7 @@ const CraftwiseAcademy = () => {
           >
 
             <motion.a
-              href="https://paystack.shop/pay/skylinemanagers"
+              href="https://paystack.shop/pay/skylinemanagerscw"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
