@@ -12,6 +12,13 @@ const CraftwiseAcademy = () => {
     "Fast-Track Professionals – Develop the executive presence and decision-making skills",
     "Team Leaders Managing Complex Projects – Strengthen leadership capabilities"
   ];
+  const tools = [
+    "Strategic & Hands-On Learning – Learn through real challenges, not just theory",
+    "Tailored for Aspiring Executives – Gain the mindset, tools, and confidence",
+    "Elite Network & Mentorship – Connect with experienced executives",
+    "Capstone Project for Real-World Application – Showcase your leadership"
+  ];
+
   const calculateTimeLeft = () => {
     const targetDate = new Date("2025-09-03T00:00:00");
     const now = new Date();
@@ -146,6 +153,7 @@ const CraftwiseAcademy = () => {
           </div>
         </div>
       </motion.section>
+
 
       {/* What You'll Learn Section */}
       <motion.section
@@ -302,6 +310,22 @@ const CraftwiseAcademy = () => {
                       <p className="text-dark-600  font-montserrat ">Learning & Design Lead - Craftwise Academy</p>
                     </div>
                   </div>
+                  <div className="flex items-center space-x-4">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-600"
+                    >
+                      <img
+                        src="/images/sam.png"
+                        alt="Sam Kimera"
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+                    <div>
+                      <h4 className="font-bold text-dark-800 text-lg  font-montserrat ">Sam Kimera</h4>
+                      <p className="text-dark-600  font-montserrat ">Senior Facilitator, Craftwise Academy</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -359,6 +383,36 @@ const CraftwiseAcademy = () => {
           </div>
         </div>
       </motion.section>
+
+      <div className="mb-16 px-4 text-center">
+        <h2 className="mb-8 font-montserrat text-3xl font-bold">
+          Why Choose This Programme?
+        </h2>
+        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {tools.map((tool, index) => {
+            // Define an array of unique background gradients for each card
+            const bgGradients = [
+              "bg-gradient-to-r from-orange-500 to-orange-600",
+              "bg-gradient-to-r from-orange-500 to-orange-600",
+              "bg-gradient-to-r from-orange-500 to-orange-600",
+              "bg-gradient-to-r from-orange-500 to-orange-600",
+            ];
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                className={`rounded-lg p-6 shadow-lg ${bgGradients[index % bgGradients.length]} text-white`}
+              >
+                <p className="font-montserrat text-white">{tool}</p>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
 
       {/* This Program Could Change Everything */}
       <motion.section

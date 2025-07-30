@@ -27,7 +27,7 @@ const programs = [
     description:
       "An advanced program for emerging leaders ready to take on greater organizational responsibilities.",
     image: "https://i.imgur.com/1NTh8oR.png",
-    path: "/emerging",
+    path: "/skyline-managers",
   },
   {
     title: "LEGACY LEADERS PROGRAMME",
