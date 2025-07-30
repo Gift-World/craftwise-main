@@ -303,7 +303,8 @@ const CraftwiseAcademy = () => {
 
                     <div>
                       <h4 className="font-bold  font-montserrat  text-dark-800 text-lg">Ngibuini Mwaura</h4>
-                      <p className="text-dark-600  font-montserrat ">Learning & Design Lead, Craftwise Academy</p>
+                      <p className="text-dark-600  font-montserrat ">Learning & Design Lead,</p>
+                      <p className="text-dark-600  font-montserrat "> Craftwise Academy</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
