@@ -292,7 +292,7 @@ const CraftwiseAcademy = () => {
                   <div className="flex items-center space-x-4">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className="w-20 h-20  sm:w-22 sm:h-20 rounded-full overflow-hidden border-2 border-primary-600"
+                      className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-600"
                     >
                       <img
                         src="/images/gibbz.png"
@@ -303,7 +303,7 @@ const CraftwiseAcademy = () => {
 
                     <div>
                       <h4 className="font-bold  font-montserrat  text-dark-800 text-lg">Ngibuini Mwaura</h4>
-                      <p className="text-dark-600  font-montserrat ">Learning & Design Lead - Craftwise Academy</p>
+                      <p className="text-dark-600  font-montserrat ">Learning & Design Lead, Craftwise Academy</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -355,7 +355,7 @@ const CraftwiseAcademy = () => {
 
                     <div className=" overflow-hidden border-2 border-primary-600 w-16 h-16 bg-white rounded-full flex items-center justify-center ">
                       <img
-                        src="/images/cw-logo.png"
+                        src="/images/cw-logo2.jpeg"
                         alt="Craftwise Academy Logo"
                         className="w-full h-full object-cover"
                       />
@@ -364,7 +364,9 @@ const CraftwiseAcademy = () => {
                     <div>
                       <h3 className="text-2xl  font-montserrat p-2 font-bold">Craftwise Academy</h3>
                       <p className="text-primary-100  font-montserrat ">Experience Learning,
-                        That Changes Everything.</p>
+                        </p>
+                      <p className="text-primary-100  font-montserrat ">That Changes Everything
+                      </p>
                     </div>
                   </div>
 
